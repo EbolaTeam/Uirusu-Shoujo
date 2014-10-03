@@ -9,13 +9,13 @@ image bg black = Solid((0, 0, 0, 255))
 image bg bg1 = "images/backgrounds/bg1.png"
 image bg ashes = "images/backgrounds/tt2.png"
 
-image ebby wink = "images/sprites/1EbbyWink.png"
-image ebby concerned= "images/sprites/2EbbyConcerned.png"
-image ebby excited = "images/sprites/3EbbyExcited.png"
-image ebby sad= "images/sprites/4EbbySad.png"
-image ebby rape= "images/sprites/5EbbyRape.png"
-image ebby joy= "images/sprites/6EbbyJoy.png"
-image ebby normal = "images/sprites/7EbbyNormal.png"
+image ebby wink = "images/sprites/EbbyWink.png"
+image ebby concerned= "images/sprites/EbbyConcerned.png"
+image ebby excited = "images/sprites/EbbyExcited.png"
+image ebby sad= "images/sprites/EbbySad.png"
+image ebby rape= "images/sprites/EbbyRape.png"
+image ebby joy= "images/sprites/EbbyJoy.png"
+image ebby normal = "images/sprites/EbbyNormal.png"
 
 image vu normal = "images/sprites/VuNormal.png"
 
