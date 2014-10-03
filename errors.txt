@@ -1,0 +1,9 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/screens.rpy", line 311: u'alt' is not a keyword argument or valid child for the hotspot statement.
+    hotspot (262, 150, 216, 45) action Preference("display", "fullscreen") alt ("Display Fullscreen")
+                                                                              ^
+
+Ren'Py Version: Ren'Py 6.17.7.521
