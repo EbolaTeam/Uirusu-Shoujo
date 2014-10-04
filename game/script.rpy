@@ -1,4 +1,5 @@
 # You can place the script of your game in this file.
+# test for GitHub procedure, DevZero, this line can be removed later
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
