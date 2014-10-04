@@ -173,26 +173,19 @@ screen navigation:
 
     # The various buttons.
     imagemap:
-        ground "images/menus/nav/EC_nav_menu_ground.png"
-        idle "images/menus/nav/EC_nav_menu_ground.png"
-        hover "images/menus/nav/EC_nav_menu_hover.png"
-        selected_idle "images/menus/nav/EC_nav_menu_selected.png"
-        selected_hover "images/menus/nav/EC_nav_menu_selected.png"
+        ground "images/menus/nav/nav_ground.png"
+        idle "images/menus/nav/nav_idle.png"
+        hover "images/menus/nav/nav_hover.png"
+        selected_idle "images/menus/nav/nav_selected_idle.png"
+        selected_hover "images/menus/nav/nav_selected_hover.png"
 
-        hotspot (1739,719,154,49) action Return()
-        hotspot (1658,768,235,54) action ShowMenu("preferences")
-        hotspot (1658,822,235,43) action ShowMenu("save")
-        hotspot (1658,865,235,48) action ShowMenu("load")
-        hotspot (1659,913,100,48) action MainMenu()
-        hotspot (1793,962,100,50) action Help()
-        hotspot (1793,1012,100,46) action Quit()
-
-
-init -2:
-
-    # Make all game menu navigation buttons the same size.
-    style gm_nav_button:
-        size_group "gm_nav"
+        hotspot (1665,552,235,69) action Return()
+        hotspot (1503,621,397,75) action ShowMenu("preferences")
+        hotspot (1503,696,397,68) action ShowMenu("save")
+        hotspot (1503,764,397,77) action ShowMenu("load")
+        hotspot (1539,841,361,71) action MainMenu()
+        hotspot (1743,912,157,78) action Help()
+        hotspot (1743,990,157,60) action Quit()
 
 
 ##############################################################################
@@ -301,22 +294,37 @@ screen preferences:
 
     use navigation
 
-
     imagemap:
-        ground "images/menus/pref/EC_pref_menu_ground.png"
-        idle "images/menus/pref/EC_pref_menu_ground.png"
-        hover "images/menus/pref/EC_pref_menu_hover.png"
-        selected_idle "images/menus/pref/EC_pref_menu_selected.png"
-        selected_hover "images/menus/pref/EC_pref_menu_selected.png"
+        ground "images/menus/pref/pref_ground.png"
+        idle "images/menus/pref/pref_idle.png"
+        hover "images/menus/pref/pref_hover.png"
+        selected_idle "images/menus/pref/pref_selected_idle.png"
+        selected_hover "images/menus/pref/pref_selected_hover.png"
 
-        hotspot (262, 150, 216, 45) action Preference("display", "fullscreen") 
-        hotspot (255, 195, 223, 47) action Preference("display", "window") 
-        hotspot (297, 403, 181, 55) action Preference("transitions", "all")
-        hotspot (357, 458, 121, 43) action  Preference("transitions", "none")
+        hotspot (158, 200, 310, 60) action Preference("display", "fullscreen") 
+        hotspot (189, 260, 279, 56) action Preference("display", "window") 
+        hotspot (224, 421, 244, 63) action Preference("transitions", "all")
+        hotspot (310, 484, 158, 54) action Preference("transitions", "none")
+        hotspot (189, 663, 279, 56) action Preference("skip", "seen")
+        hotspot (242, 720, 226, 63) action Preference("skip", "all")
+        hotspot (121, 892, 347, 64) action Preference("after choices", "stop")
+        hotspot (124, 956, 344, 60) action Preference("after choices", "skip")
 
+        bar pos (736, 156) value Preference("music volume") style "pref_slider"
+        bar pos (736, 360) value Preference("sound volume") style "pref_slider"
+        bar pos (736, 553) value Preference("voice volume") style "pref_slider"
+        bar pos (736, 764) value Preference("text speed") style "pref_slider"
+        bar pos (736, 975) value Preference("auto-forward time") style "pref_slider"
 
+init -2 python:
+    style.pref_slider.right_bar = "images/menus/pref/pref_bar_empty.png"
+    style.pref_slider.left_bar = "images/menus/pref/pref_bar_full.png"
 
-
+    style.pref_slider.xmaximum = 615
+    style.pref_slider.ymaximum = 101
+    style.pref_slider.thumb = "images/menus/pref/pref_bar_thumb_null.png"
+    style.pref_slider.thumb_offset = 16
+    style.pref_slider.thumb_shadow = None
 
 ##############################################################################
 # Yes/No Prompt
@@ -331,40 +339,32 @@ screen yesno_prompt:
     window:
         style "gm_root"
 
-    frame:
-        style_group "yesno"
-
-        xfill True
-        xmargin .05
-        ypos .1
-        yanchor 0
-        ypadding .05
-
-        has vbox:
-            xalign .5
-            yalign .5
-            spacing 30
-
-        label _(message):
-            xalign 0.5
-
-        hbox:
-            xalign 0.5
-            spacing 100
-
-            textbutton _("Yes") action yes_action
-            textbutton _("No") action no_action
-
-    # Right-click and escape answer "no".
-    key "game_menu" action no_action
-
-init -2:
-    style yesno_button:
-        size_group "yesno"
-
-    style yesno_label_text:
-        text_align 0.5
-        layout "subtitle"
+    imagemap:
+        ground 'images/menus/yesno/yesno_ground.png'
+        idle 'images/menus/yesno/yesno_idle.png' 
+        hover 'images/menus/yesno/yesno_hover.png'
+        
+        hotspot (699, 512, 199, 101) action yes_action
+        hotspot (1089, 512, 163, 101) action no_action
+    add "images/menus/yesno/yesno_overlay.png"
+    
+    if message == layout.ARE_YOU_SURE:
+        add "images/menus/yesno/yesno_are_you_sure.png"
+ 
+    elif message == layout.DELETE_SAVE:
+        add "images/menus/yesno/yesno_delete_save.png"
+        
+    elif message == layout.OVERWRITE_SAVE:
+        add "images/menus/yesno/yesno_overwrite_save.png"
+        
+    elif message == layout.LOADING:
+        add "images/menus/yesno/yesno_load_save.png"
+        
+    elif message == layout.QUIT:
+        add "images/menus/yesno/yesno_are_you_sure.png"
+        
+    elif message == layout.MAIN_MENU:
+        add "images/menus/yesno/yesno_main_menu.png"
 
 
 ##############################################################################
