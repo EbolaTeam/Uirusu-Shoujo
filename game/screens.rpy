@@ -144,19 +144,20 @@ screen nvl:
 
 screen main_menu:
 
+    window:
+        style "mm_root"
+
     # This ensures that any other menu screen is replaced.
     tag menu
 
     imagemap:
-        ground "images/menus/main/bg_mainmenu_1080_idle.png"
-        hover "images/menus/main/bg_mainmenu_1080_pressed.png"
+        ground "images/menus/main/mm_idle.png"
+        hover "images/menus/main/mm_hover.png"
 
-        hotspot (1759,837,117,50) action Start()
-        hotspot (1798,891,75,45) action ShowMenu("load")
-        hotspot (1739,941,136,53) action ShowMenu("preferences")
-        hotspot (1786,993,89,51) action Quit(confirm=False)
-
-
+        hotspot (1704,769,199,70) action Start()
+        hotspot (1717,839,186,73) action ShowMenu("load")
+        hotspot (1658,912,245,80) action ShowMenu("preferences")
+        hotspot (1756,992,147,60) action Quit(confirm=False)
 
 ##############################################################################
 # Navigation
