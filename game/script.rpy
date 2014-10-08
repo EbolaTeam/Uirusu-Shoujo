@@ -87,263 +87,51 @@ define centered = Character(name=' ', what_style="centered_text", window_style="
 # The game starts here.
 label start:
 
-  jump Name
-
-
-label Name:
-
   scene bg hospital_beds3 with fade
 
   "I've been here... for too long."
   "I've forgotten my name..."
   "What was it again?"
 
-# The phrase in the brackets is the text that the game will display to prompt 
-# the player to enter the name they've chosen.
+  jump Name
 
-  $ player_name = renpy.input("What is your name?")
 
+label Name:
+
+  # The phrase in the brackets is the text that the game will display to prompt 
+  # the player to enter the name they've chosen.
+  $ player_name = renpy.input("Please enter your name:")
+
+  # The .strip() instruction removes any extra spaces the player 
+  # may have typed by accident.
   $ player_name = player_name.strip()
 
-# The .strip() instruction removes any extra spaces the player 
-# may have typed by accident.
-
-#  If the player can't be bothered to choose a name, then we
-#  choose a suitable one for them:
+  # If the player can't be bothered to choose a name, then we
+  # choose a suitable one for them:
   if player_name == "":
     $ player_name="The Chosen One"
   
-# Now we can use the player's name.
-  
+  # Now we can use the player's name.
+  # confirm that the name is correct
+  menu:
+
+    "... My name is %(player_name)s.":
+
+      jump Name_Confirmed
+
+    "... No, that isn't my name.":
+
+      jump Name
+
+label Name_Confirmed:
+
   "Pleased to meet you, %(player_name)s!"
 
-
   jump Shrines
-  jump Africa
-
-
-
-
-label Shrines:
-  scene bg black with fade
-  centered "{i}TRIGGER WARNING{/i}"
-  centered "{i}This is the Occult{/i}"
-  centered "{i}Some images may be disturbing{/i}"
-
-  $renpy.music.set_volume (1.0, channel="music")
-  play music "O_Fortuna.mp3" noloop
-
-  scene bg s01
-  pause(2)
-  scene bg s02
-  pause(2)
-  scene bg s03
-  pause(2)
-  scene bg s04
-  pause(2)
-  scene bg s05
-  pause(2)
-  scene bg s06
-  pause(2)
-  scene bg s07
-  pause(2)
-  scene bg s08
-  pause(2)
-  scene bg s09
-  pause(2)
-  scene bg s10
-  pause(2)
-  scene bg s11
-  pause(2)
-  scene bg s12
-  pause(2)
-  scene bg s13
-  pause(2)
-  scene bg s14
-  pause(2)
-  scene bg s15
-  pause(2)
-  scene bg s16
-  pause(2)
-  scene bg s17
-  pause(2)
-  scene bg s18
-  pause(2)
-  scene bg s19
-  pause(2)
-  scene bg s20
-  pause(2)
-  scene bg s21
-  pause(2)
-  scene bg s22
-  pause(2)
-  scene bg s23
-  pause(2)
-  scene bg s24
-  pause(2)
-  scene bg s25
-  pause(2)
-  scene bg s26
-  pause(2)
-  scene bg s27
-  pause(2)
-  scene bg s28
-  pause(2)
-  scene bg s29
-  pause(2)
-  scene bg s30
-  pause(2)
-  scene bg s31
-  pause(2)
-  scene bg s32
-  pause(2)
-  scene bg s33
-  pause(2)
-  scene bg s34
-  pause(2)
-  scene bg s35
-  pause(2)
-  scene bg s36
-  pause(2)
-  scene bg s37
-  pause(2)
-  scene bg s38
-  pause(2)
-  scene bg s39
-  pause(2)
-  scene bg s40
-  pause(2)
-  scene bg s41
-  pause(2)
-  scene bg s42
-  pause(2)
-  scene bg s43
-  pause(2)
-  scene bg s44
-  pause(2)
-  scene bg s45
-  pause(2)
-  scene bg s46
-  pause(2)
-  scene bg s47
-  pause(2)
-  scene bg s48
-  pause(2)
-  scene bg s49
-  pause(2)
-  scene bg s50
-  pause(2)
-  scene bg s51
-  pause(2)
-  scene bg s52
-  pause(2)
-  scene bg s53
-  pause(2)
-  scene bg s54
-  pause(2)
-  scene bg s55
-  pause(4)
-
-  stop music
+label Shrines_Return:
 
   jump Africa
+label Africa_Return: 
 
-
-
-
-label Africa:
-
-    scene bg black with fade
-    $renpy.music.set_volume (0.5, channel="music")
-    play music "FeelsChiptune.mp3" noloop
-    
-    centered "{i}Maybe today...{/i}"
-    
-    centered "{i}Maybe in Africa...{/i}"
-    
-    scene bg bg1 with fade
-    
-    pause 1.0
-    
-    "Vu-chan!{w=1.5} Vu-chan!{p=1.5}
-    Where are you Vu-chan?"
-
-    show ebby excited:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
-        
-    ec "Vuuuu-chaaaan!!"
-    
-   
-    show vu normal:
-        zoom 1.0
-        xalign 0.9
-        yalign 1.0
-
-    vc "Keep yer shimpan on dearie,
-    I'm here."
-
-    show ebby joy
-
-    ec "Vu-chan! Yay!"
-    ec "It's gotten so quiet around here,"
-
-    show ebby normal
-
-    ec "Ebola-chan was getting lonely!"
-
-    vc "Of course it's quiet you puerile pestillance!"
-    vc "Everybody's dead!"
-
-    show ebby concerned
-    
-    ec "Dead?"
-
-    vc "Yes, Dead! Expired! Bereft of Life!
-    You've bled 'em all dry!"
-    vc "Me and me mates 'ave been munching on 'em all morning!"
-    vc "Unless they can magically come back from a vultures lower intestine,
-    yes, they are all very much dead!"
-
-    ec "But what will ebola-chan do?"
-    ec "Ebola-chan doesn't want to be lonely!
-    She wants to play with more and more humans!"
-
-    vc "Bloomin' eck you're voracious-virus!"
-    vc "Don't you want to 'ave an after-epidemic nap or something?"
-
-
-    show ebby sad
-    
-    ec "Ebola-chan doesn't want a nap!
-    Ebola-chan doesn't want to be lonely!"
- 
-    ec "Ebola-chan wants to PLAY!"
-
-    vc "All right, all right, calm yer waterworks already.
-    I'll think of something."
-
-
-
-    show ebby joy
-
-    ec "Yay! Vu-chan!"
-    ec "Ebola-chan is glad she has a friend like you!"
-    ec "You're soooo reliable!"
-
-    vc "Yeah, and you're so bloody virulant I'm suprised I haven't burst."
-
-
-    show ebby normal
-
-    vc "Ok there is this one place I 'erd of"
-    vc "loads a humans"
-    vc "they pack 'em into trains like sardines"
-    vc "and stack 'em in buildings like waffles."
-
-    vc "It's called {w=2.0}'Japan'...."
-
-    scene bg black with fade
     
     return
