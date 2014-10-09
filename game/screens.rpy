@@ -168,8 +168,8 @@ screen main_menu:
 screen navigation:
 
     # The background of the game menu.
-    window:
-        style "gm_root"
+#    window:
+#        style "gm_root"
 
     # The various buttons.
     imagemap:
@@ -260,26 +260,133 @@ screen file_picker:
 
 screen save:
 
-    # This ensures that any other menu screen is replaced.
     tag menu
 
-    use navigation
-    use file_picker
+    window:
+        style "gm_root"
 
+    use navigation
+
+    imagemap:
+        ground "images/menus/loadsave/loadsave_save_ground.png"
+        idle "images/menus/loadsave/loadsave_idle.png"
+        hover "images/menus/loadsave/loadsave_hover.png"
+        selected_idle "images/menus/loadsave/loadsave_selected.png"
+
+        alpha False
+        cache False
+
+        hotspot (257, 960, 61,95) clicked FilePage(1)
+        hotspot (347, 960, 81,95) clicked FilePage(2)
+        hotspot (454, 960, 88,95) clicked FilePage(3)
+        hotspot (572, 960, 79,95) clicked FilePage(4)
+        hotspot (677, 960, 85,95) clicked FilePage(5)
+        hotspot (785, 960, 85,95) clicked FilePage(6)
+        hotspot (896, 960, 80,95) clicked FilePage(7)
+        hotspot (1006, 960, 76,95) clicked FilePage(8)
+        hotspot (1117, 960, 77,95) clicked FilePage(9)
+        hotspot (1224, 960, 108,95) clicked FilePage(10)
+
+        hotspot (153, 186, 319, 242) clicked FileSave(1):
+            use load_save_slot(number=1)
+        hotspot (472, 186, 319, 242) clicked FileSave(2):
+            use load_save_slot(number=2)
+        hotspot (791, 186, 319, 242) clicked FileSave(3):
+            use load_save_slot(number=3)
+        hotspot (1110, 186, 319, 242) clicked FileSave(4):
+            use load_save_slot(number=4)
+        hotspot (153, 428, 319, 242) clicked FileSave(5):
+            use load_save_slot(number=5)
+        hotspot (472, 428, 319, 242) clicked FileSave(6):
+            use load_save_slot(number=6)
+        hotspot (791, 428, 319, 242) clicked FileSave(7):
+            use load_save_slot(number=7)
+        hotspot (1110, 428, 319, 242) clicked FileSave(8):
+            use load_save_slot(number=8)
+        hotspot (153, 670, 319, 242) clicked FileSave(9):
+            use load_save_slot(number=9)
+        hotspot (472, 670, 319, 242) clicked FileSave(10):
+            use load_save_slot(number=10)
+        hotspot (791, 670, 319, 242) clicked FileSave(11):
+            use load_save_slot(number=11)
+        hotspot (1110, 670, 319, 242) clicked FileSave(12):
+            use load_save_slot(number=12)
+
+
+    
 screen load:
 
-    # This ensures that any other menu screen is replaced.
     tag menu
 
-    use navigation
-    use file_picker
+    window:
+        style "gm_root"
 
-init -2:
-    style file_picker_frame is menu_frame
-    style file_picker_nav_button is small_button
-    style file_picker_nav_button_text is small_button_text
-    style file_picker_button is large_button
-    style file_picker_text is large_button_text
+    use navigation
+
+    imagemap:
+        ground "images/menus/loadsave/loadsave_load_ground.png"
+        idle "images/menus/loadsave/loadsave_idle.png"
+        hover "images/menus/loadsave/loadsave_hover.png"
+        selected_idle "images/menus/loadsave/loadsave_selected.png"
+
+        alpha False
+
+        cache False
+
+        hotspot (257, 960, 61,95) clicked FilePage(1)
+        hotspot (347, 960, 81,95) clicked FilePage(2)
+        hotspot (454, 960, 88,95) clicked FilePage(3)
+        hotspot (572, 960, 79,95) clicked FilePage(4)
+        hotspot (677, 960, 85,95) clicked FilePage(5)
+        hotspot (785, 960, 85,95) clicked FilePage(6)
+        hotspot (896, 960, 80,95) clicked FilePage(7)
+        hotspot (1006, 960, 76,95) clicked FilePage(8)
+        hotspot (1117, 960, 77,95) clicked FilePage(9)
+        hotspot (1224, 960, 108,95) clicked FilePage(10)
+
+        hotspot (153, 186, 319, 242) clicked FileLoad(1):
+            use load_save_slot(number=1)
+        hotspot (472, 186, 319, 242) clicked FileLoad(2):
+            use load_save_slot(number=2)
+        hotspot (791, 186, 319, 242) clicked FileLoad(3):
+            use load_save_slot(number=3)
+        hotspot (1110, 186, 319, 242) clicked FileLoad(4):
+            use load_save_slot(number=4)
+        hotspot (153, 428, 319, 242) clicked FileLoad(5):
+            use load_save_slot(number=5)
+        hotspot (472, 428, 319, 242) clicked FileLoad(6):
+            use load_save_slot(number=6)
+        hotspot (791, 428, 319, 242) clicked FileLoad(7):
+            use load_save_slot(number=7)
+        hotspot (1110, 428, 319, 242) clicked FileLoad(8):
+            use load_save_slot(number=8)
+        hotspot (153, 670, 319, 242) clicked FileLoad(9):
+            use load_save_slot(number=9)
+        hotspot (472, 670, 319, 242) clicked FileLoad(10):
+            use load_save_slot(number=10)
+        hotspot (791, 670, 319, 242) clicked FileLoad(11):
+            use load_save_slot(number=11)
+        hotspot (1110, 670, 319, 242) clicked FileLoad(12):
+            use load_save_slot(number=12)
+    
+
+    
+screen load_save_slot:
+
+    $ slot_text = FileSlotName(number, 12)
+    $ time_text = FileTime(number, empty=("Infection Free"))
+
+    add FileScreenshot(number) xpos 78 ypos 64
+
+    text slot_text xcenter 160 ycenter 115 size 60 color "#ff000088" outlines [ (2,"#000000ff") ] font "Evil Bunny.ttf"
+    text time_text xcenter 160 ycenter 165 size 24 color "#ffffffff" outlines [ (2,"#000000ff") ] font "BAARS__.TTF"
+
+    key "save_delete" action FileDelete(number)
+    
+init -2 python:
+    
+    config.thumbnail_width = 160
+    config.thumbnail_height = 110
 
 
 ##############################################################################
@@ -291,6 +398,9 @@ init -2:
 screen preferences:
 
     tag menu
+
+    window:
+        style "gm_root"
 
     use navigation
 
