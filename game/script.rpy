@@ -85,6 +85,24 @@ image bg s52 = "images/backgrounds/shrines/shrine52.jpg"
 image bg s53 = "images/backgrounds/shrines/shrine53.jpg"
 image bg s54 = "images/backgrounds/shrines/shrine54.jpg"
 image bg s55 = "images/backgrounds/shrines/shrine55.jpg"
+image bg s56 = "images/backgrounds/shrines/shrine56.jpg"
+image bg s57 = "images/backgrounds/shrines/shrine57.jpg"
+image bg s58 = "images/backgrounds/shrines/shrine58.jpg"
+image bg s59 = "images/backgrounds/shrines/shrine59.jpg"
+image bg s60 = "images/backgrounds/shrines/shrine60.jpg"
+image bg s61 = "images/backgrounds/shrines/shrine61.jpg"
+image bg s62 = "images/backgrounds/shrines/shrine62.jpg"
+image bg s63 = "images/backgrounds/shrines/shrine63.jpg"
+image bg s64 = "images/backgrounds/shrines/shrine64.jpg"
+image bg s65 = "images/backgrounds/shrines/shrine65.jpg"
+image bg s66 = "images/backgrounds/shrines/shrine66.jpg"
+image bg s67 = "images/backgrounds/shrines/shrine67.jpg"
+image bg s68 = "images/backgrounds/shrines/shrine68.jpg"
+image bg s69 = "images/backgrounds/shrines/shrine69.jpg"
+image bg s70 = "images/backgrounds/shrines/shrine70.jpg"
+image bg s71 = "images/backgrounds/shrines/shrine71.jpg"
+image bg s72 = "images/backgrounds/shrines/shrine72.jpg"
+image bg s73 = "images/backgrounds/shrines/shrine73.jpg"
 
 image ebby wink = "images/sprites/EbbyWink.png"
 image ebby concerned= "images/sprites/EbbyConcerned.png"
@@ -106,14 +124,15 @@ define centered = Character(name=' ', what_style="centered_text", window_style="
 # The game starts here.
 label start:
 
+  jump Africa
+label Africa_Return: 
+
   jump Origins
 label Origins_Return:
 
   jump Shrines
 label Shrines_Return:
 
-  jump Africa
-label Africa_Return: 
 
     
     return
