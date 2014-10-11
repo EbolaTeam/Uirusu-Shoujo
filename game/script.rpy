@@ -104,6 +104,26 @@ image bg s71 = "images/backgrounds/shrines/shrine71.jpg"
 image bg s72 = "images/backgrounds/shrines/shrine72.jpg"
 image bg s73 = "images/backgrounds/shrines/shrine73.jpg"
 
+image bg xebclass = "images/backgrounds/xeb/class.jpg"
+image bg xebcorridor = "images/backgrounds/xeb/corridor.jpg"
+image bg xebdock = "images/backgrounds/xeb/dock.jpg"
+image bg xebdorm = "images/backgrounds/xeb/dorm.jpg"
+image bg xebcdorm_door = "images/backgrounds/xeb/dorm_door.jpg"
+image bg xebdorm_room = "images/backgrounds/xeb/dorm_room.jpg"
+image bg xebgarden = "images/backgrounds/xeb/garden.jpg"
+image bg xebgate = "images/backgrounds/xeb/gate.jpg"
+image bg xebgrass = "images/backgrounds/xeb/grass.jpg"
+image bg xebgym = "images/backgrounds/xeb/gym.jpg"
+image bg xebkitchen = "images/backgrounds/xeb/kitchen.jpg"
+image bg xeblibrary = "images/backgrounds/xeb/library.jpg"
+image bg xebnight = "images/backgrounds/xeb/night.jpg"
+image bg xebroof = "images/backgrounds/xeb/roof.jpg"
+image bg xebtrack = "images/backgrounds/xeb/track.jpg"
+image bg xebshower = "images/backgrounds/xeb/shower.jpg"
+image bg xebstreet = "images/backgrounds/xeb/street.jpg"
+image bg xebriver = "images/backgrounds/xeb/underground_river.jpg"
+image bg xebfin = "images/backgrounds/xeb/fin.jpg"
+
 image ebby wink = "images/sprites/EbbyWink.png"
 image ebby concerned= "images/sprites/EbbyConcerned.png"
 image ebby excited = "images/sprites/EbbyExcited.png"
@@ -111,6 +131,26 @@ image ebby sad= "images/sprites/EbbySad.png"
 image ebby rape= "images/sprites/EbbyRape.png"
 image ebby joy= "images/sprites/EbbyJoy.png"
 image ebby normal = "images/sprites/EbbyNormal.png"
+
+image aids concerned = "images/sprites/AIDS/AidsConcerned.png"
+image aids excited = "images/sprites/AIDS/AidsExcited.png"
+image aids joy = "images/sprites/AIDS/AidsJoy.png"
+image aids normal = "images/sprites/AIDS/AidsNormal.png"
+image aids rape = "images/sprites/AIDS/AidsRape.png"
+image aids sad = "images/sprites/AIDS/AidsSad.png"
+
+image joki angry = "images/sprites/JOKI/JokiAngry.png"
+image joki evil = "images/sprites/JOKI/JokiEvil.png"
+image joki joy = "images/sprites/JOKI/JokiJoy.png"
+image joki normal = "images/sprites/JOKI/JokiNormal.png"
+image joki sad = "images/sprites/JOKI/JokiSad.png"
+image joki scared = "images/sprites/JOKI/JokiScared.png"
+image joki smile = "images/sprites/JOKI/JokiSmile.png"
+image joki wtf = "images/sprites/JOKI/JokiWTF.png"
+
+image sars concerned = "images/sprites/SARS/SarsConcerned.png"
+image sars grin = "images/sprites/SARS/SarsGrin.png"
+image sars sad = "images/sprites/SARS/SarsSad.png"
 
 image vu normal = "images/sprites/VuNormal.png"
 
@@ -123,16 +163,16 @@ define centered = Character(name=' ', what_style="centered_text", window_style="
 
 # The game starts here.
 label start:
+    stop music
+    scene bg black with fade
+    menu:
+        "Origins":
+            jump Origins
+        "Shrines":
+            jump Shrines
+        "Africa":
+            jump Africa
+        "Xebs Stuff":
+            jump Xebstuff
 
-  jump Africa
-label Africa_Return: 
-
-  jump Origins
-label Origins_Return:
-
-  jump Shrines
-label Shrines_Return:
-
-
-    
     return

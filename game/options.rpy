@@ -376,4 +376,12 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
+
+    style.menu_choice.color = "#ffffffff"
+    style.menu_choice.hover_color = "000000ff"
+    style.menu_choice.font = "BAARS__.TTF"
+    style.menu_choice.size = 36
+    style.menu_choice.outlines = [(0,"#000000ff",0,0),(0,"#000000ff",0,0)]
+    style.menu_choice_button.background = "#55000088"
+    style.menu_choice_button.hover_background =  "#FF000088"
     

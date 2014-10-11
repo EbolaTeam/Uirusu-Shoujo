@@ -109,4 +109,5 @@ label Name_Confirmed:
   "Little did he know that death was stalking him."
   "It would follow him home from Africa."
   
-  jump Origins_Return
+  scene bg black with fade
+  return

@@ -92,4 +92,4 @@ label Africa:
     vc "It's called {w=2.0}'Japan'...."
 
     scene bg black with fade
-    jump Africa_Return
+    return
