@@ -174,5 +174,7 @@ label start:
             jump Africa
         "Xebs Stuff":
             jump Xebstuff
+        "Rydeas":
+            jump rydeas
 
     return
