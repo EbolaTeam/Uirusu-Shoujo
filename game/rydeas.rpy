@@ -2,11 +2,14 @@ label rydeas:
 
 image bg white = "images/placeholder/white.png"
 image bg lab = "images/placeholder/lab.jpg"
+image bg river = "images/placeholder/
 
 
 image ry = "images/placeholder/ry.png"
 image pro = "images/placeholder/pro.png"
 image sian = "images/placeholder/sian.png"
+image bsg = "images/placeholder/bsg.png"
+image nye = "images/placeholder/nye.png"
 
 define pr = Character(name='Protag')
 define si = Character(name='Sian')
@@ -20,12 +23,13 @@ show ry:
     yalign 0.7
 
 "Me" "Heads up, this isn't done yet, I just committed so I wouln't have to worry about my work dissapeearing"
+"Me" "Okay, I've polished off the first bit, run through it if you want. I'm gonna flesh it out more through today, so if you can wait I'd suggest holding off on this for a bit."
 "Me" "Hello!"
 "Me" "Just a little pre-demo explanation thingy"
 "Me" "I don't intend any specifc things here to be part of the plot..."
 "Me" "But I think what we need most right now is a frame for everyone to work in."
 "Me" "Xebec's thing here is a good example, a basic layot of possible events that we can go and fill in."
-"Me" "For example, the little story place wrote here () could fit perfectly if someone just threw it into what xebec has."
+"Me" "For example, the little story Linder wrote about zmapp and ebby chasing eachother could fit perfectly if someone just threw it into what xebec has."
 "Me" "I think it woud be good if someone make a more broader framework that we can all throw our little pieces into, potentially even something we could throw smaller little frames into"
 "Me" "That is what I intend to do here."
 "Me" "If anyone has any ideas please feel free to throw them inside this scrypt somewhere."
@@ -87,18 +91,13 @@ pr "Anyway, more specifics. My project isn't working on anything inherintly bad,
 pr "Same goes for good for a couple hours a week, and management like that."
 pr "How does this shit work you ask? Well, baic evolution works by tiny changes happening when an organism recreates itself..."
 pr "...and the resulting changes, mutations, affecting the oranism's chances of yet again recreating itself."
-
-
-
-
-
+pr "Spread this over billions of years and you get, well, all living shit."
+pr "For humans this process happenes once ever 20 or so years, viruses can do so in minutes."
+pr "But the difference between the times is really not that big, 20 years might as well be 2 minutes, cool shit's still not gonna happen in my lifetime"
+pr "Because most copies end up being too close to the original it takes ages before you even get a chace at something cool, and that chance is still probably 1 in a million."
+pr "A medicin might kill 99.99\% of viruses, but that 1 in 10 billion retard virus babby with the genetic fuckup thatmakes it immune to penicilin's gonna be the Adam of a new race"
+pr "I decided to speed up this process by making each copy, each child, have a lot more changes than usuall."
 pr "Radiation tends to do the same but it just shreads the DNA leaving utter destruction."
-
-
-
-
-
-
 pr "What I wanted is to affect every child, but not so drasticly."
 pr "I did this by using a organism of my own, a virus that lives on, or really just bondes to other viruses, changing their coppy's."
 pr "Nice, non-destructive, doesn't really hurt the viruses. No need to reengineer every bloody organism I want to work on, just shake and go"
@@ -111,7 +110,7 @@ pr "Dammit girl, Can't you see I'm monologing to myself?"
 
 show sian:
     zoom 1.0
-    xalign 0.8
+    xalign 0.3
     yalign 0.75
 
 si "You do that every day Sir, but this is important."
@@ -130,7 +129,19 @@ si "They're here to see you, Sir. It's important. With what's goin on overseas, 
 pr "Who are they?"
 si "I'll let them in and you can see for yourself"
 pr "Oh mein god"
+
+show bsg:
+    zoom 1.0
+    xalign 0.7
+    yalign 0.7
+
 bsg "Hello, you must be the doctor. It's a pleasure to meet you"
+
+show nye:
+    zoom 1.0
+    xalign 1.0
+    yalign 1.0
+
 bn "Also Hi. It's an honour"
 pr "Are you kidding me, you guys are the 2 greatest minds of our generation, the pleasure's all mine!"
 bsg "You might not think so now, but from what I've read your reasearch is groundbreaking. You can cure anything. Well we need a cure for Ebola, now."
@@ -149,11 +160,11 @@ bsg "Elaborate"
 pr "You see, rather than bashing my brain on working out solutions to problems I just let evolution do its thing and study the results."
 pr "My finding are based on the most fit cells that fight the issue, I reverse engineer them from there, compare the changes."
 bsg "That's totally, utterly cheating and I love it. But how do you make so many permutations? That would take years, you've fixed thing thrown at you in a couple of days! Small as they may have been, it was a greater acomplashement than anyone has managed before. How do you do this"
-pr "Well, I use something I created ages ago, it's a very basic thing that promotes changes in every single offspring, nothing too fancy, I found it by pot luckk. But when I apply it to some of the more common cells in humans, expose the relults to viruses the good cells literally just sit there, waiting for me to notice them"
+pr "Well, I use something I created ages ago, it's a very basic thing that promotes changes in every single offspring, nothing too fancy, I found it by pot luck. But when I apply it to some of the more common cells in humans, expose the relults to viruses the good cells literally just sit there, waiting for me to notice them"
 bsg "How much of this mutagen have you got? Have you tried using it on Ebola?"
-pr "I-I'm sorry, waht?"
+pr "I-I'm sorry, what?"
 bsg "Have you applied the resulting cells to ebola samples to see if anything will hurt it?"
-pr "Oh, sorry. Um, no. Not yet."
+pr "Oh, sorry. Um, no. Not yet. Not recently, at least."
 bsg "Coudl we run through it now? We have all day, and it's what the world needs right now."
 pr "Sure, we can do it now. Grab that incubator over there, Sian, get me a Ebola sample pack"
 bsg "This one?"
@@ -176,3 +187,7 @@ si "Uh, yes?"
 pr "Was that what I though it was?"
 si "Um, yes Sir"
 pr "Fuck."
+
+
+
+
