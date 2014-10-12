@@ -2,7 +2,7 @@ label rydeas:
 
 image bg white = "images/placeholder/white.png"
 image bg lab = "images/placeholder/lab.jpg"
-image bg river = "images/placeholder/
+image bg river = "images/placeholder/river.jpg"
 
 
 image ry = "images/placeholder/ry.png"
