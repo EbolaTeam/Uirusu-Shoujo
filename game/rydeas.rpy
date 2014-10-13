@@ -3,6 +3,7 @@ label rydeas:
 image bg white = "images/placeholder/white.png"
 image bg lab = "images/placeholder/lab.jpg"
 image bg river = "images/placeholder/river.jpg"
+image bg nurg = "images/placeholder/nurg.jpg"
 
 
 image ry = "images/placeholder/ry.png"
@@ -191,3 +192,25 @@ pr "Fuck."
 
 
 
+
+scene bg black with fade
+scene bg river with fade
+centered "Love is life"
+
+show ry:
+    xalign 0.1
+    yalign 0.7
+
+"Me" "(Potential boat sequence, maybe?)"
+"Me" "Could be vauge, maybe this (And the following) are slowly rememberes over the course of the 1st act?"
+
+
+
+
+scene bg black with fade
+scene bg nurg
+show pro:
+    xalign 0.1
+    yalign 1.0
+pr "h-Helo?"
+pr "Where am I?"
