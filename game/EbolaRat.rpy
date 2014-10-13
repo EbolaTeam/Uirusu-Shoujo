@@ -1,5 +1,5 @@
 label EbolaRat:
 
-  $ renpy.movie_cutscene("EbolaRat.mpg")
+  $ renpy.movie_cutscene("EbolaRat.ogv")
 
   return
