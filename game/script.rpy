@@ -176,5 +176,7 @@ label start:
             jump Xebstuff
         "Rydeas":
             jump rydeas
+        "Ebola Rat":
+            jump EbolaRat
 
     return
