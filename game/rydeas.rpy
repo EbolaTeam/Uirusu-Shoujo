@@ -11,20 +11,25 @@ image pro = "images/placeholder/pro.png"
 image sian = "images/placeholder/sian.png"
 image bsg = "images/placeholder/bsg.png"
 image nye = "images/placeholder/nye.png"
+image zmapp = "images/placeholder/zmapp.png"
+image ebbyz = "images/placeholder/ebbyz.png"
 
 define pr = Character(name='Protag')
 define si = Character(name='Sian')
 define bsg = Character(name='Black Science Guy')
 define bn = Character(name='Bill Nye')
 define nur = Character(name='Nurgle')
+define zma = Character(name='Zmapp-chan')
+define ug = Character(name='Unknown Girl')
+
+
 scene bg white
 
 show ry:
     xalign 0.1
     yalign 0.7
 
-"Me" "Heads up, this isn't done yet, I just committed so I wouln't have to worry about my work dissapeearing"
-"Me" "Okay, I've polished off the first bit, run through it if you want. I'm gonna flesh it out more through today, so if you can wait I'd suggest holding off on this for a bit."
+
 "Me" "Hello!"
 "Me" "Just a little pre-demo explanation thingy"
 "Me" "I don't intend any specifc things here to be part of the plot..."
@@ -306,6 +311,8 @@ menu:
         $place="corridorRy"
     "Have lunch in the library.":
         $place="libraryRy"
+    "Go exploring.":
+        $place="explore"
 
 $destination="day"+str(day)+"_"+time+"_"+place
 $renpy.call(destination)
@@ -506,6 +513,76 @@ label day1_lunchRy_libraryRy:
     ec "Having a quiet lunch with malaria in the library."
     $malaria_affection+=1
     return
+    
+    
+    
+    
+    
+    
+label day1_lunchRy_explore:
+    scene bg xebriver with fade
+    show pro:
+        zoom 1.0
+        xalign 0.1
+        yalign 1.0
+    pr "How did I end up here?"
+    pr "I realy shouldn't have walked around without someone to guide me, now I'm lost"
+    show zmapp:
+        zoom 1.0
+        xalign 0.9
+        yalign 0.7
+    "I think there's someone else here"
+    pr "Hello?"
+    ug "WHAAAAAAAAA. Don’t sneak up on me like that! I’m working here."
+    pr "Working on what?"
+    ug "Oh, you’ll see… Now, let me get back to work."
+    ug "So… if I put this one here…"
+    ug "OH SHIT"
+    show ebby rape:
+        zoom 1.0
+        xalign 0.7
+        yalign 0.7
+    ec "IT'S RAPE TIME"
+    ug "No, No, No!"
+    ec "I GOT YOU NO-oh."
+    ec "MC?"
+    hide zmapp
+    ec "OH GOD I’M SO SORRY. I didn’t mean to hurt you. Are you ok?"
+    pr "Yes, I think."
+    ec "Anyway, you didn’t happen to see someone in green run this way, did you?"
+    pr "Yeah… they went that way, why?"
+    ec "I’LL TELL YOU LATER."
+    
+    
+    scene bg xebroof
+    "I think I finally found them"
+    show ebby sad:
+        zoom 1.0
+        xalign 0.7
+        yalign 0.7
+    show zmapp:
+        zoom 1.0
+        xalign 0.9
+        yalign 0.7
+    ug "Come on, ‘Pinky’, you’ll have to do better than that if you want your hat back."
+    ec "Oh yeah?"
+    hide ebby
+    hide zmapp
+    show ebbyz:
+        zoom 1.0
+        xalign 0.7
+        yalign 0.7
+    ug "Shit."
+    ec "Wait, we're laste for class"
+    hide ebbyz
+    show zmapp:
+        zoom 1.0
+        xalign 0.7
+        yalign 0.9
+    ug "(Panting on the ground)"
+    scene bg black with fade
+    return
+
 
 label day1_afternoonRy:
     scene bg xebclass with fade
@@ -644,6 +721,7 @@ label decisionRy:
     Aids        [aids_affection]\n
     Malaria     [malaria_affection]"
 
+    
     if ebby_affection > 2:
         $bestgirl="ebby"
     elif sars_affection > 2:
