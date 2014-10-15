@@ -159,12 +159,12 @@ image sars sad = "images/sprites/SARS/SarsSad.png"
 
 image vu normal = "images/sprites/VuNormal.png"
 
-image ctc_tball = anim.Filmstrip("images/tballstrip3.png", (30,30), (8,1), 0.1, xpos=1840, ypos=1020, xanchor=0, yanchor=0)
+image ctc = anim.Filmstrip("images/ec_c2cstrip.png", (79,40), (8,1), 0.1, xpos=1720, ypos=1020, xanchor=0, yanchor=0)
 
-define ec = Character(name='Ebola-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"')
-define vc = Character(name='Vu-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"')
-define narrator = Character(name=' ', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"')
-define nn = Character(name=' ', what_color="#dddddd", who_color="#000000", what_prefix='', what_suffix='')
+define ec = Character(name='Ebola-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define vc = Character(name='Vu-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define narrator = Character(name=' ', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define nn = Character(name=' ', what_color="#dddddd", who_color="#000000", what_prefix='', what_suffix='', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 define centered = Character(name=' ', what_style="centered_text", window_style="centered_window")
 
 # The game starts here.
