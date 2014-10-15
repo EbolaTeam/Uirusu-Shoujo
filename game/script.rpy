@@ -123,6 +123,11 @@ image bg xebshower = "images/backgrounds/xeb/shower.jpg"
 image bg xebstreet = "images/backgrounds/xeb/street.jpg"
 image bg xebriver = "images/backgrounds/xeb/underground_river.jpg"
 image bg xebfin = "images/backgrounds/xeb/fin.jpg"
+image bg xebcult3 = "images/backgrounds/xeb/cult3.jpg"
+image bg xebcult5 = "images/backgrounds/xeb/cult5.jpg"
+image bg xebcompound = "images/backgrounds/xeb/liberia_village2.jpg"
+image bg xebhospital = "images/backgrounds/xeb/hospital.jpg"
+image bg xebpop = "images/backgrounds/xeb/pop.jpg"
 
 image ebby wink = "images/sprites/EbbyWink.png"
 image ebby concerned= "images/sprites/EbbyConcerned.png"
@@ -159,6 +164,7 @@ image ctc_tball = anim.Filmstrip("images/tballstrip3.png", (30,30), (8,1), 0.1, 
 define ec = Character(name='Ebola-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"')
 define vc = Character(name='Vu-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"')
 define narrator = Character(name=' ', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"')
+define nn = Character(name=' ', what_color="#dddddd", who_color="#000000", what_prefix='', what_suffix='')
 define centered = Character(name=' ', what_style="centered_text", window_style="centered_window")
 
 # The game starts here.
