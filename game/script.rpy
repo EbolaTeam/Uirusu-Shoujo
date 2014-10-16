@@ -184,5 +184,7 @@ label start:
             jump rydeas
         "Ebola Rat":
             jump EbolaRat
+        "Alike API Test":
+            jump alike
 
     return
