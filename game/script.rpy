@@ -1,5 +1,7 @@
 # You can place the script of your game in this file.
 
+# Character relations API
+
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
 
@@ -184,5 +186,7 @@ label start:
             jump rydeas
         "Ebola Rat":
             jump EbolaRat
+        "Alike API Test":
+            jump alike
 
     return
