@@ -18,9 +18,16 @@ define pr = Character(name='Protag')
 define si = Character(name='Sian')
 define bsg = Character(name='Black Science Guy')
 define bn = Character(name='Bill Nye')
-define nur = Character(name='Nurgle')
+define nur = Character(name='Giant Scary Blob Thing')
 define zma = Character(name='Zmapp-chan')
 define ug = Character(name='Unknown Girl')
+define ai = Character(name='Aids-chan')
+
+$ AidsMeet = 0
+$ AidsCount = 0
+
+
+$ EbbyBrowniePoints = 0
 
 
 scene bg white
@@ -375,7 +382,7 @@ menu:
         $place="dormRy"
     "Take a look around school grounds.":
         $place="groundsRy"
-    "Study at the library before classes.":
+    "Get Ebby to show you around the classrooms.":
         $place="libraryRy"
     "Head straight to class.":
         $place="classRy"
@@ -525,19 +532,8 @@ label day1_morningRy_groundsRy:
     return
 
 
-label day1_morningRy_libraryRy:
-    scene bg xeblibrary with fade
-    show ebby concerned:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
-    show aids sad:
-        zoom 1.8
-        xalign 0.9
-        yalign 1.0
-    ec "Visit the library and see Aids reading a naughty book!"
-    $aids_affection+=1
-    return
+
+
 
 label day1_morningRy_classRy:
     scene bg xebclass with fade
@@ -583,19 +579,7 @@ label day1_lunchRy_roofRy:
     $sars_affection+=1
     return
 
-label day1_lunchRy_corridorRy:
-    scene bg xebcorridor with fade
-    show ebby sad:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
-    show aids sad:
-        zoom 1.8
-        xalign 0.9
-        yalign 1.0
-    ec "Poor Aids wanted to have lunch with Hiv but he is not around so she ate with protag instead."
-    $aids_affection+=1
-    return
+
 
 label day1_lunchRy_libraryRy:
     scene bg xeblibrary with fade
@@ -710,19 +694,7 @@ label day1_afternoonRy_gymRy:
     $sars_affection+=1
     return
 
-label day1_afternoonRy_gateRy:
-    scene bg xebgate with fade
-    show ebby sad:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
-    show aids sad:
-        zoom 1.8
-        xalign 0.9
-        yalign 1.0
-    ec "Poor Aids wanted to walk home with Hiv but he is off to bang a floozy."
-    $aids_affection+=1
-    return
+
 
 label day1_afternoonRy_dockRy:
     scene bg xebdock with fade
@@ -767,19 +739,7 @@ label day1_eveningRy_gardenRy:
     $sars_affection+=1
     return
 
-label day1_eveningRy_showerRy:
-    scene bg xebshower with fade
-    show ebby rape:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
-    show aids joy:
-        zoom 1.8
-        xalign 0.9
-        yalign 1.0
-    ec "Aids walks in on protag naked in the shower! What a perverted girl!"
-    $aids_affection+=1
-    return
+
 
 label day1_eveningRy_roomRy:
     scene bg xebdorm_room with fade
