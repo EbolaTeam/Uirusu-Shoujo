@@ -138,6 +138,12 @@ image ebby sad= "images/sprites/EbbySad.png"
 image ebby rape= "images/sprites/EbbyRape.png"
 image ebby joy= "images/sprites/EbbyJoy.png"
 image ebby normal = "images/sprites/EbbyNormal.png"
+image ebby toastdead = "images/sprites/EbbyToastDead.png"
+image ebby toastsad = "images/sprites/EbbyToastSad.png"
+image ebby toastjoy = "images/sprites/EbbyToastJoy.png"
+
+image mal = Placeholder("girl")
+image bp = Placeholder("girl")
 
 image aids concerned = "images/sprites/AIDS/AidsConcerned.png"
 image aids excited = "images/sprites/AIDS/AidsExcited.png"
@@ -158,13 +164,20 @@ image joki wtf = "images/sprites/JOKI/JokiWTF.png"
 image sars concerned = "images/sprites/SARS/SarsConcerned.png"
 image sars grin = "images/sprites/SARS/SarsGrin.png"
 image sars sad = "images/sprites/SARS/SarsSad.png"
-
+image sars notamused = "images/sprites/SARS/SarsNotAmused.png"
 image vu normal = "images/sprites/VuNormal.png"
 
 image ctc = anim.Filmstrip("images/ec_c2cstrip.png", (79,40), (8,1), 0.1, xpos=1720, ypos=1020, xanchor=0, yanchor=0)
 
 define ec = Character(name='Ebola-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 define vc = Character(name='Vu-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define sars = Character(name='Sars-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define joki = Character(name='Joki-kun', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define eidzu = Character(name='Eidzu-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define mal = Character(name='Malaria-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define bp = Character(name='BP-sama', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define teach = Character(name='Teacher', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+
 define narrator = Character(name=' ', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 define nn = Character(name=' ', what_color="#dddddd", who_color="#000000", what_prefix='', what_suffix='', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 define centered = Character(name=' ', what_style="centered_text", window_style="centered_window")

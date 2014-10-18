@@ -16,20 +16,16 @@ call day1_morning
 
 $time = "morning"
 
-scene bg xebdorm with fade
-show ebby normal:
-    zoom 1.0
-    xalign 0.1
-    yalign 1.0
+
 
 menu:
-    "What to do?"
+    "Well, what should I do?"
 
     "Stay at the dorm a while longer.":
         $place="dorm"
     "Take a look around school grounds.":
         $place="grounds"
-    "Study at the library before classes.":
+    "Study at the library.":
         $place="library"
     "Head straight to class.":
         $place="class"
@@ -216,18 +212,122 @@ label intro:
 
     scene bg black with fade
 
-    return
+    scene bg xebriver with fade
+    show joki normal:
+        zoom 1.8
+        xalign 0.1
+        yalign 1.0
+    joki "This is my scene where I tell the protag a bit about the universe!"
+
+    show joki evil
+
+    joki "Don't talk shit about my boat-fu tho"
+return
 
 
 label day1_morning:
-    scene bg xebdorm_room with fade
-    show ebby joy:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
-    ec "Here the protag wakes up in the morning!"
 
-    return
+scene bg xebdorm_room with fade
+
+nn "I wake to sunlight streaming in the window and give a stretch."
+nn "mmmm this is nice - when was the last time waking up in the morning felt so damn good?"
+
+scene bg xebshower with fade
+
+nn "After getting washed and dressed I give myself a look over in the mirror.{p}
+so this is how I look in a school uniform?{p}
+Not half bad If I say so myself.{p}"
+nn "Laughing I head down for breakfast."
+
+scene bg xebdorm with fade
+
+show sars notamused at left:
+    zoom 1.5
+
+sars "AHH! Its the pervert! Don’t look at him or you’ll get molested!"
+
+show aids concerned behind sars:
+    zoom 1.8
+    xalign 0.3
+    yalign 1.0
+eidzu "ehhhh? what?!?!?"
+"Good morning ladies!"
+sars "Grrrrrr!"
+eidzu "ah..g-good morning!"
+
+hide sars
+hide aids
+
+show mal happy at left:
+    xalign 0.1
+mal "*smile* *nod*"
+
+show ebby toastdead behind mal:
+    xalign 0.3
+    yalign 1.0
+
+ec "...."
+
+nn "Ebola-chan is nibbling on her toast, but she seems to be still asleep
+I guess she isn’t good with mornings."
+
+hide ebby
+hide mal
+
+show bp happy:
+    xalign 0.1
+
+bp "Now now, settle down and enjoy your breakfast! It’s the most important meal of the day you know!"
+
+nn "Not one to refuse a nice homecooked meal, I get stuck in."
+
+"Mmm! this is delicious!"
+
+bp "I’m glad it’s to your tastes!"
+
+"Definitly!"
+
+nn "I could easily get used to this." 
+
+hide bp
+
+show sars notamused at left:
+    zoom 1.5
+sars "I’m done! Come on Eidzu, lets leave now, I don’t want to be around HIM any longer than I have to!"
+show aids concerned behind sars:
+    zoom 1.8
+    xalign 0.3
+    yalign 1.0
+eidzu "ah! yes - we’ll be going now!"
+
+hide sars
+hide aids
+
+nn "She barely has time to call out as she is dragged out the door"
+
+show mal notmal at left:
+    xalign 0.1
+
+mal "I should be going too, I want to study a little before class while it’s quiet."
+mal "Thank you for the meal."
+
+show bp happy behind mal:
+    xalign 0.3
+
+bp "Have a good day!"
+mal "I’ll see you two in class."
+
+hide mal
+hide bp
+
+show ebby toastdead:
+    xalign 0.1
+    yalign 1.0
+ec "..."
+
+hide ebby
+
+return
 
 
 label day1_morning_dorm:
