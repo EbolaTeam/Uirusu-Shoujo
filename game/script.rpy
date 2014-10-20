@@ -130,6 +130,7 @@ image bg xebcult5 = "images/backgrounds/xeb/cult5.jpg"
 image bg xebcompound = "images/backgrounds/xeb/liberia_village2.jpg"
 image bg xebhospital = "images/backgrounds/xeb/hospital.jpg"
 image bg xebpop = "images/backgrounds/xeb/pop.jpg"
+image bg xebdesk = "images/backgrounds/xeb/desk.jpg"
 
 image ebby wink = "images/sprites/EbbyWink.png"
 image ebby concerned= "images/sprites/EbbyConcerned.png"
@@ -165,6 +166,15 @@ image sars concerned = "images/sprites/SARS/SarsConcerned.png"
 image sars grin = "images/sprites/SARS/SarsGrin.png"
 image sars sad = "images/sprites/SARS/SarsSad.png"
 image sars notamused = "images/sprites/SARS/SarsNotAmused.png"
+
+image rab happy = "images/sprites/RABIES/RabHappy.png"
+image rab normal = "images/sprites/RABIES/RabNormal.png"
+image rab sad = "images/sprites/RABIES/RabSad.png"
+image rab shock = "images/sprites/RABIES/RabShock.png"
+image rab unsure = "images/sprites/RABIES/RabUnsure.png"
+image rab violent = "images/sprites/RABIES/RabViolent.png"
+image rab annoyed = "images/sprites/RABIES/RabAnnoyed.png"
+
 image vu normal = "images/sprites/VuNormal.png"
 
 image ctc = anim.Filmstrip("images/ec_c2cstrip.png", (79,40), (8,1), 0.1, xpos=1720, ypos=1020, xanchor=0, yanchor=0)
@@ -175,6 +185,7 @@ define sars = Character(name='Sars-chan', what_color="#fdb2b6", who_color="#0000
 define joki = Character(name='Joki-kun', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 define eidzu = Character(name='Eidzu-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 define mal = Character(name='Malaria-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define rab = Character(name='Rabies-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 define bp = Character(name='BP-sama', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 define teach = Character(name='Teacher', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 
@@ -197,9 +208,10 @@ label start:
             jump Xebstuff
         "Rydeas":
             jump rydeas
+        "Linder":
+            jump linderstuff
         "Ebola Rat":
             jump EbolaRat
         "Alike API Test":
             jump alike
-
     return
