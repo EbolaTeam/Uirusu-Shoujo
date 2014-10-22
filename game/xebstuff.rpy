@@ -331,12 +331,121 @@ return
 
 
 label day1_morning_dorm:
-    scene bg xebstreet with fade
-    show ebby normal:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
-    ec "They are late! Ebby runs to school with protag with toast in her mouth!"
+    nn "Well there is no sense in being too early on my first day, but I don’t want to be late either."
+    nn "I head back to my room and double check that I have everything I need for the day."
+    scene bg xebdorm_room with fade
+    nn "Ok, looking good."
+    scene bg xebdorm_door with fade
+    nn "All right, time to go.{p}
+    I’m actually starting to feel a bit nerv-"
+    ec "AAAAAAAHHHHHHHHHHHHHHHHHHHHHH!!!!!!!!!"
+    nn "With a toast-muffled cry Ebola-chan bursts out of into the hall."
+    show ebby toastsad at left
+    ec "Mfff mff! Mfff mfffff mff mff mffff!"
+    nn "Years of cultist experience in understanding the esoteric utterances of summoned other-worldly entities kick in instantly."
+    ec "{color=#57bab7}(Oh no! I'm going to be late!){/color}"
+    "No, no, you’re ok. We have plenty of time, it’s only half past."
+    nn "I glance up at the clock over the door - it says ten to.{p}..oh no."
+    nn "My watch still says half past{p}..and isn’t ticking."    
+    "AHHHHH!! I’m going to be late!"
+    ec "mfff mffff mfffff-mff mmmmff mffff, mfff!\"{p}
+    \"{color=#57bab7}(That's what Ebola-chan already said, silly!){/color}"
+    nn "Think, think think - yeah we can do this."
+    "If we run we can still make it!"
+    nn "I grab her hand and drag her out the door!"
+    ec "mffffffff!\"{p}
+    \"{color=#57bab7}(Kyaaaaa!){/color}"
+    "We’ll be heading out!"
+    bp "Have a good day!"
+
+
+    hide ebby
+    show bg xebstreet with fade
+    show bg xebstreet2 with fade
+    show bg xebstreet3 with fade
+    nn "It’s actually quite exhilarating.{p}
+    Running along like this, I’d almost forgotten this feeling, legs pounding, wind in my hair."
+    nn "I feel...alive."
+    nn "Being hand in hand with a cute girl is not unpleasant either."
+    nn "Although her status as ‘girl’ is perhaps open to debate, she certainly measures up to cute in my book."
+    show ebby toastjoy at left
+    nn "I turn to look at her, twintails streaming she runs along beside me earnestly."
+    nn "She flashes me a smile and gives my hand a friendly squeeze."
+    ec "mfff mf mf! mf mfff mf mf!\"{p}
+    \"{color=#57bab7}(Keep it up! We can do it!){/color}"
+    hide ebby
+    nn "Giving her hand a squeeze back I run on.{p}
+    Why the hell she still has the toast in her mouth is beyond me."
+
+    show bg xebstreet4 with fade
+    show bg xebstreet5 with fade
+    show bg xebgate with fade
+    nn "We skid to a stop in front of the school gate."
+    "I don't know the way from here!"
+    show ebby toastjoy at left
+    ec "mmff mffff, mmfff-mfff mfff!\"{p}
+    \"{color=#57bab7}(Don't worry, Ebola-chan does!){/color}"
+    hide ebby
+    nn "pulling me along she dashes off towards the main building."
+    show bg xebgrass with fade
+    show bg xeblockers with fade
+    show bg xebstairs with fade
+    show bg xebcorridor with fade
+    show bg xebclass with fade
+
+    show ebby toastjoy at left
+    ec "MFFF!!\"{p}
+    \"{color=#57bab7}(SAFE!!){/color}"
+    hide ebby
+    show sars stars at left:
+        zoom 1.5
+    sars "WHAT THE HELL ARE YOU DOING WITH MY EBOLA-CHAN!!!"
+    with vpunch
+    sars "PERVERT!"
+    with hpunch
+    sars "MOLESTER!"
+    with vpunch
+
+    nn "Before I can even catch my breath I’m assaulted by a manic sars-chan."
+
+    show ebby toastsad
+    ec "mfff mf mfff-mfff! mff mmmfffff mfff mfff!\"{p}
+    \"{color=#57bab7}(Stop it Sars-chan!  It's nothing like that!){/color}"
+    show sars concerned at left:
+        zoom 1.5
+    sars "What? Take that toast out of your mouth, I can't understand a word!"
+    show sars stars at left:
+        zoom 1.5
+    sars "or did he force it on you?"
+    with hpunch
+    sars "TOAST FETISHIST!"
+    ec "mffff! mf mmmffff.\"{p}
+    \"{color=#57bab7}(Ohh! I forgot.){/color}"
+    nn "finally she takes it out of her mouth."
+    show ebby rape
+    ec "%(player_name)s-kun didn’t do anything like that! Stop being so mean!{p}
+    He was very kind and ran with me all the way here so that I wouldn’t be late!"
+    show sars concerned at left:
+        zoom 1.5
+    sars "hmph! I dont care how kind he is, he shouldn’t be holding your hand with such familiarity!"
+    show ebby concerned
+    ec "eh?"
+    nn "She looks down as if suddenly realising we’re still holding hands."
+    show ebby joy
+    ec "oh! hehe"
+    nn "she gives my hand a last friendly squeeze before letting go and giving me a quick bow."
+    ec "Thank you %(player_name)s-kun, I wouldn't have made it on time without you!"
+    nn "Now I actually start to feel embarrassed."
+    "We both made it in time, that’s the important thing."
+    teach "All right! Settle down and get to your seats everyone!"
+    nn "And here is the teacher now, looks like we really did make it just in time."
+    nn "Ebola-chan flashes me a quick smile and heads to her seat."
+    hide ebby
+    sars "I'm watching you, toast-fetishist!"
+    hide sars
+    "Yes, this is going to be an experience indeed."
+
+    scene bg black with fade
     $ebby_affection+=1
     return
 
