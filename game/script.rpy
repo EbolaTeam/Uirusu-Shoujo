@@ -182,6 +182,18 @@ image rab unsure = "images/sprites/RABIES/RabUnsure.png"
 image rab violent = "images/sprites/RABIES/RabViolent.png"
 image rab annoyed = "images/sprites/RABIES/RabAnnoyed.png"
 
+image marburg annoyed = "images/sprites/MARBURG/MarburgAnnoyed.png"
+image marburg normal = "images/sprites/MARBURG/MarburgNormal.png"
+image marburg rape = "images/sprites/MARBURG/MarburgRape.png"
+
+image who angry = "images/sprites/WHO/WhoAngry.png"
+image who concerned = "images/sprites/WHO/WhoConcerned.png"
+image who joy = "images/sprites/WHO/WhoJoy.png"
+image who normal = "images/sprites/WHO/WhoNormal.png"
+image who suprised = "images/sprites/WHO/WhoNormal.png"
+
+image zmapp normal = "images/sprites/ZMAPP/ZmappNormal.png"
+
 image vu normal = "images/sprites/VuNormal.png"
 
 image ctc = anim.Filmstrip("images/ec_c2cstrip.png", (79,40), (8,1), 0.1, xpos=1720, ypos=1020, xanchor=0, yanchor=0)
@@ -194,6 +206,9 @@ define eidzu = Character(name='Eidzu-chan', what_color="#fdb2b6", who_color="#00
 define mal = Character(name='Malaria-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 define rab = Character(name='Rabies-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 define bp = Character(name='BP-sama', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define wc = Character(name='WHO-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define zmapp = Character(name='Zmapp-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+define marburg = Character(name='Zmapp-chan', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 define teach = Character(name='Teacher', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 
 define narrator = Character(name=' ', what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
@@ -221,4 +236,6 @@ label start:
             jump EbolaRat
         "Alike API Test":
             jump alike
+        "roisaber":
+            jump roisaber
     return
