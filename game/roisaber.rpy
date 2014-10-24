@@ -1,6 +1,8 @@
 label roisaber:
 
   $route=""
+  $stay_flag = 0
+  $who_affection = 0
 
   # Scene: inside Protag-kun bedroom, early morning
   scene bg xebdorm_room with fade
@@ -23,7 +25,7 @@ label roisaber:
   wc "They're blaming us for spreading the diseases. I'm going to go check on Z-MAPP-chan! You wait here!"
 
   # WHO-chan shifts offscreen.
-  show who normal slideawayleft
+  show who normal at right
 
   menu:
     "What should I do?"
@@ -300,5 +302,542 @@ label UndergroundLab2:
   marburg "What a bunch of primitives. No wonder they can't stand their ground against me."
   show ebby joy at left
   ec "That's okay, Oni-sama! That just means that WHO-chan is farther than ever from finding a cure for us!"
+  wc "You two... this is all your fault!"
 
-jump start
+  menu:
+    "What should I do?"
+
+    "Agree with WHO-chan":
+        $route="E1"
+    "Disagree with WHO-chan":
+        $route="E2"
+
+  $renpy.call(route)
+  
+label E1:
+  nn "If you two would just learn to get along with humanity, we could let you guys outside the compound!"
+  show ebby sad at left
+  ec "I didn't do anything wrong. I just wanted to share my LOVE with the world."
+  show marburg annoyed at right
+  marburg "Don't blame me for the failings of your own species."
+  # Medium unhappy sound + medium Marburg-sama penalty
+  jump Biohazard_quarantine_door
+
+label E2:
+  nn "This isn't their fault, WHO-chan, and it isn't your fault either. This is the fault of the rioters who allowed themselves to be controlled by fear. Rebuilding is going to be a lot of work, but let's not give up so easily!"
+  # Ebola-chan akanbe sprite
+  show ebby wink at left
+  ec "That's right! You've got another thirty years of failure ahead of you."
+  # Angry WHO-chan sprite
+  show ebby concerned at left
+  wc "What do you mean, another!? I'm only twenty four!"
+  # Small unhappy sound + small WHO-chan penalty
+  jump Biohazard_quarantine_door
+
+label Biohazard_quarantine_door:
+  wc "Sigh. Just make sure the facility doors are sealed, Protag-kun. We don't need these two escaping and causing any more trouble than they already are."
+ 
+  #Scene: Biohazard quarantine door
+  scene bg hospital_beds3 with fade
+
+  nn "Well, at least the door still closes securely. I hope nobody from the town picked up any viruses while they were busy smashing our equipment."
+  #'Seductive' Marburg-sama sprite
+  marburg "Hey, lover. What do you think about giving me the code to the door?"
+  # Sweatdrop Protag-kun sprite
+  nn "Wh-what!? No way! Marburg-sama, you know you're not supposed to be lurking over here."
+  marburg "*sigh* You have no right to keep me as a prisoner here."
+  nn "But - you kill people!"
+  marburg "So? You kill cows and chickens, don't you? I have just as much right to live in this world as you do."
+  nn "That's... different."
+  marburg "It is? Why?"
+  nn "Because human beings matter more than chickens and cows!"
+  marburg "Who decided that? Human beings, right?"
+  nn "What are you trying to say, Marburg-sama?"
+  # Sword draw sound
+  # angry Marburg-sama sprite
+  show marburg annoyed at right
+  marburg "I'm saying you'd better get out of my way, or I'll have to go through you!"
+ 
+  menu:
+    "What should I do?"
+
+    "Be conciliatory":
+        $route="F1"
+    "Be flirtatious":
+        $route="F2"
+    "Be defiant":
+        $route="F3"
+
+  $renpy.call(route)
+ 
+label F1:
+  nn "I know it's hard for you to be cooped up in this facility all the time. But we're doing it for the good of everyone, you included! If we can find a vaccine for you, then we won't have to keep you contained any more. In fact, we'll need to have you around so that we're able to keep manufacturing the vaccine!"
+  marburg "Why should I help an idiot like you?"
+  nn "Don't help me, Marburg-sama. Help yourself by learning how to work with other people."
+  # Sword sheath noise. Small happy sound, small Marburg-sama bonus
+  marburg "I can buy myself more time by escaping when no one's looking..."
+  # Marburg-sama sprite goes offscreen, relieved Protag-kun sprite
+  nn "That was too close..."
+  jump Destroyed_treatment_room
+
+label F2:
+  nn "But Marburg-sama, this place would be intolerable without seeing your lovely face every day!"
+  # Medium unhappy sound, medium Marburg-sama penalty
+  marburg "You idiot. Did you really think I would fall for such a cheesy line?"
+  nn "I... uh..."
+  marburg "I'll be back. Sooner or later you'll let your guard down, and when you do, just remember who it was that defeated you."
+  # Sword sheath sound. Marburg-sama sprite goes offscreen
+  nn "Is she serious? I'd better watch my back..."
+  jump Destroyed_treatment_room
+
+label F3:
+  nn "I'm not letting you out of this facility! Even if I have to lay down my life, I'll protect the people of this world!"
+  # Medium happy sound, medium Marburg-sama bonus, happy Marburg sprite
+  marburg "Seriously? Baka... fine, you win this round. After all, you have to sleep sometime..."
+  # Marburg-sama sprite goes offscreen.
+  nn "Whew! That was way too close..."
+  jump Destroyed_treatment_room
+
+label Destroyed_treatment_room:
+  nn "I'd better go check up on WHO-chan and make sure everything's okay back in the treatment room."
+
+  # Scene: Destroyed treatment room
+  scene bg hospital_beds3 with fade
+  show zmapp normal at center
+  nn "Hey, ZMAPP-chan. Where's WHO-chan?"
+  zmapp "My sensors are picking her up in her office. She appears to be on the phone with the World Health Organization. She's also crying. Would you like me to repeat their conversation for you?"
+  nn "Uh, no... thank you... that won't be necessary. What are you doing here?"
+  zmapp "Per WHO-chan's orders, I am sterilizing and disposing of all potentially biohazardous material in the treatment room. Do you wish to add an additional task to my queue?"
+  nn "No, you're doing more than enough already."
+
+  menu:
+    "What should I do?"
+
+    "Don't offer to help":
+        $route="G1"
+    "Offer to help":
+        $route="G2"
+
+  $renpy.call(route)
+
+label G1:
+  # Don't offer to help
+  jump lab_teamwork
+
+label G2:
+  nn "Could you use a hand, ZMAPP-chan?"
+  zmapp "I estimate I would be 21.6%% more efficient with an additional appendage. What time should I schedule the surgery?"
+  nn "That's... not what I meant! I'm asking you if you want any help cleaning the room."
+  zmapp "Oh. You would not hinder my progress."
+  "Does that mean yes...?"
+  # Sound of stacking or cleaning (somehow? Like the sound of broken glass being set down in a box?)
+  nn "Are you upset or anything? I mean, the riot must have frightened you, right?"
+  zmapp "I don't think so. What do you mean by fear?"
+  # More stacking/cleaning sound
+  nn "Well, fear is when your heart starts beating faster, and your breaths come shorter and shallower, and your stomach muscles tighten, and you can feel a surge of adrenaline in your bloodstream..."
+  zmapp "Really? That sounds complicated. How do you humans manage to experience so many different feelings at once?"
+  nn "Ugh. It's hard to explain. I have an idea! Tell me how that flask you're picking up feels."
+  # ZMAPP-chan pensive sprite
+  zmapp "Well, it's cool to the touch, and the surface is very smooth."
+  nn "Compare that feeling to something."
+  zmapp "It feels like glass."
+  nn "No, compare it to something different from what it is! Compare it to something like the night sky or the ocean!"
+  zmapp "I do not understand. The feeling of glass is like... the appearance of a duck's bill on the third Saturday of the month when the moon is full and three birds are chirping 250 degrees to my rear."
+  # Protag-kun long sweatdrop sprite
+  nn "That's... great, ZMAPP-chan. I think you're on your way to getting it."
+  # Protag-kun neutral sprite
+  # ZMAPP-chan happy sprite
+  zmapp "Will this improve my efficiency in combating the viruses?"
+  nn "...Probably?"
+  # Medium happy sound, medium ZMAPP-chan bonus
+  zmapp "That is excellent to hear."
+  nn "Does that make you happy?"
+  zmapp "Happy...."
+  jump lab_teamwork
+
+label lab_teamwork: 
+
+  # Loud door sound
+ 
+  wc "Okay everyone, huddle up!"
+  # Grumble sound, all neutral sprites on screen
+  wc "I've got good news and bad news. The good news is, the World Health Organization has agreed to send us an emergency shipment of replacement supplies. Of course, we won't be able to operate at full capacity for several months, but we'll still be able to treat patients in the interim with the supplies they're dispatching from regional HQ."
+  nn "What's the bad news?"
+  show who sad at center
+  wc "They said my yearly bonus is going to be folded into the clinic's operating expenses for the next three years..."
+  # Determined WHO-chan sprite
+  show who excited at center
+  wc "But that's no excuse to give up!"
+  show ebby joy at left
+  ec "Are you sure? This is the perfect opportunity to usher in a new paradise full of peace and LOVE!?"
+  # WHO-chan sprite shakes
+  wc "Get... her... out of here... before... I... strangle... her..."
+  show who normal at center
+  nn "So, what's next?"
+  wc "Let's get this place cleaned up and ready for new patients. The chief of police said he'd station a guard outside around the clock, so hopefully we won't run into any more problems with angry locals."
+  # WHO-chan determined sprite
+  wc "Alright everyone, let's get to work! And that includes you virus girls too."
+  show marburg annoyed at right
+  marburg "Me? Why should I have to do anything?"
+  ec "Yeah! You've been trying to cure us this whole time! Why should we help you?"
+  # Furious WHO-chan sprite
+  show who angry at center
+  wc "I swear if you two don't start helping out I'll stick you both in a vial and lock you in the freezer!"
+  # Scared/shivering Ebola-chan sprite
+  show ebby sad at left
+  ec "S-s-s-so cold."
+  marburg "And scary."
+  # Threatening ZMAPP-chan sprite
+  show zmapp normal at center
+  zmapp "You heard the Director! Everyone get to work!"
+
+  
+  # Start WHO-chan ending
+  # WHO-chan Romance Scene
+  scene bg hospital_beds3 with fade
+ 
+  # Location: 2nd hospital corridor
+ 
+  # WHO-chan sprite enters screen
+  show who normal at center
+  wc "Hey, Protag-kun, do you have some time?"
+  nn "I was just on my way to fill out the last of the closure paperwork. What do you need?"
+  # Nervous WHO-chan sprite
+  show who shy at center
+  wc "I was actually wondering if you wanted to come back to my room and get a drink."
+  nn "You've got alcohol?"
+  show who annoyed at center
+  wc "I am an adult, you know! I've just been hiding it from all the other girls so they don't drink all of it. I guess it doesn't really matter, now..."
+  nn "You miss them, don't you?"
+  wc "I know the world is better off without them, but I can't pretend I'm not a little lonely now that they're gone. This place used to be so lively, but now we're closing down."
+  nn "Now you can go back to the States and earn your Lexus and a big mansion!"
+  wc "I guess so... well, are you coming, or not?"
+ 
+  menu:
+    "What should I do?"
+
+    "Brush her off":
+        $route="H1"
+    "Kiss her":
+        $route="H2"
+
+  $renpy.call(route)
+ 
+label H1:
+  nn "Sorry, but I really have to get this paperwork done. My flight leaves tomorrow at noon, and if I miss it, it'll be another five days before I can get another connection to Brussels."
+  wc "Oh... okay, I understand. Well, it's been great working with you, Protag-kun. We saved the world and we're probably the only people who will ever know it or care."
+  nn "It's been an honor."
+ 
+  # Scene: Protag-kun poring over paperwork late into the night
+  # Scene: Protag-kun in airplane looking down on the African coast
+  # Scene: Protag-kun back in the states, tired but relieved
+ 
+  jump Credits
+ 
+label H2:
+ 
+  wc "Mmph...!? ....Mmm...."
+  nn "S-s-sorry! I didn't mean to -"
+  # WHO-chan kiss back sprite?
+  show who kiss at center
+  # Scene: WHO-chan bedroom
+ 
+  nn "Yikes! You weren't kidding about the alcohol collection, were you?"
+  wc "What!? Is there something wrong if a girl likes to have a drink after work?"
+  nn "Of course not... I just didn't imagine you to be the type."
+  wc "There's a lot you don't know about me."
+  nn "There's a lot I'd like to learn about you."
+  # Laughing WHO-chan sprite
+  show who joy at center
+  wc "You really are a total goof."
+  # Serious WHO-chan sprite
+  show who rape at center
+  wc "So, what do you want to drink?"
+ 
+  menu:
+    "What should I drink?"
+
+    "Water":
+        $route="J1"
+    "Vodka":
+        $route="J2"
+    "Gin":
+        $route="J3"
+    "Whiskey":
+        $route="J4"
+
+  $renpy.call(route)
+  
+label J1:
+  nn "Just a glass of water, please."
+  wc "Water!? Are you crazy!? You're still willing to drink the water here after everything that happened? You'd better make another choice before I get mad."
+
+  menu:
+    "What should I drink?"
+
+    "Vodka":
+        $route="J2"
+    "Gin":
+        $route="J3"
+    "Whiskey":
+        $route="J4"
+
+  $renpy.call(route)
+ 
+label J2:
+  nn "I'll take a vodka rocks."
+  wc "Sorry, I don't have any ice. Warm vodka tastes like the Devil's armpit so try again."
+  
+  menu:
+    "What should I drink?"
+
+    "Gin":
+        $route="J3"
+    "Whiskey":
+        $route="J4"
+
+  $renpy.call(route)
+ 
+label J3:
+  nn "I'd like a gin and tonic please."
+  wc "Sorry Protag-kun, no tonic."
+  nn "How about a martini?"
+  wc "Uh... about that..."
+  nn "What?"
+  wc "I drank all the vermouth one night. I'm all out."
+  nn "You drank straight vermouth?"
+  wc "I'm not proud of all my life choices, alright! Anyway, you'll have to pick something else."
+
+  menu:
+    "What should I drink?"
+
+    "Whiskey":
+        $route="J4"
+    "Whiskey":
+        $route="J4"
+    "Whiskey":
+        $route="J4"
+
+  $renpy.call(route)
+ 
+label J4:
+  nn "How about a glass of whiskey?"
+  wc "Ahh, whiskey, the drink of sophisticates. I knew you'd make the right choice."
+  # Pouring sound, tinkle
+  nn "So what are you planning to do next?"
+  wc "You know, I honestly don't know. I was hoping that a drink and a conversation with a good friend would help sort me out."
+  nn "Well, what is your heart telling you?"
+  wc "You know you talk like a total dork, right?"
+  # Protag-kun sweatdrop sprite
+  wc "But I think it's cute."
+  # Happy WHO-chan sprite, happy Protag-kun sprite
+  show who joy at center
+  wc "I guess I should probably return to the States and take up a normal practice like I planned all along. But you know, despite everything, this place has kind of grown on me. Sure it's hot and humid and the people here can be totally crazy, but it feels like every day is a new adventure. If I went back home now, I would always wonder what I missed if I stayed. My head is telling me to do the smart thing, and my heart is telling me to do the exciting thing. What do you think I should do?"
+ 
+  menu:
+    "What should I do?"
+
+    "Be rational":
+        $route="K1"
+    "Be spontaneous":
+        $route="K2"
+
+  $renpy.call(route)
+ 
+label K1:
+  nn "You should probably return to the States. You're not going to be young forever, and if you stay here in Equatorial Leone, it'll be hard to save up enough money to retire someday and take care of yourself in old age."
+  wc "I suppose you're right."
+  show who sad at center 
+  # small unhappy sound, small WHO-chan penalty
+  $stay_flag = 0
+ 
+label K2:
+  nn "The most important thing in life is doing what you believe in! If you really want to stay, you should stay. It's not as if spending another year or two in Equatorial Leone would keep you from doing other things in the future, right?"
+  wc "You're right, Protag-kun!"
+  show who joy at center 
+  # small happy sound, small WHO-chan bonus
+  $stay_flag = 1
+ 
+  nn "H-hey! There's no need to pour so much!"
+  # Tinkle noise
+  nn "Not more for me, too..."
+  wc "Drink up! It'll put hair on your chest!"
+  nn "I'm not sure I need-"
+  wc "I said drink up!"
+  nn "*sigh* There's just no arguing with her when she's like this..."
+ 
+  # Scene WHO-chan's room, later
+ 
+  wc "Hic!"
+  nn "WHO-chan, I think you've had enough."
+
+
+  # Route 1: Not enough points to romance WHO-chan
+ 
+  wc "Yeah, I guess you're right. I'm totally exhausted."
+  nn "And more than a little drunk..."
+  wc "What was that!?"
+  nn "Oh, nothing!"
+  wc "Well, it was nice knowing you, Protag-kun. It'll be awfully lonely with both you and the girls gone, but sooner or later I just know I'll find the right person for me. Hic! Go to bed, and I'll drive you hic! to the airport first thing in the morning."
+  nn "Thanks, WHO-chan."
+  # Scene: WHO-chan driving a jeep like a maniac and terrifying Protag-kun
+  # Scene: Protag-kun in airplane looking down on the African coast
+  # Scene: Protag-kun back in the states, tired but relieved
+  jump Credits
+ 
+  # Route 2: Enough points to romance WHO-chan
+  wc "Enough? Enough?! I'll tell enough when I've had you!"
+  # Blushing WHO-chan sprite
+  show who shy at center
+  wc "You're such a pain, Protag-kun."
+  nn "Hey, what did I do?"
+  show who angry at center
+  wc "I'm going to ask you a question, and you'd better answer honestly!"
+  nn "What's with you all of a sudden?"
+  wc "Do you like me?"
+  nn "Like you?"
+  wc "That's right! Do you like me? Like, like like me?"
+ 
+  menu:
+    "What should I say?"
+
+    "Say no":
+        $route="L1"
+    "Say yes":
+        $route="L2"
+
+  $renpy.call(route)
+ 
+label L1:
+ 
+  nn "Sorry. You're just not my type."
+  wc "What!? Seriously!? After leading me on all this time? You're the worst, Protag-kun. Get out of here! I don't ever want to see your face again!"
+  # Scene: Protag-kun fleeing an angry WHO-chan throwing a bottle
+  # Scene: Protag-kun in airplane looking down on the African coast
+  # Scene: Protag-kun back in the states, tired but relieved
+ 
+  jump Credits
+
+label L2:
+
+  nn "Of course I do!"
+  wc "Wait, really?"
+  nn "I think you're amazing! You're studious, hardworking, honest, and beautiful."
+  # Blush WHO-chan sprite
+  show who shy at center
+  wc "You really think I'm pretty?"
+  nn "I do!"
+  wc "I guess you're not so bad yourself. You know, it's really warm in here... I wonder if the air conditioning is on the fritz again."
+  nn "Hey, what are you doing with your shirt!?"
+  show who kiss at center
+  wc "Well, it's not my fault if the tropical heat is getting to my head."
+  nn "WHO-chan..."
+ 
+  # ROMANCE STUFF
+ 
+  # Scene: Next morning. 
+  # Underwear WHO-chan sprite
+  show who pantsu at center
+ 
+  wc "I guess it's time for me to drive you to the airport, right? I'm really going to miss having you around."
+  nn "Especially after last night?"
+  # Blushing WHO-chan sprite
+  show who shy at center
+  wc "Geeze. Well, I guess this is it...."
+  # Hopeful WHO-chan sprite
+  show who joy at center
+ 
+  menu:
+    "What should I do?"
+
+    "Time to return home":
+        $route="M1"
+    "Maybe I should stay":
+        $route="M2"
+
+  $renpy.call(route)
+ 
+label M1:
+  nn "Yeah. This is it."
+
+  if stay_flag = 1:
+    jump M1_Stay
+  else:
+    jump M1_Going
+
+label M1_Stay:
+  wc "It's too bad, you know. I wish you would stay with me, here."
+  nn "My family's waiting for me back home. Plus, I've already got a job at a clinic in my home town. I can't turn my back on the people who depend on me."
+  wc "I guess you're right. You're so responsible, Protag-kun."
+  nn "But, if you're ever in the area... be sure to drop by."
+  wc "I'd like that."
+  show who sad at center
+  nn "Oh, crap! My flight leaves in less than an hour!"
+  # Shocked WHO-chan sprite
+  show who suprised at center with Pause(2)
+  show who excited at center
+  wc "Oh no! We're going to have to hurry!"
+  # Scene: WHO-chan driving a jeep like a maniac and terrifying Protag-kun
+  # Scene: Protag-kun in airplane looking down on the African coast
+  # Scene: Protag-kun back in the states, tired but relieved
+  jump Credits
+ 
+label M1_Going:
+  wc "Well, I guess it's time to get to the airport. When does your flight leave?"
+  nn "I'm supposed to be at the airport by noon."
+  wc "My plane leaves at four o'clock so we might as well go together."
+  nn "I'd like that."
+  wc "Hey... we don't actually live that far apart, do we?"
+  nn "Back in the States? No, only a couple hundred miles."
+  wc "You know... if you wanted to come over on the weekend, once in awhile..."
+  nn "You'd like that?"
+  show who annoyed at center with Pause(2)
+  show who joy at center
+  wc "Maybe."
+  # Scene: WHO-chan and Protag-kun at the airport waving passports angrily
+  # Scene: Protag-kun in airplane looking down on the African coast
+  # Scene: WHO-chan and Protag-kun at a Thanksgiving dinner, arguing in front of a family
+  jump Credits
+
+label M2:
+
+  if stay_flag = 1:
+    jump M2_Stay
+  else:
+    jump M2_Going
+
+label M2_Stay:
+  nn "I think I'm going to miss my flight."
+  wc "What do you mean? We've got plenty of time to get to the airport."
+  nn "I actually think I want to stay."
+  wc "You mean with me?"
+  nn "Well... that's part of it."
+  show who angry at center
+  nn "A big part of it! But I was thinking about what you said about every day being an adventure, and you know what? I think you're right. And I want to share that ongoing adventure with you."
+  show who joy at center
+  wc "That's so sweet... I mean... fine, you dork!"
+  # Scene: WHO-chan and Protag-kun running around in lab coats
+  # Scene: WHO-chan and Protag-kun eating off each others' plates under traditional West African regalia
+  jump Credits
+ 
+label M2_Going:
+  nn "I think I'm going to miss my flight."
+  wc "What do you mean? We've got plenty of time to get to the airport."
+  nn "I actually think I want to stay."
+  wc "Really? I thought you hated it here."
+  nn "I changed my mind. You're right - this place really is a new adventure every day."
+  wc "Well, it's your choice, I guess..."
+  nn "You're still planning on returning to the States, right?"
+  wc "Yeah. I've got to be practical and plan for the future."
+  nn "Just in case..."
+  wc "Hmm?"
+  nn "If you ever get assigned to Equatorial Leone again, be sure and look me up!"
+  wc "I will. I promise."
+  # Nature sounds
+  wc "Will you at least see me off to the airport?"
+  # Scene: WHO-chan driving a jeep like a maniac and terrifying Protag-kun
+  # Scene: Protag-kun in front of a small but modern and freshly painted African clinic surrounded by children
+  jump Credits
+
+label Credits:
+  jump start
