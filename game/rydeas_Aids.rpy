@@ -59,6 +59,7 @@ label day1_morningRy_libraryRy:
     menu:
         "Sure":
             $ AidsCount += 1
+            $ AidsMetFulfilled = 1
             pr "Sure, See you then!"
             show aids excited
             ai "YAY! I can't wait!"
@@ -67,7 +68,7 @@ label day1_morningRy_libraryRy:
             show aids sad
             ai "Aww, I wanna hang out with cute boys..."
     show ebby concerned
-    ec "Are you gonna keep behaiving like that around boys?"
+    ec "Are you gonna keep behaiving like that around everyone?"
     show aids joy
     ai "Yep!"
     ai "Anyway, class starts soon. We better get going"
@@ -78,6 +79,7 @@ label day1_morningRy_libraryRy:
     pr "Later!"
     $ AidsCount += 1
     $ AidsMeet += 1
+    $ aids_affection += 1
     return
     
     
@@ -101,6 +103,9 @@ label day1_lunchRy_corridorRy:
         menu:
             "Sure":
                 pr "Of course, let's go chat to her"
+                $ AidsMeet = 1
+                $ AidsCount =+ 1
+                $ aids_affection += 1
                 jump Day1AidLunchComfort
             "Let's not":
                 pr "Nah, she's probably just resting"
@@ -108,48 +113,67 @@ label day1_lunchRy_corridorRy:
                 show ebby sad
                 ec "She's crying you inconsiderate shit!"
                 "A guy just walked up to her"
+                show ebby normal
                 ec "Oh, HIV's here, I guess she'll be fine."
-                jump Day1AidsLatterLunch
+                jump Day1AidsLatterLunchEbbs
 
 
 
     else:
-        "elsetest"
-        return
-        
-        
-    "afteriftest"
-    return
-    
+        if AidsCount < 2:
+            show aids sad at right
+            pr "Hey, Eidzu!"
+            show aids excited
+            ai "Protag?"
+            ai "YAY! I was hoping I'd see you again!"
+            pr "Same here"
+            show aids joy
+            ai "Really?"
+            $ AidsProprietary = 1
+            show aids normal
+            pr "Yeah."
+            ai "Hey, where's Ebby? Usually on their first day people stick to their guides like glue!"
+        else:
+            $ AidsMetFulfilled = 0            
+            show aids normal
+            pr "Hey, Eidzu!"
+            show aids excited
+            ai "YAY, YOU MADE IT!"
+            pr "Hope I didn't keep you waiting too long, had a little mixup with Ebby"
+            show aids normal
+            ai "Where is she, anyway? Usually on their first day people stick to their guides like glue!"
+        "show aids flustered"
+        ai "Thick, viscuss, sticky white glue..."
+        show aids normal
+        pr "I dunno, she whent off chasing after some green haired girl, I think she stole her hat or something..."
+        pr "They looked pretty similar, does she have a sister or something"
+        "Show aids confused"
+        ai "Yeah, but they're all equally pink. Weird, I haven't seen anyone with green hair around in ages..."
+        pr "Maybe someone else joined today?"
+        show aids joy
+        ai "Who knows?"
+        show aids normal
+        ai "Anyway, wanna go get lunch togeather?"
+        pr "Sure, I'm starving. I- I don't even remember the last time I ate..."
+        show aids joy
+        ai "You're almost as ditsy as Ebby!"
+        show aids normal
+        "SWWWOOOOSHHH"
+        "A green streak shot past us, followed by a shorter pink one"
+        ai "Well that's Ebster explained"
+        pr "Still, brings up a couple more questions than it answeres"
+        pr "..."
+        pr "So, Lunch?"
+        show aids excited
+        ai "LUNCH!"
+        $ AidsCount += 1
+        $ aids_affection += 1
+        jump Day1AidsLatterLunchAids
 
 
+#AutoReturn
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    show ebby sad:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
-    show aids sad:
-        zoom 1.8
-        xalign 0.9
-        yalign 1.0
-    ec "Poor Aids wanted to have lunch with Hiv but he is not around so she ate with protag instead."
-    $aids_affection+=1
-    return
 
 
 
@@ -187,7 +211,8 @@ label day1_afternoonRy_gateRy:
         xalign 0.9
         yalign 1.0
     ec "Poor Aids wanted to walk home with Hiv but he is off to bang a floozy."
-    $aids_affection+=1
+    $ AidsCount += 1
+    $ aids_affection += 1
     return
     
     
@@ -202,5 +227,6 @@ label day1_eveningRy_showerRy:
         xalign 0.9
         yalign 1.0
     ec "Aids walks in on protag naked in the shower! What a perverted girl!"
-    $aids_affection+=1
+    $ AidsCount += 1
+    $ aids_affection += 1
     return

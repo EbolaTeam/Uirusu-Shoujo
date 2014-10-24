@@ -245,4 +245,6 @@ label start:
             jump alike
         "roisaber":
             jump roisaber
+        "Ryan's Aids route":
+            jump rydeasPureAids
     return
