@@ -3,7 +3,7 @@ label linderstuff:
     #(Someone's slumped over the table. They seem to be asleep.)#   
 
     scene bg xebdesk with fade
-    nn "It looks like someone is asleep at their desk"  
+    nn "It looks like someone is asleep at their desk."  
     
 
     menu:
@@ -28,7 +28,7 @@ label linderstuff:
     rab "You're... new here...?"
     show rab happy at left:
         zoom 1.8
-    rab "YEY! Wait until Ebola-Chan hears that I got to talk to the new kid! She'll freak out!"
+    rab "YEY! Wait until Ebola-chan hears that I got to talk to the new kid! She'll freak out!"
     "But I already met her..."
     show rab unsure at left:
         zoom 1.8
@@ -85,7 +85,7 @@ label lind_wake:
 return  
 
 label lind_nowake:
-    "They must be tired, I should just let them sleep"
+    "They must be tired, I should just let them sleep."
     nn "Unfortunately the door makes a loud creek as I go to leave."
     show rab unsure at left:
         zoom 1.8
