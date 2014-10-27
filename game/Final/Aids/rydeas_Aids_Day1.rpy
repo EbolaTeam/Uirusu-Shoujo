@@ -1,23 +1,23 @@
-label day1_SnackFin_libraryFin:
+﻿label day1_SnackFin_libraryFin:
     scene bg xebcorridor with fade
     show ebby normal:
         zoom 1.0
         xalign 0.1
         yalign 1.0
-    "We got to school not long after"
-    ec "...the principals office is just beside you, and over here is the library"
-    ec "We should probably get you a library card so you can borrow books"
-    pr "Do we have time? We've been walking around for a while?"
+    "We got to school not long after."
+    ec "...the principal's office is just beside you, and over here is the library."
+    ec "We should probably get you a library card so you can borrow books."
+    pr "Do we have time? We've been walking around for a while."
     ec "Don't worry, class doesn't start 'till 9"
     scene bg xeblibrary
-    "We walked into the sparse library, it was mostly empty spare one girl reading a book"
+    "We walked into the sparse library, it was mostly empty spare one girl reading a book."
     
     show ebby sad:
         zoom 1.0
         xalign 0.3
         yalign 1.0
-    ec "Aww, the librarian's not in"
-    pr "Shame, we still have a few minutes before class"
+    ec "Aww, the librarian's not in."
+    pr "Shame, we still have a few minutes before class."
     show ebby joy
     ec "Hey look, it's Eidzu!"
     pr "Who?"
@@ -34,7 +34,7 @@ label day1_SnackFin_libraryFin:
     show ebby concerned
     ec "He's... wait, Eidzu, are you reading a naughty book again?"
     show aids concerned
-    ai "N-no! It isn't like that I'm not"
+    ai "N-no! It isn't like that I'm not-"
     ec "Gimmie"
     show aids sad
     ai "n-No! Don't read that!"
@@ -42,11 +42,11 @@ label day1_SnackFin_libraryFin:
     ec "Let's see what you've been reading: \"I don't love you. I've never loved anyone. I wanted you from the first moment I saw you. I wanted you as one wants a whore – for the same reason and purpose.\""
     show ebby concerned
     ec "Eidzu, why are you always reading such lewd things? A girl like you shouldn't be interested in this sort of thing!" 
-    ai "I-I'm sorry Ebby, I, I just,"
+    ai "I-I'm sorry Ebby, I, I just-"
     show aids rape
     ai "Hey, you haven't even introduced your friend yet! How rude!"
     show ebby rape
-    ec "Don't try to chance the subject you little pervert!"
+    ec "Don't try to change the subject you little pervert!"
     ai "Nu-uh. Who is he? Is he your boyfriend?"
     show ebby concerned
     ec "No! It's not like that, he's just a friend of Papa"
@@ -60,7 +60,7 @@ label day1_SnackFin_libraryFin:
         "Sure":
             $ AidsCount += 1
             $ AidsMetFulfilled = 1
-            pr "Sure, See you then!"
+            pr "Sure, see you then!"
             show aids excited
             ai "YAY! I can't wait!"
         "I don't know":
@@ -68,10 +68,10 @@ label day1_SnackFin_libraryFin:
             show aids sad
             ai "Aww, I wanna hang out with cute boys..."
     show ebby concerned
-    ec "Are you gonna keep behaiving like that around everyone?"
+    ec "Are you gonna keep behaving like that around everyone?"
     show aids joy
     ai "Yep!"
-    ai "Anyway, class starts soon. We better get going"
+    ai "Anyway, class starts soon. We better get going."
     show ebby normal
     ec "Bye then."
     if AidsCount == 1:
@@ -101,20 +101,20 @@ label day1_lunchFin_corridorFin:
             zoom 1.0
             xalign 0.1
             yalign 1.0
-        ec "You're probably hungry, I'll show you the cafiteria"
-        pr "Yeah, funny how lunch does that to you"
-        "There's a sad looking girl sitting down over there"
+        ec "You're probably hungry, I'll show you the cafeteria."
+        pr "Yeah, funny how lunch does that to you."
+        "There's a sad looking girl sitting down over there."
         show ebby concerned
-        ec "Aww, Eidzu's sad, maybe we should go and chear her up?"
+        ec "Aww, Eidzu's sad, maybe we should go and cheer her up?"
         menu:
             "Sure":
-                pr "Of course, let's go chat to her"
+                pr "Of course, let's go chat to her."
                 $ AidsMeet = 1
                 $ AidsCount =+ 1
                 $ aids_affection += 1
                 jump Day1AidLunchComfort
             "Let's not":
-                pr "Nah, she's probably just resting"
+                pr "Nah, she's probably just resting."
                 $ EbbyBrowniePoints -= 1
                 show ebby sad
                 ec "She's crying you inconsiderate shit!"
@@ -145,14 +145,14 @@ label day1_lunchFin_corridorFin:
             pr "Hey, Eidzu!"
             show aids excited
             ai "YAY, YOU MADE IT!"
-            pr "Hope I didn't keep you waiting too long, had a little mixup with Ebby"
+            pr "Hope I didn't keep you waiting too long, had a little mixup with Ebby."
             show aids normal
             ai "Where is she, anyway? Usually on their first day people stick to their guides like glue!"
         "show aids flustered"
         ai "Thick, viscuss, sticky white glue..."
         show aids normal
         pr "I dunno, she whent off chasing after some green haired girl, I think she stole her hat or something..."
-        pr "They looked pretty similar, does she have a sister or something"
+        pr "They looked pretty similar, does she have a sister or something?"
         "Show aids confused"
         ai "Yeah, but they're all equally pink. Weird, I haven't seen anyone with green hair around in ages..."
         pr "Maybe someone else joined today?"
@@ -165,11 +165,11 @@ label day1_lunchFin_corridorFin:
         ai "You're almost as ditsy as Ebby!"
         show aids normal
         "SWWWOOOOSHHH"
-        "A green streak shot past us, followed by a shorter pink one"
-        ai "Well that's Ebster explained"
-        pr "Still, brings up a couple more questions than it answeres"
+        "A green streak shot past us, followed by a shorter pink one."
+        ai "Well that's Ebster explained."
+        pr "Still, brings up a couple more questions than it answers."
         pr "..."
-        pr "So, Lunch?"
+        pr "So, lunch?"
         show aids excited
         ai "LUNCH!"
         $ AidsCount += 1
@@ -189,7 +189,7 @@ label day1_lunchFin_corridorFin:
 label Day1AidLunchComfort:
         ec "Eidzu? Are you okay?"
         show aids sad
-        ai "HIV-kun said he'd meet me at lunch but he's too buisy railing that slut Sian"
+        ai "HIV-kun said he'd meet me at lunch but he's too busy railing that slut Sian."
         pr "Did you say Sian?"
         show ebby normal
         ec "Aww, poor girl. Want a huggu?"
@@ -202,11 +202,11 @@ label Day1AidLunchComfort:
         ec "Oh, o-okay then."
         show aids normal
         ai "So, how do you two know each other?"
-        ec "My dad introduced me to him"
+        ec "My dad introduced me to him."
         show aids excited
-        ai "Oh, so that's what's going on"
+        ai "Oh, so that's what's going on."
         show ebby concerned
-        ec "No, it's not like that, daddy just wanted me to make sure he fits in well"
+        ec "No, it's not like that, daddy just wanted me to make sure he fits in well."
         show aids joy
         ai "I bet I can make him fit in well!"
         "Show ebby flustered"
@@ -214,12 +214,12 @@ label Day1AidLunchComfort:
         pr "Wha~?"
         show aids normal
         ai "Anyway, I hope we can meet soon, maybe after school some time?"
-        pr "We'll see"
+        pr "We'll see."
         show aids joy
         ai "YAY!"
-        ec "Anyway, it's getting on, we better go eat lunch"
-        ai "Later you two"
-        pr "Bye"
+        ec "Anyway, it's getting late, we better go eat lunch."
+        ai "Later you two."
+        pr "Bye."
         jump Day1AidsLatterLunchEbbs
         return
 
@@ -289,7 +289,7 @@ pause (1)
 scene bg xebdorm_room with fade
 pause (1)
 prin "Bloody hell, what a day..."
-prin "Wait, What the fuck? Why am I in a school? I'm 25! I graduated Uni years ago! THIS DOESN'T MAKE ANY FUCKING SENCE"
+prin "Wait, what the fuck? Why am I in a school? I'm 25! I graduated Uni years ago! THIS DOESN'T MAKE ANY FUCKING SENSE!"
 prin "WHY DID I NOT NOTICE THIS EARLIER, THIS IS SO BLOODY WEIRD. WHAT THE SHIT."
 prin "Oh who cares, time for some sleep"
 ug "Can it wait?"
@@ -298,13 +298,13 @@ show aids normal
 ai "Me, silly."
 pr "Eidz, what are you doing in here?"
 show aids sad
-ai "I couldn't sleep, I had a dream. Mind if I stay with you tonight, I don't wanna be in my rome alone."
+ai "I couldn't sleep, I had a dream. Mind if I stay with you tonight? I don't wanna be in my room alone."
 pr "Aww, I'm sorry, sure... I guess, stay if you want. What was your nightmare about, if you don't mind me asking?"
 show aids joy
-ai "I never said it was a bad dream, but you are to blame, so I'll keep that apology"
-pr "What, what?"
+ai "I never said it was a bad dream, but you are to blame, so I'll keep that apology."
+pr "Wait, what?"
 show aids normal
-ai "Mind if we cuddle"
+ai "Mind if we cuddle?"
 pr "WHAT?"
 show aids excited
 ai "That's a yes to me!"
