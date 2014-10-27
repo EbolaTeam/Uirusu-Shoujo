@@ -223,7 +223,7 @@ label UndergroundLab:
   wc "I've got it! I'll just call the police."
   # All others sweatdrop sprite
   # Phone sound
-  wc "Hello, police? I'm calling from the World Health Organization Reconnaissance and Eradication Squad. That's right, W.H.O.R.E.S.. What? Look I didn't decide on the acronym, okay!? Stop laughing! We have a real emergency on our hands here."
+  wc "Hello, police? I'm calling from the World Health Organization Reconnaissance and Eradication Squad. That's right, W.H.O.R.E.S. What? Look I didn't decide on the acronym, okay!? Stop laughing! We have a real emergency on our hands here."
   ec "Stop taking things so seriously, WHO-sama."
   wc "You shut up! No, not you officer. No please, look, there's a riot at our facility! If you don't send help right away, the rioters might destroy the whole clinic."
   wc "Not only would that set our efforts to eradicate these diseases back by six months, but it would be a public relations disaster for Equatorial Leone on the world stage!"
@@ -330,7 +330,7 @@ label E2:
   ec "That's right! You've got another thirty years of failure ahead of you."
   # Angry WHO-chan sprite
   show ebby concerned at left
-  wc "What do you mean, another!? I'm only twenty four!"
+  wc "What do you mean, another!? I'm only twenty-four!"
   # Small unhappy sound + small WHO-chan penalty
   jump Biohazard_quarantine_door
 
@@ -469,7 +469,7 @@ label lab_teamwork:
   show who excited at center
   wc "But that's no excuse to give up!"
   show ebby joy at left
-  ec "Are you sure? This is the perfect opportunity to usher in a new paradise full of peace and LOVE!?"
+  ec "Are you sure? This is the perfect opportunity to usher in a new paradise full of peace and LOVE!"
   # WHO-chan sprite shakes
   wc "Get... her... out of here... before... I... strangle... her..."
   show who normal at center
