@@ -1,4 +1,4 @@
-label Xebstuff:
+﻿label Xebstuff:
     
 $place=""
 $day= 1
@@ -94,7 +94,7 @@ show ebby normal:
     yalign 1.0
 
 menu:
-    "What do do?"
+    "What to do?"
 
     "Go help out in the kitchen.":
         $place="kitchen"
@@ -121,13 +121,13 @@ label intro:
     
     scene bg xebcult3 with fade
 
-    nn "Being a cultist isn't all its cracked up to be you know"
-    nn "sure you get the cool robes, the swag ritual jewellry and the sense of belonging
-    body and soul to an other-worldly being"
+    nn "Being a cultist isn't all its cracked up to be you know."
+    nn "Sure you get the cool robes, the swag ritual jewelry and the sense of belonging
+    body and soul to an other-worldly being,"
 
     nn "but do the recruiting pamphlets mention mucking out the sacrificial animal pens every day?{p}
-    or spending hours trying to scrub pus and ectoplasmic residue off of a hardwood floor only to
-    be berated in front of the entire cell because Mr adhd-prick-brains-coven-leader thought they
+    Or spending hours trying to scrub pus and ectoplasmic residue off of a hardwood floor only to
+    be berated in front of the entire cell because Mr. adhd-prick-brains-coven-leader thought they
     weren't clean enough for a phlegm imp summoning?"
 
     nn "No."
@@ -141,11 +141,11 @@ label intro:
 
     nn "I honed them like a well oiled machine, ceremonies exact and on time like clockwork,{p}
     all in service of the disease lord, it was truly a thing of beauty."
-    nn "I ruled it with a rod of iron - 100%% Drama free."
+    nn "I ruled it with a rod of iron - 100%% drama free."
 
-    nn "Then I was invited to attend the high symposium"
+    nn "Then I was invited to attend the high symposium."
     "Finally!\" I thought, \"the big league!\"{p}
-    \"No more pissing around with petty coven politics.  Now I can work with real professionals all in service of Pestilence Reborn!"
+    \"No more pissing around with petty coven politics. Now I can work with real professionals all in service of Pestilence Reborn!"
 
     nn "Oh, how naive I was."
 
@@ -158,8 +158,8 @@ label intro:
     nn "The only motivation my cultists needed was that if they didn’t do as they were fucking told they would be the next volunteer
     for the fucking holy slab!"
     nn "And the bickering, I could hear it everywhere, the whispering"
-    "did you see that robe deacon Rhiyobe was wearing? Scandalous! that design is definitely from last year!
-    how could he possibly show his face here wearing that?"
+    "Did you see that robe deacon Rhiyobe was wearing? Scandalous! That design is definitely from last year!
+    How could he possibly show his face here wearing that?"
     "Oh yes, such a thing as that wouldn’t be tolerated in MY coven!"
 
     scene bg xebcult3 with fade
@@ -167,48 +167,48 @@ label intro:
     nn "I returned a broken man."
 
     nn "Fuck it, fuck the coven, fuck cults and fuck the Prince of Pestilence."
-    nn "Before the week was out I’d embezzled the covens far from insignificant funds and fled the country"
+    nn "Before the week was out I’d embezzled the covens far from insignificant funds and fled the country."
 
     scene bg xebcompound with fade
 
-    nn "No doubt they sent assassins after me, they do take apostasy very seriously"
+    nn "No doubt they sent assassins after me, they do take apostasy very seriously,"
     nn "or at least they do when millions of cult dollars are involved,{p}
-    but I led them a merry chase around europe, asia and finally Africa."
+    but I led them a merry chase around Europe, Asia and finally Africa."
 
-    nn "Holed up in some shithole Liberian stockade I spent a year waiting on them, but they never came."
+    nn "Holed up in some shithole Liberian stockade, I spent a year waiting on them, but they never came."
     nn "Probably too busy attending a fucking motivational course to chase me that far."
 
-    nn "Tired of the heat I snuck back into the US and settled down quietly in a non-descript out of the way town,
+    nn "Tired of the heat, I snuck back into the US and settled down quietly in a non-descript out of the way town,
     intending to live a cult free life of leisure and debauchery."
     nn "Unfortunately it seems I brought something unexpected back with me."
 
     scene bg xebhospital with fade
 
     nn "Ebola."
-    nn "Oh the fucking Irony."
+    nn "Oh the fucking irony."
     nn "So here I lie, in the best isolation room stolen money can buy,{p}
     blood seeping through my skin and soaking the silk sheets - a disease ridden disease cultist."
     nn "I’d laugh but I think I’d bring up some liquified lung if I did."
 
     nn "Do I have regrets?{p}
     Sure, a boatload, buying into the whole cult thing to begin with."
-    nn "I can’t believe I actually swallowed all that bullshit, not like it matters{p}
-    I’m dying and that’s that"
-    nn "no afterlife to look forward to, no ‘pus-heaven’ or whatever that crap was, just oblivion."
-    nn "Oh well, at least I had time to write my will{p}
-    the look on the faces of the coven leaders when they realise I’ve left their remaining funds to the WHO will be fucking priceless..."
+    nn "I can’t believe I actually swallowed all that bullshit, not like it matters.{p}
+    I’m dying and that’s that."
+    nn "No afterlife to look forward to, no ‘pus-heaven’ or whatever that crap was, just oblivion."
+    nn "Oh well, at least I had time to write my will.{p}
+    The look on the faces of the coven leaders when they realize I’ve left their remaining funds to the WHO will be fucking priceless..."
 
     scene bg black with fade
     
 
     scene bg xebpop with fade
 
-    "Ho ho ho! So my errent little mortal, you think that was it do you?{p}
-    You thought, that you could escape me that easily?"
-    "My precious apostate - you offered your soul to me and unlike most of my pathetic supposed followers, you actually meant it!"
-    "No"
-    "I have use for you yet,{p}
-    You might claim you do not believe in the Prince of Pestilence, but he certainly believes in YOU…"
+    "Ho ho ho! So my errent little mortal, you think that was it, do you?{p}
+    You thought that you could escape me that easily?"
+    "My precious apostate - you offered your soul to me, and unlike most of my pathetic supposed followers, you actually meant it!"
+    "No..."
+    "I have use for you yet...{p}
+    You might claim you do not believe in the Prince of Pestilence, but he certainly believes in YOU!"
 
     scene bg black with fade
 
@@ -230,30 +230,30 @@ label day1_morning:
 scene bg xebdorm_room with fade
 
 nn "I wake to sunlight streaming in the window and give a stretch."
-nn "mmmm this is nice - when was the last time waking up in the morning felt so damn good?"
+nn "Mmmm this is nice - when was the last time waking up in the morning felt so damn good?"
 
 scene bg xebshower with fade
 
 nn "After getting washed and dressed I give myself a look over in the mirror.{p}
-so this is how I look in a school uniform?{p}
-Not half bad If I say so myself.{p}"
-nn "Laughing I head down for breakfast."
+So this is how I look in a school uniform?{p}
+Not half bad if I say so myself.{p}"
+nn "Laughing, I head down for breakfast."
 
 scene bg xebdorm with fade
 
 show sars notamused at left:
     zoom 1.5
 
-sars "AHH! Its the pervert! Don’t look at him or you’ll get molested!"
+sars "AHH! It's the pervert! Don’t look at him or you’ll get molested!"
 
 show aids concerned behind sars:
     zoom 1.8
     xalign 0.3
     yalign 1.0
-eidzu "ehhhh? what?!?!?"
+eidzu "Ehhhh? What?!?!?"
 "Good morning ladies!"
 sars "Grrrrrr!"
-eidzu "ah..g-good morning!"
+eidzu "Ah..g-good morning!"
 
 hide sars
 hide aids
@@ -268,7 +268,7 @@ show ebby toastdead behind mal:
 
 ec "...."
 
-nn "Ebola-chan is nibbling on her toast, but she seems to be still asleep
+nn "Ebola-chan is nibbling on her toast, but she seems to be still asleep.
 I guess she isn’t good with mornings."
 
 hide ebby
@@ -279,9 +279,9 @@ show bp happy:
 
 bp "Now now, settle down and enjoy your breakfast! It’s the most important meal of the day you know!"
 
-nn "Not one to refuse a nice homecooked meal, I get stuck in."
+nn "Not one to refuse a nice homecooked meal, I dig in."
 
-"Mmm! this is delicious!"
+"Mmm! This is delicious!"
 
 bp "I’m glad it’s to your tastes!"
 
@@ -293,17 +293,17 @@ hide bp
 
 show sars notamused at left:
     zoom 1.5
-sars "I’m done! Come on Eidzu, lets leave now, I don’t want to be around HIM any longer than I have to!"
+sars "I’m done! Come on Eidzu, let's leave now, I don’t want to be around HIM any longer than I have to!"
 show aids concerned behind sars:
     zoom 1.8
     xalign 0.3
     yalign 1.0
-eidzu "ah! yes - we’ll be going now!"
+eidzu "Ah! Yes - we’ll be going now!"
 
 hide sars
 hide aids
 
-nn "She barely has time to call out as she is dragged out the door"
+nn "She barely has time to call out as she is dragged out the door."
 
 show mal notmal at left:
     xalign 0.1
@@ -332,7 +332,7 @@ return
 
 label day1_morning_dorm:
     nn "Well there is no sense in being too early on my first day, but I don’t want to be late either."
-    nn "I head back to my room and double check that I have everything I need for the day."
+    nn "I head back to my room and double-check that I have everything I need for the day."
     scene bg xebdorm_room with fade
     nn "Ok, looking good."
     scene bg xebdorm_door with fade
@@ -345,15 +345,15 @@ label day1_morning_dorm:
     nn "Years of cultist experience in understanding the esoteric utterances of summoned other-worldly entities kick in instantly."
     ec "{color=#57bab7}(Oh no! I'm going to be late!){/color}"
     "No, no, you’re ok. We have plenty of time, it’s only half past."
-    nn "I glance up at the clock over the door - it says ten to.{p}..oh no."
+    nn "I glance up at the clock over the door - it says ten to.{p}...oh no."
     nn "My watch still says half past{p}..and isn’t ticking."    
     "AHHHHH!! I’m going to be late!"
-    ec "mfff mffff mfffff-mff mmmmff mffff, mfff!\"{p}
+    ec "Mfff mffff mfffff-mff mmmmff mffff, mfff!\"{p}
     \"{color=#57bab7}(That's what Ebola-chan already said, silly!){/color}"
-    nn "Think, think think - yeah we can do this."
+    nn "Think, think, think - yeah we can do this."
     "If we run we can still make it!"
     nn "I grab her hand and drag her out the door!"
-    ec "mffffffff!\"{p}
+    ec "Mffffffff!\"{p}
     \"{color=#57bab7}(Kyaaaaa!){/color}"
     "We’ll be heading out!"
     bp "Have a good day!"
@@ -371,7 +371,7 @@ label day1_morning_dorm:
     show ebby toastjoy at left
     nn "I turn to look at her, twintails streaming she runs along beside me earnestly."
     nn "She flashes me a smile and gives my hand a friendly squeeze."
-    ec "mfff mf mf! mf mfff mf mf!\"{p}
+    ec "Mfff mf mf! Mf mfff mf mf!\"{p}
     \"{color=#57bab7}(Keep it up! We can do it!){/color}"
     hide ebby
     nn "Giving her hand a squeeze back I run on.{p}
@@ -383,10 +383,10 @@ label day1_morning_dorm:
     nn "We skid to a stop in front of the school gate."
     "I don't know the way from here!"
     show ebby toastjoy at left
-    ec "mmff mffff, mmfff-mfff mfff!\"{p}
+    ec "Mmff mffff, mmfff-mfff mfff!\"{p}
     \"{color=#57bab7}(Don't worry, Ebola-chan does!){/color}"
     hide ebby
-    nn "pulling me along she dashes off towards the main building."
+    nn "Pulling me along, she dashes off towards the main building."
     show bg xebgrass with fade
     show bg xeblockers with fade
     show bg xebstairs with fade
@@ -406,34 +406,34 @@ label day1_morning_dorm:
     sars "MOLESTER!"
     with vpunch
 
-    nn "Before I can even catch my breath I’m assaulted by a manic sars-chan."
+    nn "Before I can even catch my breath, I’m assaulted by a manic Sars-chan."
 
     show ebby toastsad
     ec "mfff mf mfff-mfff! mff mmmfffff mfff mfff!\"{p}
-    \"{color=#57bab7}(Stop it Sars-chan!  It's nothing like that!){/color}"
+    \"{color=#57bab7}(Stop it Sars-chan! It's nothing like that!){/color}"
     show sars concerned at left:
         zoom 1.5
     sars "What? Take that toast out of your mouth, I can't understand a word!"
     show sars stars at left:
         zoom 1.5
-    sars "or did he force it on you?"
+    sars "-or did he force it on you?"
     with hpunch
     sars "TOAST FETISHIST!"
-    ec "mffff! mf mmmffff.\"{p}
+    ec "Mffff! Mf mmmffff.\"{p}
     \"{color=#57bab7}(Ohh! I forgot.){/color}"
-    nn "finally she takes it out of her mouth."
+    nn "Finally she takes it out of her mouth."
     show ebby rape
     ec "%(player_name)s-kun didn’t do anything like that! Stop being so mean!{p}
     He was very kind and ran with me all the way here so that I wouldn’t be late!"
     show sars concerned at left:
         zoom 1.5
-    sars "hmph! I dont care how kind he is, he shouldn’t be holding your hand with such familiarity!"
+    sars "Hmph! I dont care how kind he is, he shouldn’t be holding your hand with such familiarity!"
     show ebby concerned
-    ec "eh?"
-    nn "She looks down as if suddenly realising we’re still holding hands."
+    ec "Eh?"
+    nn "She looks down as if suddenly realizing we’re still holding hands."
     show ebby joy
-    ec "oh! hehe"
-    nn "she gives my hand a last friendly squeeze before letting go and giving me a quick bow."
+    ec "Oh! Hehe"
+    nn "She gives my hand a last friendly squeeze before letting go and giving me a quick bow."
     ec "Thank you %(player_name)s-kun, I wouldn't have made it on time without you!"
     nn "Now I actually start to feel embarrassed."
     "We both made it in time, that’s the important thing."
@@ -543,7 +543,7 @@ label day1_lunch_library:
         zoom 1.0
         xalign 0.1
         yalign 1.0
-    ec "Having a quiet lunch with malaria in the library."
+    ec "Having a quiet lunch with Malaria in the library."
     $malaria_affection+=1
     return
 
@@ -600,7 +600,7 @@ label day1_afternoon_dock:
         zoom 1.0
         xalign 0.1
         yalign 1.0
-    ec "Malaria is reading poetry aloud to herself.  She is a bit funny that way."
+    ec "Malaria is reading poetry aloud to herself. She is a bit funny that way."
     $malaria_affection+=1
     return
 
