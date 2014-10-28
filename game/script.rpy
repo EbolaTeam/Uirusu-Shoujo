@@ -209,28 +209,29 @@ init:
     image ctc = anim.Filmstrip("images/ec_c2cstrip.png", (79,40), (8,1), 0.1, xpos=1720, ypos=1020, xanchor=0, yanchor=0)
 
     # all characters inherit from adv by default.
-    define adv = Character (None)
-    #let's create another character for them to inherit from, so it only affects the ones we want it to.
-    define char = Character (None, what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+    # adv should define what normal dialogue looks like.
+    define adv = Character (None, what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+    # the mono character will be used for anything that isn't dialogue. (in other words monologue)
+    define mono = Character (None, what_color="#ffffff", who_color="#ffffff", what_prefix='', what_suffix='')
 
     # Characters can have dynamic names. Change the variable at any time to change her name.
-    define ec = Character('name_ec', dynamic=True, kind=char)
+    define ec = Character('name_ec', dynamic=True, image='ebby')
     $ name_ec = 'Ebola-chan'
-    define vc = Character('Vu-chan', kind=char)
-    define sars = Character('Sars-chan', kind=char)
-    define joki = Character('Joki-kun', kind=char)
-    define eidzu = Character('Eidzu-chan', kind=char)
-    define mal = Character('Malaria-chan', kind=char)
-    define rab = Character('Rabies-chan', kind=char)
-    define bp = Character('BP-sama', kind=char)
-    define wc = Character('WHO-chan', kind=char)
-    define zmapp = Character('Zmapp-chan', kind=char)
-    define marburg = Character('Marburg-sama', kind=char)
-    define teach = Character('Teacher', kind=char)
+    define vc = Character('Vu-chan', image='vu')
+    define sars = Character('Sars-chan', image='sars')
+    define joki = Character('Joki-kun', image='joki')
+    define eidzu = Character('Eidzu-chan', image='aids')
+    define mal = Character('Malaria-chan', image='mal')
+    define rab = Character('Rabies-chan', image='rab')
+    define bp = Character('BP-sama', image='bp')
+    define wc = Character('WHO-chan', image='who')
+    define zmapp = Character('Zmapp-chan', image='zmapp')
+    define marburg = Character('Marburg-sama', image='marburg')
+    define teach = Character('Teacher')
 
-    define narrator = Character('', kind=char)
-    define nn = Character('', kind=char, what_color="#dddddd", who_color="#000000", what_prefix='', what_suffix='')
-    define centered = Character('', what_style="centered_text", window_style="centered_window")
+    define narrator = Character('', kind=mono, what_color="#fdb2b6")
+    define nn = Character('', kind=mono, what_color="#dddddd", who_color="#000000")
+    define centered = Character('', kind=mono, what_style="centered_text", window_style="centered_window", ctc=None)
 
 # The game starts here.
 label start:
