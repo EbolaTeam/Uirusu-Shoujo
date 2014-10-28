@@ -209,27 +209,28 @@ init:
     image ctc = anim.Filmstrip("images/ec_c2cstrip.png", (79,40), (8,1), 0.1, xpos=1720, ypos=1020, xanchor=0, yanchor=0)
 
     # all characters inherit from adv by default.
-    define adv = Character (None, what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
+    define adv = Character (None)
+    #let's create another character for them to inherit from, so it only affects the ones we want it to.
+    define char = Character (None, what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 
     # Characters can have dynamic names. Change the variable at any time to change her name.
+    define ec = Character('name_ec', dynamic=True, kind=char)
     $ name_ec = 'Ebola-chan'
-    define ec = Character(name='name_ec', dynamic=True)
+    define vc = Character('Vu-chan', kind=char)
+    define sars = Character('Sars-chan', kind=char)
+    define joki = Character('Joki-kun', kind=char)
+    define eidzu = Character('Eidzu-chan', kind=char)
+    define mal = Character('Malaria-chan', kind=char)
+    define rab = Character('Rabies-chan', kind=char)
+    define bp = Character('BP-sama', kind=char)
+    define wc = Character('WHO-chan', kind=char)
+    define zmapp = Character('Zmapp-chan', kind=char)
+    define marburg = Character('Marburg-sama', kind=char)
+    define teach = Character('Teacher', kind=char)
 
-    define vc = Character(name='Vu-chan')
-    define sars = Character(name='Sars-chan')
-    define joki = Character(name='Joki-kun')
-    define eidzu = Character(name='Eidzu-chan')
-    define mal = Character(name='Malaria-chan')
-    define rab = Character(name='Rabies-chan')
-    define bp = Character(name='BP-sama')
-    define wc = Character(name='WHO-chan')
-    define zmapp = Character(name='Zmapp-chan')
-    define marburg = Character(name='Marburg-sama')
-    define teach = Character(name='Teacher')
-
-    define narrator = Character(name=' ', what_color="#fdb2b6", who_color="#000000")
-    define nn = Character(name=' ', what_color="#dddddd", who_color="#000000")
-    define centered = Character(name=' ', what_style="centered_text", window_style="centered_window")
+    define narrator = Character('', kind=char)
+    define nn = Character('', kind=char, what_color="#dddddd", who_color="#000000", what_prefix='', what_suffix='')
+    define centered = Character('', what_style="centered_text", window_style="centered_window")
 
 # The game starts here.
 label start:
