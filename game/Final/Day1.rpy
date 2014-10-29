@@ -30,6 +30,8 @@ menu:
     "Stay at the dorm a while longer.":
         $place="dorm"
 
+$destination="day"+str(day)+"_"+time+"_"+place
+$renpy.call(destination)
 
 $time = "SnackFin"
 

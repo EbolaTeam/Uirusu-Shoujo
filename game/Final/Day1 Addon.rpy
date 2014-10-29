@@ -17,14 +17,17 @@ label day1_morningFin:
     ec "Heh, that happens to me some times"
     pr "Seriously, what's my name..."
     $ bullshitname = renpy.input("Please enter your name:")
+    $ bullshitname = bullshitname.strip()
     pr "I remember, it's %(bullshitname)s"
     show ebby concerned
     ec "Seriously? What a weird name"
     pr "Wait no, that isn't it, obviously. Forgive me, I'm still half asleep."
-    pr "I'm Chungus. Nice to meet you Ebby."
     show ebby normal
-    ec "Well that's a much more normal name."
+    pr "I'm Chungus. Nice to meet you Ebby."
+    show ebby joy
+    ec "Well that's a much more normal name. Nice to meet you, Chungus."
     pr "Anyway, what's the time? I'm pretty tired."
+    show ebby normal
     ec "Oh, it's 3AM. Sorry for waking you, I coundn't wait to meet you"
     pr "No chance you'd let me go back to sleep?"
     show ebby joy
