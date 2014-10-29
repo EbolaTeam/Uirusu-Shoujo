@@ -1,4 +1,4 @@
-﻿label day1_SnackFin_libraryFin:
+label day1_SnackFin_libraryFin:
     scene bg xebcorridor with fade
     show ebby normal:
         zoom 1.0
@@ -60,6 +60,7 @@
         "Sure":
             $ AidsCount += 1
             $ AidsMetFulfilled = 1
+            $ AidsMetAtLunch = 1
             pr "Sure, see you then!"
             show aids excited
             ai "YAY! I can't wait!"
@@ -189,7 +190,7 @@ label day1_lunchFin_corridorFin:
 label Day1AidLunchComfort:
         ec "Eidzu? Are you okay?"
         show aids sad
-        ai "HIV-kun said he'd meet me at lunch but he's too busy railing that slut Sian."
+        ai "HIV-kun said he'd meet me at lunch but he's too busy railing that harlot Sian."
         pr "Did you say Sian?"
         show ebby normal
         ec "Aww, poor girl. Want a huggu?"
@@ -246,31 +247,51 @@ return
 
 label day1_afternoonFin_gateFin:
     scene bg xebgate with fade
-    show ebby sad:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
-    show aids sad:
+    show ebby normal on left
+    if AidsMeet == 0:
+    else:
+    nn "I see Aids sitting alone on a bench, looking like she's waiting for someone."
+    if AidsMetAtLunch = 1:
+        nn "Not the first time today..."
+    show aids sad at right
+    pr "Aids, you okay?"
+    show aids normal:
         zoom 1.8
-        xalign 0.9
-        yalign 1.0
-    ec "Poor Aids wanted to walk home with Hiv but he is off to bang a floozy."
+    ai "Mostly. HIV's ditched me again for a floozy."
+    show aids sad
+    ai "Why don't I ever get to have fun with him anymore?"
+    pr "If you want you can always hang out with me."
+    show aids excited
+    ai "REALLY! YAY!"
+    show aids normal
+    nn "Aids followed me an Ebby back to the dorm."
     $ AidsCount += 1
     $ aids_affection += 1
+    $ AidsInvite = 1
     return
     
     
 label day1_eveningFin_showerFin:
     scene bg xebshower with fade
-    show ebby rape:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
-    show aids joy:
-        zoom 1.8
-        xalign 0.9
-        yalign 1.0
-    ec "Aids walks in on protag naked in the shower! What a perverted girl!"
+    if AidsMeet == 0:
+        show aids concerned at right
+        nn "After todays shinanigans a nice warm shower feels suprisingly good"
+        nn "But I'm pretty sure I saw a girl I met earlier peeking at me"
+        hide aids
+        with moveoutright
+        nn "Nevermind, nothing wrong with a pervert, plus I wouldn't mind a peek at Ebby, if I do say so"
+        $ AidsMeet = 1
+    else:
+        nn "After todays shinanigans a nice warm shower feels suprisingly good"
+        show aids joy at right:
+            zoom 1.8
+        nn "Aids accidentally walked in on me, although \"Accidentally\" may be up for debate"
+        ai "S-sorry, I didn't mean to walk in on you l-like this..."
+        hide aids
+        with moveoutright
+        nn "I wouldn't mind too bad, but she's already gone"
+        
+    
     $ AidsCount += 1
     $ aids_affection += 1
     return
@@ -298,6 +319,9 @@ show aids normal
 ai "Me, silly."
 pr "Eidz, what are you doing in here?"
 show aids sad
+if  AidsInvite = 1:
+    ai "You said I could hang out with you if I wanted"
+    pr "This isn't really what I had in mind, but still, why are you up so late?"
 ai "I couldn't sleep, I had a dream. Mind if I stay with you tonight? I don't wanna be in my room alone."
 pr "Aww, I'm sorry, sure... I guess, stay if you want. What was your nightmare about, if you don't mind me asking?"
 show aids joy

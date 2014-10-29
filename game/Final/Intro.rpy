@@ -233,7 +233,7 @@ label introLab:
     
     
     scene bg black with fade
-    
+    $ renpy.pause(0.5, hard=True)
     "Cough Cough"
     ug "Pathetic... another one"
     

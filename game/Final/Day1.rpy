@@ -18,11 +18,6 @@ call day1morningwakeFin
 
 $time = "morningFin"
 
-scene bg xebdorm with fade
-show ebby normal:
-    zoom 1.0
-    xalign 0.1
-    yalign 1.0
 
 menu:
     "What to do?"
