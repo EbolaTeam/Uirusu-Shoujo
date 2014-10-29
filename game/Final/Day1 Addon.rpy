@@ -291,7 +291,7 @@ label day1_morningFin_dorm:
     
 label day1_SnackFin_classFin:
     scene bg xebdesk with fade
-    "It looks like someone is asleep at their desk"  
+    "It looks like someone is asleep at their desk."  
     
     
     menu:
@@ -316,7 +316,7 @@ label day1_SnackFin_classFin:
     rab "You're... new here...?"
     show rab happy at left:
         zoom 1.8
-    rab "YEY! Wait until Ebola-Chan hears that I got to talk to the new kid! She'll freak out!"
+    rab "YEY! Wait until Ebola-chan hears that I got to talk to the new kid! She'll freak out!"
     "But I already met her..."
     show rab unsure at left:
         zoom 1.8
@@ -373,7 +373,7 @@ label lind_wakeFin:
     return  
 
 label lind_nowakeFin:
-    "They must be tired, I should just let them sleep"
+    "They must be tired, I should just let them sleep."
     "Unfortunately the door makes a loud creek as I go to leave."
     show rab unsure at left:
         zoom 1.8
