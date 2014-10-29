@@ -41,7 +41,7 @@ menu:
 
     "Get Ebby to show you around the classrooms.":
         $place="libraryFin"
-    "Stay in class a while longer":
+    "Stay in class a while longer.":
         $place="classFin"
         
         
@@ -62,16 +62,16 @@ show ebby normal:
 if AidsMeet == 0:
     menu:
         "What to do?"
-        "Walk around the corridors":
+        "Walk around the corridors.":
             $place="corridorFin"
-        "Explore outside the school":
+        "Explore outside the school.":
             $place="explore"
 else:
     menu:
         "What to do?"
-        "Stay in class a while longer":
+        "Stay in class a while longer.":
             $place="classFin"
-        "Go find Eidzu":
+        "Go find Eidzu.":
             $place="corridorFin"
         "Go exploring.":
             $place="explore"
