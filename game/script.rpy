@@ -238,8 +238,6 @@ label start:
     stop music
     scene bg black with fade
     menu:
-        "Final":
-            jump final
         "Origins":
             jump Origins
         "Shrines":

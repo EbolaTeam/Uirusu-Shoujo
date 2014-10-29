@@ -114,7 +114,7 @@ show ebby normal:
     yalign 1.0
 
 menu:
-    "What to do?"
+    "What do do?"
 
     "Have a shower.":
         $place="showerFin"

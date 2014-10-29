@@ -48,7 +48,7 @@ label day1morningwakeFin:
     scene bg xebdorm_room with fade
 
     prin "I wake to sunlight streaming in the window and give a stretch."
-    nn "Mmmm this is nice - when was the last time waking up in the morning felt so damn good?"
+    prin "mmmm this is nice - when was the last time waking up in the morning felt so damn good?"
     prin "There's a school uniform with my name tagged onto it. I have no clue what the hell's going on, but I think I can understand that much"
     
     scene bg xebdorm with fade
@@ -59,25 +59,25 @@ label day1morningwakeFin:
     scene bg xebshower with fade
 
     "After getting washed and dressed I give myself a look over in the mirror.{p}
-    So this is how I look in a school uniform?{p}
-    Not half bad if I say so myself.{p}"
-    nn "Laughing, I head down for breakfast."
+    so this is how I look in a school uniform?{p}
+    Not half bad If I say so myself.{p}"
+    "Laughing I head down for breakfast."
 
     scene bg xebdorm with fade
 
     show sars notamused at left:
         zoom 1.5
 
-    sars "AHH! It's the pervert! Don’t look at him or you’ll get molested!"
+    sars "AHH! Its the pervert! Don’t look at him or you’ll get molested!"
 
     show aids concerned behind sars:
         zoom 1.8
         xalign 0.3
         yalign 1.0
-    eidzu "Ehhhh? What?!?!?"
+    eidzu "ehhhh? what?!?!?"
     pr "Good morning ladies!"
     sars "Grrrrrr!"
-    eidzu "Ah..g-good morning!"
+    eidzu "ah..g-good morning!"
 
     hide sars
     hide aids
@@ -92,7 +92,7 @@ label day1morningwakeFin:
 
     ec "...."
 
-    nn "Ebola-chan is nibbling on her toast, but she seems to be still asleep.
+    "Ebby- chan is nibbling on her toast, but she seems to be still asleep
     I guess she isn’t good with mornings."
 
     hide ebby
@@ -103,9 +103,9 @@ label day1morningwakeFin:
 
     bp "Now now, settle down and enjoy your breakfast! It’s the most important meal of the day you know!"
 
-    nn "Not one to refuse a nice homecooked meal, I dig in."
+    pr "Not one to refuse a nice homecooked meal, I get stuck in."
 
-    "Mmm! This is delicious!"
+    "Mmm! this is delicious!"
 
     bp "I’m glad it’s to your tastes!"
 
@@ -117,17 +117,17 @@ label day1morningwakeFin:
 
     show sars notamused at left:
         zoom 1.5
-    sars "I’m done! Come on Eidzu, let's leave now, I don’t want to be around HIM any longer than I have to!"
+    sars "I’m done! Come on Eidzu, lets leave now, I don’t want to be around HIM any longer than I have to!"
     show aids concerned behind sars:
         zoom 1.8
         xalign 0.3
         yalign 1.0
-    eidzu "Ah! Yes - we’ll be going now!"
+    eidzu "ah! yes - we’ll be going now!"
 
     hide sars
     hide aids
 
-    pr "She barely has time to call out as she is dragged out the door."
+    pr "She barely has time to call out as she is dragged out the door"
 
     show mal notmal at left:
         xalign 0.1
@@ -157,7 +157,7 @@ label day1morningwakeFin:
 
 label day1_morningFin_dorm:
     nn "Well there is no sense in being too early on my first day, but I don’t want to be late either."
-    nn "I head back to my room and double-check that I have everything I need for the day."
+    nn "I head back to my room and double check that I have everything I need for the day."
     scene bg xebdorm_room with fade
     nn "Ok, looking good."
     scene bg xebdorm_door with fade
@@ -170,15 +170,15 @@ label day1_morningFin_dorm:
     nn "Years of cultist experience in understanding the esoteric utterances of summoned other-worldly entities kick in instantly."
     ec "{color=#57bab7}(Oh no! I'm going to be late!){/color}"
     "No, no, you’re ok. We have plenty of time, it’s only half past."
-    nn "I glance up at the clock over the door - it says ten to.{p}...oh no."
+    nn "I glance up at the clock over the door - it says ten to.{p}..oh no."
     nn "My watch still says half past{p}..and isn’t ticking."    
     "AHHHHH!! I’m going to be late!"
-    ec "Mfff mffff mfffff-mff mmmmff mffff, mfff!\"{p}
+    ec "mfff mffff mfffff-mff mmmmff mffff, mfff!\"{p}
     \"{color=#57bab7}(That's what Ebola-chan already said, silly!){/color}"
-    nn "Think, think, think - yeah we can do this."
+    nn "Think, think think - yeah we can do this."
     "If we run we can still make it!"
     nn "I grab her hand and drag her out the door!"
-    ec "Mffffffff!\"{p}
+    ec "mffffffff!\"{p}
     \"{color=#57bab7}(Kyaaaaa!){/color}"
     "We’ll be heading out!"
     bp "Have a good day!"
@@ -196,7 +196,7 @@ label day1_morningFin_dorm:
     show ebby toastjoy at left
     nn "I turn to look at her, twintails streaming she runs along beside me earnestly."
     nn "She flashes me a smile and gives my hand a friendly squeeze."
-    ec "Mfff mf mf! Mf mfff mf mf!\"{p}
+    ec "mfff mf mf! mf mfff mf mf!\"{p}
     \"{color=#57bab7}(Keep it up! We can do it!){/color}"
     hide ebby
     nn "Giving her hand a squeeze back I run on.{p}
@@ -208,10 +208,10 @@ label day1_morningFin_dorm:
     nn "We skid to a stop in front of the school gate."
     "I don't know the way from here!"
     show ebby toastjoy at left
-    ec "Mmff mffff, mmfff-mfff mfff!\"{p}
+    ec "mmff mffff, mmfff-mfff mfff!\"{p}
     \"{color=#57bab7}(Don't worry, Ebola-chan does!){/color}"
     hide ebby
-    nn "Pulling me along, she dashes off towards the main building."
+    nn "pulling me along she dashes off towards the main building."
     show bg xebgrass with fade
     show bg xeblockers with fade
     show bg xebstairs with fade
@@ -231,34 +231,34 @@ label day1_morningFin_dorm:
     sars "MOLESTER!"
     with vpunch
 
-    nn "Before I can even catch my breath, I’m assaulted by a manic Sars-chan."
+    nn "Before I can even catch my breath I’m assaulted by a manic sars-chan."
 
     show ebby toastsad
     ec "mfff mf mfff-mfff! mff mmmfffff mfff mfff!\"{p}
-    \"{color=#57bab7}(Stop it Sars-chan! It's nothing like that!){/color}"
+    \"{color=#57bab7}(Stop it Sars-chan!  It's nothing like that!){/color}"
     show sars concerned at left:
         zoom 1.5
     sars "What? Take that toast out of your mouth, I can't understand a word!"
     show sars stars at left:
         zoom 1.5
-    sars "-or did he force it on you?"
+    sars "or did he force it on you?"
     with hpunch
     sars "TOAST FETISHIST!"
-    ec "Mffff! Mf mmmffff.\"{p}
+    ec "mffff! mf mmmffff.\"{p}
     \"{color=#57bab7}(Ohh! I forgot.){/color}"
-    nn "Finally she takes it out of her mouth."
+    nn "finally she takes it out of her mouth."
     show ebby rape
     ec "%(player_name)s-kun didn’t do anything like that! Stop being so mean!{p}
     He was very kind and ran with me all the way here so that I wouldn’t be late!"
     show sars concerned at left:
         zoom 1.5
-    sars "Hmph! I dont care how kind he is, he shouldn’t be holding your hand with such familiarity!"
+    sars "hmph! I dont care how kind he is, he shouldn’t be holding your hand with such familiarity!"
     show ebby concerned
-    ec "Eh?"
-    nn "She looks down as if suddenly realizing we’re still holding hands."
+    ec "eh?"
+    nn "She looks down as if suddenly realising we’re still holding hands."
     show ebby joy
-    ec "Oh! Hehe"
-    nn "She gives my hand a last friendly squeeze before letting go and giving me a quick bow."
+    ec "oh! hehe"
+    nn "she gives my hand a last friendly squeeze before letting go and giving me a quick bow."
     ec "Thank you %(player_name)s-kun, I wouldn't have made it on time without you!"
     nn "Now I actually start to feel embarrassed."
     "We both made it in time, that’s the important thing."
