@@ -249,7 +249,9 @@ label day1_afternoonFin_gateFin:
     scene bg xebgate with fade
     show ebby normal on left
     if AidsMeet == 0:
+        pass
     else:
+        pass
     nn "I see Aids sitting alone on a bench, looking like she's waiting for someone."
     if AidsMetAtLunch = 1:
         nn "Not the first time today..."
