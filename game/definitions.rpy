@@ -212,7 +212,6 @@ init:
     image vu normal = "images/sprites/VuNormal.png"
     
     image ry = "images/placeholder/ry.png"
-    image pro = "images/placeholder/pro.png"
     image sian = "images/placeholder/sian.png"
     image bsg = "images/placeholder/bsg.png"
     image nye = "images/placeholder/nye.png"
