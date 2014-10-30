@@ -105,7 +105,7 @@ label introLab:
     
     pr "It's been years since I started working here."
     pr "Nobody ever realy asked why, guess I'm not really the type people make chitchat with."
-    pr "What does suprise me is how very few people ever ask me what I'm doing"
+    pr "What does suprise me is how very few people ever ask me what I'm doing."
     pr "\"Million dollar equipment? Sure. A 20 man team? Here you go. 5 billion dollars? For research? You act like you think I'm gonna say no.\"
     pr "Funny, for all I've ever done, they only know about a select few things. They think that's what I'm pouring all these years into, all their money into."
     pr "They don't know jack shit, but they're still impressed."
