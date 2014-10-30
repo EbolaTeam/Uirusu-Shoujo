@@ -6,7 +6,8 @@ $ AidsMeet = 0
 $ AidsCount = 0
 $ AidsMetFulfilled = 0
 $ AidsProprietary  = 0
-
+$ RabbiesMet = 0
+$ RabbiesCount = 0
 $ EbbyBrowniePoints = 0
 
 

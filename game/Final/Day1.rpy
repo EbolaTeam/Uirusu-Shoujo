@@ -41,7 +41,7 @@ menu:
 
     "Get Ebby to show you around the classrooms.":
         $place="libraryFin"
-    "Stay in class a while longer.":
+    "Have a quick nap at your desk.":
         $place="classFin"
         
         
@@ -62,16 +62,14 @@ show ebby normal:
 if AidsMeet == 0:
     menu:
         "What to do?"
-        "Walk around the corridors.":
+        "Have a look around the corridors":
             $place="corridorFin"
-        "Explore outside the school.":
+        "Explore outside the school":
             $place="explore"
 else:
     menu:
         "What to do?"
-        "Stay in class a while longer.":
-            $place="classFin"
-        "Go find Eidzu.":
+        "Go find Eidzu":
             $place="corridorFin"
         "Go exploring.":
             $place="explore"
@@ -91,7 +89,8 @@ show ebby normal:
 
 menu:
     "What to do?"
-
+    "Hang around for a bit":
+        $place="hang"
     "Head home alone.":
         $place="gateFin"
 
@@ -143,7 +142,8 @@ label day1_lunchFin:
         zoom 1.0
         xalign 0.1
         yalign 1.0
-    ec "They have morning classes!"
+    nn "We have morning classes, I introduce myself to everyone, all that stuff."
+    nn "Honestly it's a pretty booring morning."
 
     return
 
@@ -160,7 +160,9 @@ label day1_afternoonFin:
         zoom 1.0
         xalign 0.1
         yalign 1.0
-    ec "They have afternoon classes!"    
+    nn "Afternoon classes. Still pretty booring, but we have Biology, so I at least stay awake."
+    nn "Some of the girls are impressed at how much I know, but I'm suprised at how much has changed in the textbooks since I last read them."
+    nn "I mean, since when did the immune system get so much attention? You wouldn't think it'd be that important, but the other girls seem facinated..."
     return
 
 
@@ -170,7 +172,7 @@ label day1_eveningFin:
         zoom 1.0
         xalign 0.1
         yalign 1.0
-    ec "Everyone is at home in the dorm!"
+    nn "Back in the dorm, it seems like a good time to relax"
     return
 
 

@@ -11,7 +11,7 @@ label day1_morningFin:
     ug "Daddy told me you're staying with us for a bit and that you'd know what's going on."
     pr "He was a little vauge. Anyway, what's your name?"
     show ebby normal
-    ec "Ebby. And yours?"
+    ec "Ebola-chan. You can call me Ebby. And yours?"
     pr "I'm having a hard time remembering..."
     show ebby joy
     ec "Heh, that happens to me some times"
@@ -53,14 +53,15 @@ label day1morningwakeFin:
     
     scene bg xebdorm with fade
     prin "I walk out into what looks like the main room, onty to be greeted by a small girl getting dressed"
-    show sars
+    show sars notamused
+    show sars notamused
     ug "Wh-what are you doing here, intruder! Pervert! GET OUT!"
     prin "I promptly fuck off back to my room. Maybe I'll clean myself up a bit..."
     scene bg xebshower with fade
 
-    "After getting washed and dressed I give myself a look over in the mirror.{p}
+    nn "After getting washed and dressed I give myself a look over in the mirror.{p}
     So this is how I look in a school uniform?{p}
-    Not half bad if I say so myself.{p}"
+    Not half bad if I say so myself."
     nn "Laughing, I head down for breakfast."
 
     scene bg xebdorm with fade
@@ -68,16 +69,16 @@ label day1morningwakeFin:
     show sars notamused at left:
         zoom 1.5
 
-    sars "AHH! It's the pervert! Don’t look at him or you’ll get molested!"
+    ug "AHH! It's the pervert! Don’t look at him or you’ll get molested!"
 
     show aids concerned behind sars:
         zoom 1.8
         xalign 0.3
         yalign 1.0
-    eidzu "Ehhhh? What?!?!?"
+    ug "Ehhhh? What?!?!?"
     pr "Good morning ladies!"
-    sars "Grrrrrr!"
-    eidzu "Ah..g-good morning!"
+    ug "Grrrrrr!"
+    ug "Ah..g-good morning!"
 
     hide sars
     hide aids
@@ -105,13 +106,13 @@ label day1morningwakeFin:
 
     nn "Not one to refuse a nice homecooked meal, I dig in."
 
-    "Mmm! This is delicious!"
+    pr "Mmm! This is delicious!"
 
     bp "I’m glad it’s to your tastes!"
 
-    "Definitly!"
+    pr "Definitly!"
 
-    pr "I could easily get used to this." 
+    nn "I could easily get used to this." 
 
     hide bp
 
@@ -144,12 +145,13 @@ label day1morningwakeFin:
     hide mal
     hide bp
 
+    pr "Huh, only 8:30, what should we do?"
+    
     show ebby toastdead:
         xalign 0.1
         yalign 1.0
     ec "..."
 
-    hide ebby
     return
 
 
@@ -248,7 +250,7 @@ label day1_morningFin_dorm:
     \"{color=#57bab7}(Ohh! I forgot.){/color}"
     nn "Finally she takes it out of her mouth."
     show ebby rape
-    ec "%(player_name)s-kun didn’t do anything like that! Stop being so mean!{p}
+    ec "Chungus-kun didn’t do anything like that! Stop being so mean!{p}
     He was very kind and ran with me all the way here so that I wouldn’t be late!"
     show sars concerned at left:
         zoom 1.5
@@ -259,7 +261,7 @@ label day1_morningFin_dorm:
     show ebby joy
     ec "Oh! Hehe"
     nn "She gives my hand a last friendly squeeze before letting go and giving me a quick bow."
-    ec "Thank you %(player_name)s-kun, I wouldn't have made it on time without you!"
+    ec "Thank you Chungus-kun, I wouldn't have made it on time without you!"
     nn "Now I actually start to feel embarrassed."
     "We both made it in time, that’s the important thing."
     teach "All right! Settle down and get to your seats everyone!"
@@ -268,7 +270,7 @@ label day1_morningFin_dorm:
     hide ebby
     sars "I'm watching you, toast-fetishist!"
     hide sars
-    "Yes, this is going to be an experience indeed."
+    nn "Yes, this is going to be an experience indeed."
 
     scene bg black with fade
     $ebby_affection+=1
@@ -290,6 +292,8 @@ label day1_morningFin_dorm:
     
     
 label day1_SnackFin_classFin:
+    $ RabbiesMet += 1
+    $ RabbiesCount += 1
     scene bg xebdesk with fade
     "It looks like someone is asleep at their desk."  
     
@@ -303,25 +307,27 @@ label day1_SnackFin_classFin:
     "Are you ok? I think you fell asleep there."
     show rab annoyed at left:
         zoom 1.8
-    rab "I KNOW THAT."
+    ug "I KNOW THAT."
     show rab unsure at left:
         zoom 1.8
-    rab "I don't sleep well, so sometimes I come where it's quiet."
+    ug "I don't sleep well, so sometimes I come where it's quiet."
     show rab normal at left:
         zoom 1.8
-    rab "Oh well... I'm awake now... sorry, who were you again?"
-    "I'm %(player_name)s. It's my first day here."
+    ug "Oh well... I'm awake now... sorry, who were you again?"
+    pr "I'm Chungus. It's my first day here."
     show rab unsure at left:
         zoom 1.8
     rab "You're... new here...?"
     show rab happy at left:
         zoom 1.8
-    rab "YEY! Wait until Ebola-chan hears that I got to talk to the new kid! She'll freak out!"
-    "But I already met her..."
+    ug "YEY! Wait until Ebola-chan hears that I got to talk to the new kid! She'll freak out!"
+    pr "But I already met her..."
     show rab unsure at left:
         zoom 1.8
-    rab "Oh..."
-    "The two of you stare at each other, awkwardly. It looks like she might still be drooling."
+    ug "Oh..."
+    pr "Wait, you didn't tell me your name."
+    rab "Rabies."
+    pr "The two of us stare at each other, awkwardly. It looks like she might still be drooling."
     show rab normal at left:
         zoom 1.8
     rab "Well, I know something YOU haven't seen yet. Come with me!"#
@@ -353,8 +359,8 @@ label day1_SnackFin_classFin:
     show rab normal at left:
         zoom 1.8
     rab "I guess I'll see you around... sorry, what was your name again?"
-    "It's %(player_name)s."
-    rab "Well, it was nice to meet you, %(player_name)s-San, I'm Rabies. I guess I'll see you later, then..."
+    "It's Chungus-kun."
+    rab "Well, it was nice to meet you, Chuu-San, I'm Rabies. I guess I'll see you later, then..."
 
     "She skips away."
     show rab happy at left:
@@ -369,7 +375,7 @@ label lind_wakeFin:
     "Uh, excuse me?"
     show rab unsure at left:
         zoom 1.8
-    rab "Huh...wha...?"
+    ug "Huh...wha...?"
     return  
 
 label lind_nowakeFin:
@@ -377,10 +383,10 @@ label lind_nowakeFin:
     "Unfortunately the door makes a loud creek as I go to leave."
     show rab unsure at left:
         zoom 1.8
-    rab "Huh...wha...?"
+    ug "Huh...wha...?"
     show rab shock at left:
         zoom 1.8
-    rab "NOCOMEBACK!"
+    ug "NOCOMEBACK!"
     return
 
 label lind_itsokFin:
@@ -517,3 +523,156 @@ label day1_lunchFin_explore:
 
 
 
+
+
+
+
+
+
+
+
+
+label day1_afternoonFin_hang:
+    scene bg xebgate with fade
+    nn "It's been a long day. I decide to take a break from socializing."
+    nn "The streets are mostly empty as I make my way back to the dorms, spare a couple girls still walking home."
+    if RabbiesMet == 1:
+        nn "I almost feel like I'm forgetting something..."
+    if RabbiesMet == 1:
+        "*Thunder*"
+        ug "EEEEK!"
+        nn "One of the girls a few feet ahead dashes into a small enclosure."
+        nn "As I walk past, she shouts to me."
+        show rab unsure at right
+        if RabbiesMet == 1:
+            rab "HEY! CHUU-SAN!"
+        else:
+            ug "HEY!"
+        nn "She sounds terrified, she looks like she's cowering under there..."
+        show rab unsure
+        rab "I knew it was going to happen... I saw the dark clouds... but... I thought I could make it back before it started..."
+        pr "Huh...?"
+        show rab annoyed
+        rab "The storm! You heard that, didn't you? It's going to start raining, soon..."
+        show rab sad
+        rab "And now I'm going to get all wet..."
+        rab "..."
+        show rab shock
+        rab "Wait... is that an umbrella?"
+        nn "She didn't see it before? Or is she just playing dumb?"
+        show rab shock:
+            linear 1.0 zoom 1.8 xalign 0.2 yalign 1.0
+        show rab happy
+        rab "That's MUCH better. Lucky I found you, isn't it?"
+    else:
+        "*Thunder*"
+        ug "EEEEK!"
+        nn "One of the girls a few feet ahead dashes into a small enclosure."
+        nn "As I walk past, she shouts to me."
+        show rab unsure at right
+        if RabbiesMet == 1:
+            rab "HEY! CHUU-SAN!"
+        else:
+            ug "HEY!"
+        nn "She sounds terrified, she looks like she's cowering under there..."
+        show rab unsure
+        ug "I knew it was going to happen... I saw the dark clouds... but... I thought I could make it back before it started..."
+        pr "Huh...?"
+        show rab annoyed
+        ug "The storm! You heard that, didn't you? It's going to start raining, soon..."
+        show rab sad
+        ug "And now I'm going to get all wet..."
+        ug "..."
+        show rab shock
+        ug "Wait... is that an umbrella?"
+        nn "She didn't see it before? Or is she just playing dumb?"
+        show rab shock:
+            linear 1.0 zoom 1.8 xalign 0.2 yalign 1.0
+        show rab happy
+        ug "That's MUCH better. Lucky I found you, isn't it?"
+        pr "I guess, but I didn't even catch your name yet"
+        rab "Rabies."
+    
+    
+    
+    
+    
+    menu:
+        "Let's get you home.":
+            $ RabbiesHelp = 1
+            $ RabbiesCount += 1
+            call Day1AfterSchoolRabHome
+        "Please let go of me.":
+            call Day1AfterSchoolRabFuggoff
+    if RabbiesCount == 2:
+        if RabbiesHelp == 1:
+            call Day1AfterSchoolRabDormGood
+        else:
+            call Day1AfterSchoolRabDormBad
+    else:
+        call Day1AfterSchoolRabDormBad        
+    return
+
+
+label Day1AfterSchoolRabHome:
+    pr "Come on, let’s get you back to your room. Where do you live?"
+    show rab normal
+    rab "Oh, uh... I live in Petri Hall"
+    show rab happy
+    rab "It’s where I first met Ebola-Chan. I live just a few rooms down from her."
+    pr "I live there too. Right across from her, actually…"
+    show rab shock
+    rab "WHA? I didn’t know they let boys live there!"
+    show rab unsure
+    rab "Then again… I always see HIV-kun there with AIDS-chan…"
+    nn "The two of us chat the rest of the way back. As it starts to rain, I feel her clutching onto me."
+    return
+    
+
+
+label Day1AfterSchoolRabFuggoff:
+    show rab annoyed
+    rab "Oh come on. You’re going to make me walk home all alone in the rain?"
+    show rab sad
+    rab "Can’t I at least walk with you to your dorm? I’m sure I’d be able to make it the rest of the way."
+    label Day1AfterSchoolRabFuggoffQLoop:
+    menu:
+        "No way.":
+            rab "Pleaaaaaase?"
+            jump Day1AfterSchoolRabFuggoffQLoop
+        "Fine.":
+            pass
+    show rab happy
+    rab "YEY!"
+    nn "The two of us walk back to the dorm in silence. As it starts raining, she seems to get closer to me."
+    return
+    
+    
+    
+label Day1AfterSchoolRabDormGood:
+    scene bg xebdorm
+    show rab unsure at right
+    rab "Hey _____-San…"
+    pr "Yes?"
+    rab "..."
+    pr "..."
+    show rab happy:
+        linear 0.1 zoom 1.8 xalign 0.3 yalign 1.0
+    nn "She rushes me, almost knocking me over. Upon contact, she wraps her arms around me."
+    show rab normal
+    rab "Thanks for walking me back. You were a real lifesaver there."
+    show rab sad
+    rab "I don’t know how long I’d have been stuck out there if you hadn’t passed by."
+    show rab normal
+    rab "I won’t forget my umbrella next time. See you tomorrow, Chuu-San!"
+    return
+
+
+label Day1AfterSchoolRabDormBad:
+    scene bg zebdorm
+    show rab shock at left
+    rab "Wait… you live in Petri Hall too?"
+    show rab normal
+    rab "You’re like a good luck charm or something. Thanks a lot, Chuu-San!"
+    nn "And there she goes, like a rocket up those stairs…"
+    return

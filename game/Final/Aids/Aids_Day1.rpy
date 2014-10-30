@@ -117,6 +117,7 @@ label day1_lunchFin_corridorFin:
             "Let's not":
                 pr "Nah, she's probably just resting."
                 $ EbbyBrowniePoints -= 1
+                $ AidsPassed = 1
                 show ebby sad
                 ec "She's crying you inconsiderate shit!"
                 "A guy just walked up to her"
@@ -249,24 +250,62 @@ label day1_afternoonFin_gateFin:
     scene bg xebgate with fade
     show ebby normal on left
     if AidsMeet == 0:
-        pass
+        nn "Me and Ebster walk home togeather"
+        nn "Huh, funny. I called the dorm \"Home\". Guess I've really snapped out of reality pretty quickly..."
+        if AidsPassed = 1:
+            nn "She looks like the one we saw earlier at lunch, I wonder if Ebby still thinks I'm a dick for that..."
+        show ebby sad
+        ebby "Aids! AIDS!"
+        show aids normal
+        ai "Y-yeah Ebby?"
+        show ebby concerned
+        ebby "You've been alone alot recently. Ebola-chan is worried about you!"
+        ai "D-don't be, it's just HIV, he's not spending as much time with me anymore"
+        show ebby normal
+        ec "Aww, poor girl. Want a huggu?"
+        show aids rape
+        ai "Depends, is your friend free?"
+        show ebby concerned
+        ec "Don't be lewd!"
+        pr "I'm fine with it Ebbs"
+        show ebby normal
+        ec "Oh, o-okay then."
+        ec "Anyway, wanna walk home with us?"
+        show aids joy
+        ai "Sure! So, how did you two meet?"
+        ec "My dad introduced me to him."
+        show aids excited
+        ai "Oh, so that's what's going on."
+        show ebby concerned
+        ec "No, it's not like that, daddy just wanted me to make sure he fits in well."
+        show aids joy
+        ai "I bet I can make him fit in well!"
+        "Show ebby flustered"
+        ec "Y-you shouldn't be saying things like that!"
+        pr "Wha~?"
+        $ AidsMeet = 1
     else:
-        pass
-    nn "I see Aids sitting alone on a bench, looking like she's waiting for someone."
-    if AidsMetAtLunch = 1:
-        nn "Not the first time today..."
-    show aids sad at right
-    pr "Aids, you okay?"
-    show aids normal:
-        zoom 1.8
-    ai "Mostly. HIV's ditched me again for a floozy."
-    show aids sad
-    ai "Why don't I ever get to have fun with him anymore?"
-    pr "If you want you can always hang out with me."
-    show aids excited
-    ai "REALLY! YAY!"
+        nn "I see Aids sitting alone on a bench, looking like she's waiting for someone."    
+        show aids sad at right
+        pr "Aids, you okay?"
+        show aids normal:
+            zoom 1.8
+        ai "Mostly. HIV's ditched me again for another floozy."
+        show aids sad
+        ai "Why don't I ever get to have fun with him anymore?"
+        pr "If you want you can always hang out with me."
+        show aids excited
+        ai "REALLY! YAY!"
+        show aids normal
+        nn "Aids followed me an Ebby back to the dorm."
+    show ebby normal
     show aids normal
-    nn "Aids followed me an Ebby back to the dorm."
+    ec "Huh, home already..."
+    pr "Just in time, it's almost starting to rain..."
+    ai "Well, I better go then. I'm all dirty, so I gotta have a shower."
+    ec "I should probably get going too, I promised Bee I'd help her cook tonight"
+    ai "Later you two!"
+    ec "Seeya"
     $ AidsCount += 1
     $ aids_affection += 1
     $ AidsInvite = 1
@@ -277,8 +316,8 @@ label day1_eveningFin_showerFin:
     scene bg xebshower with fade
     if AidsMeet == 0:
         show aids concerned at right
-        nn "After todays shinanigans a nice warm shower feels suprisingly good"
-        nn "But I'm pretty sure I saw a girl I met earlier peeking at me"
+        nn "After todays shinanigans a nice warm shower feels suprisingly good...{p}
+        I'm pretty sure I saw a girl I met earlier peeking at me"
         hide aids
         with moveoutright
         nn "Nevermind, nothing wrong with a pervert, plus I wouldn't mind a peek at Ebby, if I do say so"
