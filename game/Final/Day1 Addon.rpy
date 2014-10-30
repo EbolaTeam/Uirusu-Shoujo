@@ -1,4 +1,4 @@
-label day1_morningFin:
+﻿label day1_morningFin:
     scene bg black with fade
     scene bg xebdorm_room with fade
     show ebby concerned:
@@ -20,7 +20,7 @@ label day1_morningFin:
     $ bullshitname = bullshitname.strip()
     pr "I remember, it's %(bullshitname)s"
     show ebby concerned
-    ec "Seriously? What a weird name"
+    ec "Seriously? What a weird name."
     pr "Wait no, that isn't it, obviously. Forgive me, I'm still half asleep."
     show ebby normal
     pr "I'm Chungus. Nice to meet you Ebby."
@@ -28,7 +28,7 @@ label day1_morningFin:
     ec "Well that's a much more normal name. Nice to meet you, Chungus."
     pr "Anyway, what's the time? I'm pretty tired."
     show ebby normal
-    ec "Oh, it's 3AM. Sorry for waking you, I coundn't wait to meet you"
+    ec "Oh, it's 3AM. Sorry for waking you, I coundn't wait to meet you."
     pr "No chance you'd let me go back to sleep?"
     show ebby joy
     ec "No worries! Ebby's just happy she got to make a new friend. See you in the morning!"
@@ -49,10 +49,10 @@ label day1morningwakeFin:
 
     prin "I wake to sunlight streaming in the window and give a stretch."
     nn "Mmmm this is nice - when was the last time waking up in the morning felt so damn good?"
-    prin "There's a school uniform with my name tagged onto it. I have no clue what the hell's going on, but I think I can understand that much"
+    prin "There's a school uniform with my name tagged onto it. I have no clue what the hell's going on, but I think I can understand that much."
     
     scene bg xebdorm with fade
-    prin "I walk out into what looks like the main room, onty to be greeted by a small girl getting dressed"
+    prin "I walk out into what looks like the main room, onty to be greeted by a small girl getting dressed."
     show sars notamused
     show sars notamused
     ug "Wh-what are you doing here, intruder! Pervert! GET OUT!"
@@ -340,15 +340,15 @@ label day1_SnackFin_classFin:
     rab "So...what do you think?"
 
     menu:
-        "It's ok.":
+        "It's ok":
             call lind_itsokFin
         "It's beautiful!":
             call lind_beutFin
 
     menu:
-        "I don't mind the rain.":
+        "I don't mind the rain":
             call lind_raingoodFin
-        "I hate the rain.":
+        "I hate the rain":
             call lind_rainbadFin
 
     "The bell rings out signaling the end of the break."
@@ -460,17 +460,17 @@ label day1_lunchFin_explore:
         xalign 0.1
         yalign 1.0
     pr "How did I end up here?"
-    pr "I realy shouldn't have walked around without someone to guide me, now I'm lost"
+    pr "I realy shouldn't have walked around without someone to guide me, now I'm lost."
     show zmapp:
         zoom 1.0
         xalign 0.9
         yalign 0.7
-    "I think there's someone else here"
+    "I think there's someone else here."
     pr "Hello?"
     ug "WHAAAAAAAAA. Don’t sneak up on me like that! I’m working here."
     pr "Working on what?"
-    ug "Oh, you’ll see… Now, let me get back to work."
-    ug "So… if I put this one here…"
+    ug "Oh, you’ll see... Now, let me get back to work."
+    ug "So... if I put this one here..."
     ug "OH SHIT"
     show ebby rape:
         zoom 1.0
@@ -484,12 +484,12 @@ label day1_lunchFin_explore:
     ec "OH GOD I’M SO SORRY. I didn’t mean to hurt you. Are you ok?"
     pr "Yes, I think."
     ec "Anyway, you didn’t happen to see someone in green run this way, did you?"
-    pr "Yeah… they went that way, why?"
+    pr "Yeah... they went that way, why?"
     ec "I’LL TELL YOU LATER."
     
     
     scene bg xebroof
-    "I think I finally found them"
+    "I think I finally found them."
     show ebby sad:
         zoom 1.0
         xalign 0.7
@@ -507,7 +507,7 @@ label day1_lunchFin_explore:
         xalign 0.7
         yalign 0.7
     ug "Shit."
-    ec "Wait, we're laste for class"
+    ec "Wait, we're late for class."
     hide ebbyz
     show zmapp:
         zoom 1.0
@@ -617,14 +617,14 @@ label day1_afternoonFin_hang:
 label Day1AfterSchoolRabHome:
     pr "Come on, let’s get you back to your room. Where do you live?"
     show rab normal
-    rab "Oh, uh... I live in Petri Hall"
+    rab "Oh, uh... I live in Petri Hall."
     show rab happy
     rab "It’s where I first met Ebola-Chan. I live just a few rooms down from her."
-    pr "I live there too. Right across from her, actually…"
+    pr "I live there too. Right across from her, actually..."
     show rab shock
     rab "WHA? I didn’t know they let boys live there!"
     show rab unsure
-    rab "Then again… I always see HIV-kun there with AIDS-chan…"
+    rab "Then again... I always see HIV-kun there with AIDS-chan..."
     nn "The two of us chat the rest of the way back. As it starts to rain, I feel her clutching onto me."
     return
     
@@ -637,10 +637,10 @@ label Day1AfterSchoolRabFuggoff:
     rab "Can’t I at least walk with you to your dorm? I’m sure I’d be able to make it the rest of the way."
     label Day1AfterSchoolRabFuggoffQLoop:
     menu:
-        "No way.":
+        "No way":
             rab "Pleaaaaaase?"
             jump Day1AfterSchoolRabFuggoffQLoop
-        "Fine.":
+        "Fine":
             pass
     show rab happy
     rab "YEY!"
@@ -652,7 +652,7 @@ label Day1AfterSchoolRabFuggoff:
 label Day1AfterSchoolRabDormGood:
     scene bg xebdorm
     show rab unsure at right
-    rab "Hey _____-San…"
+    rab "Hey _____-San..."
     pr "Yes?"
     rab "..."
     pr "..."
@@ -671,8 +671,8 @@ label Day1AfterSchoolRabDormGood:
 label Day1AfterSchoolRabDormBad:
     scene bg zebdorm
     show rab shock at left
-    rab "Wait… you live in Petri Hall too?"
+    rab "Wait... you live in Petri Hall too?"
     show rab normal
     rab "You’re like a good luck charm or something. Thanks a lot, Chuu-San!"
-    nn "And there she goes, like a rocket up those stairs…"
+    nn "And there she goes, like a rocket up those stairs..."
     return

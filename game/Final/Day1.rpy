@@ -39,9 +39,9 @@ show ebby normal:
 menu:
     "What to do?"
 
-    "Get Ebby to show you around the classrooms.":
+    "Get Ebby to show you around the classrooms":
         $place="libraryFin"
-    "Have a quick nap at your desk.":
+    "Have a quick nap at your desk":
         $place="classFin"
         
         
@@ -71,7 +71,7 @@ else:
         "What to do?"
         "Go find Eidzu":
             $place="corridorFin"
-        "Go exploring.":
+        "Go exploring":
             $place="explore"
 
 $destination="day"+str(day)+"_"+time+"_"+place
@@ -91,7 +91,7 @@ menu:
     "What to do?"
     "Hang around for a bit":
         $place="hang"
-    "Head home alone.":
+    "Head home alone":
         $place="gateFin"
 
 $destination="day"+str(day)+"_"+time+"_"+place
@@ -110,7 +110,7 @@ show ebby normal:
 menu:
     "What to do?"
 
-    "Have a shower.":
+    "Have a shower":
         $place="showerFin"
 
 $destination="day"+str(day)+"_"+time+"_"+place
@@ -143,7 +143,7 @@ label day1_lunchFin:
         xalign 0.1
         yalign 1.0
     nn "We have morning classes, I introduce myself to everyone, all that stuff."
-    nn "Honestly it's a pretty booring morning."
+    nn "Honestly, it's a pretty boring morning."
 
     return
 
@@ -160,9 +160,9 @@ label day1_afternoonFin:
         zoom 1.0
         xalign 0.1
         yalign 1.0
-    nn "Afternoon classes. Still pretty booring, but we have Biology, so I at least stay awake."
+    nn "Afternoon classes. Still pretty boring, but we have Biology, so I at least stay awake."
     nn "Some of the girls are impressed at how much I know, but I'm suprised at how much has changed in the textbooks since I last read them."
-    nn "I mean, since when did the immune system get so much attention? You wouldn't think it'd be that important, but the other girls seem facinated..."
+    nn "I mean, since when did the immune system get so much attention? You wouldn't think it'd be that important, but the other girls seem fascinated..."
     return
 
 
@@ -172,7 +172,7 @@ label day1_eveningFin:
         zoom 1.0
         xalign 0.1
         yalign 1.0
-    nn "Back in the dorm, it seems like a good time to relax"
+    nn "Back in the dorm, it seems like a good time to relax."
     return
 
 
