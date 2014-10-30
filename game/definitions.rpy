@@ -241,10 +241,7 @@ init:
     define zmapp = Character('Zmapp-chan', image='zmapp')
     define marburg = Character('Marburg-sama', image='marburg')
     define teach = Character('Teacher')
-    
-    # seems we have two of the same character. This is a problem.
-    define ai = Character('Aids-chan', image='aids')
-    define eidzu = Character('Eidzu-chan', image='aids')
+    define ai = Character('Eidzu-chan', image='aids')
     
     # This is the protagonist. Use this character when the protagonist speaks.
     define pr = Character('player_name', dynamic=True)
@@ -263,3 +260,16 @@ init:
 
     define prin = Character('', kind=narrator) #deprecated. Please use narrator instead
     define nn = Character('', kind=narrator) #deprecated. Please use narrator instead
+    
+    
+    #================#
+    # Record keeping #
+    #================#
+    
+    $ AidsMeet = 0
+    $ AidsCount = 0
+    $ AidsMetFulfilled = 0
+    $ AidsProprietary  = 0
+    $ RabbiesMet = 0
+    $ RabbiesCount = 0
+    $ EbbyBrowniePoints = 0

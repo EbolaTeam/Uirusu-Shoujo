@@ -1,4 +1,4 @@
-﻿label day1_morningFin:
+label day1_morningFin:
     scene bg black with fade
     scene bg xebdorm_room with fade
     show ebby concerned:
@@ -14,7 +14,7 @@
     ec "Ebola-chan. You can call me Ebby. And yours?"
     pr "I'm having a hard time remembering..."
     show ebby joy
-    ec "Heh, that happens to me some times"
+    ec "Hehe, that happens to me some times"
     pr "Seriously, what's my name..."
     $ bullshitname = renpy.input("Please enter your name:")
     $ bullshitname = bullshitname.strip()
@@ -123,7 +123,7 @@ label day1morningwakeFin:
         zoom 1.8
         xalign 0.3
         yalign 1.0
-    eidzu "Ah! Yes - we’ll be going now!"
+    ai "Ah! Yes - we’ll be going now!"
 
     hide sars
     hide aids
@@ -226,26 +226,26 @@ label day1_morningFin_dorm:
     hide ebby
     show sars stars at left:
         zoom 1.5
-    sars "WHAT THE HELL ARE YOU DOING WITH MY EBOLA-CHAN!!!"
+    nn "WHAT THE HELL ARE YOU DOING WITH MY EBOLA-CHAN!!!"
     with vpunch
-    sars "PERVERT!"
+    nn "PERVERT!"
     with hpunch
-    sars "MOLESTER!"
+    nn "MOLESTER!"
     with vpunch
 
-    nn "Before I can even catch my breath, I’m assaulted by a manic Sars-chan."
+    nn "Before I can even catch my breath, I’m assaulted by the manic from earlier."
 
     show ebby toastsad
     ec "mfff mf mfff-mfff! mff mmmfffff mfff mfff!\"{p}
     \"{color=#57bab7}(Stop it Sars-chan! It's nothing like that!){/color}"
     show sars concerned at left:
         zoom 1.5
-    sars "What? Take that toast out of your mouth, I can't understand a word!"
+    nn "What? Take that toast out of your mouth, I can't understand a word!"
     show sars stars at left:
         zoom 1.5
-    sars "-or did he force it on you?"
+    nn "-or did he force it on you?"
     with hpunch
-    sars "TOAST FETISHIST!"
+    nn "TOAST FETISHIST!"
     ec "Mffff! Mf mmmffff.\"{p}
     \"{color=#57bab7}(Ohh! I forgot.){/color}"
     nn "Finally she takes it out of her mouth."
@@ -254,7 +254,7 @@ label day1_morningFin_dorm:
     He was very kind and ran with me all the way here so that I wouldn’t be late!"
     show sars concerned at left:
         zoom 1.5
-    sars "Hmph! I dont care how kind he is, he shouldn’t be holding your hand with such familiarity!"
+    nn "Hmph! I dont care how kind he is, he shouldn’t be holding your hand with such familiarity!"
     show ebby concerned
     ec "Eh?"
     nn "She looks down as if suddenly realizing we’re still holding hands."
@@ -268,7 +268,7 @@ label day1_morningFin_dorm:
     nn "And here is the teacher now, looks like we really did make it just in time."
     nn "Ebola-chan flashes me a quick smile and heads to her seat."
     hide ebby
-    sars "I'm watching you, toast-fetishist!"
+    nn "I'm watching you, toast-fetishist!"
     hide sars
     nn "Yes, this is going to be an experience indeed."
 
@@ -317,7 +317,7 @@ label day1_SnackFin_classFin:
     pr "I'm Chungus. It's my first day here."
     show rab unsure at left:
         zoom 1.8
-    rab "You're... new here...?"
+    ug "You're... new here...?"
     show rab happy at left:
         zoom 1.8
     ug "YEY! Wait until Ebola-chan hears that I got to talk to the new kid! She'll freak out!"
@@ -325,19 +325,17 @@ label day1_SnackFin_classFin:
     show rab unsure at left:
         zoom 1.8
     ug "Oh..."
-    pr "Wait, you didn't tell me your name."
-    rab "Rabies."
     pr "The two of us stare at each other, awkwardly. It looks like she might still be drooling."
     show rab normal at left:
         zoom 1.8
-    rab "Well, I know something YOU haven't seen yet. Come with me!"#
+    ug "Well, I know something YOU haven't seen yet. Come with me!"#
     "She grabs you by the hand and drags you off with her."
 
     scene bg xebgrass with fade
 
     show rab unsure at left:
         zoom 1.8
-    rab "So...what do you think?"
+    ug "So...what do you think?"
 
     menu:
         "It's ok":
@@ -355,11 +353,11 @@ label day1_SnackFin_classFin:
 
     show rab shock at left:
         zoom 1.8
-    rab "OH. We should get to class."
+    ug "OH. We should get to class."
     show rab normal at left:
         zoom 1.8
-    rab "I guess I'll see you around... sorry, what was your name again?"
-    "It's Chungus-kun."
+    ug "I guess I'll see you around... sorry, what was your name again?"
+    pr "It's Chungus-kun."
     rab "Well, it was nice to meet you, Chuu-San, I'm Rabies. I guess I'll see you later, then..."
 
     "She skips away."
@@ -392,37 +390,37 @@ label lind_nowakeFin:
 label lind_itsokFin:
     show rab annoyed at left:
         zoom 1.8
-    rab "WHAT? I go through all the effort of taking you here, and all you say is 'it's ok'?"
+    ug "WHAT? I go through all the effort of taking you here, and all you say is 'it's ok'?"
     show rab unsure at left:
         zoom 1.8
-    rab "Well, I guess it's a bit cloudy. I'd rather have shown you when it was sunny out. It almost looks like it's about to rain.."
+    ug "Well, I guess it's a bit cloudy. I'd rather have shown you when it was sunny out. It almost looks like it's about to rain.."
     return
 
 label lind_beutFin:
     show rab happy at left:
         zoom 1.8
-    rab "I know, right? I come here all the time to get some fresh air."
+    ug "I know, right? I come here all the time to get some fresh air."
     show rab unsure at left:
         zoom 1.8
-    rab "Except when it rains... it kinda looks that way right now..."
+    ug "Except when it rains... it kinda looks that way right now..."
     return
 
 label lind_raingoodFin:
     show rab annoyed at left:
         zoom 1.8
-    rab "NO. WATER IS BAD."
+    ug "NO. WATER IS BAD."
     show rab unsure at left:
         zoom 1.8
-    rab "It gets in my ears and makes them feel all full."
+    ug "It gets in my ears and makes them feel all full."
     return
 
 label lind_rainbadFin:
     show rab shock at left:
         zoom 1.8
-    rab "You do?"
+    ug "You do?"
     show rab normal at left:
         zoom 1.8
-    rab "So do I. It's just such a downer..."
+    ug "So do I. It's just such a downer..."
     return
 
 
@@ -455,10 +453,6 @@ label lind_rainbadFin:
 
 label day1_lunchFin_explore:
     scene bg xebriver with fade
-    show pro:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
     pr "How did I end up here?"
     pr "I realy shouldn't have walked around without someone to guide me, now I'm lost."
     show zmapp:
@@ -474,21 +468,24 @@ label day1_lunchFin_explore:
     ug "OH SHIT"
     show ebby rape:
         zoom 1.0
-        xalign 0.7
+        xalign -1.0
         yalign 0.7
+    show ebby rape:
+        linear 0.05 zoom 1.0 xalign 0.7 yalign 0.7
     ec "IT'S RAPE TIME"
     ug "No, No, No!"
     ec "I GOT YOU NO-oh."
     ec "MC?"
     hide zmapp
+    with moveoutright
     ec "OH GOD I’M SO SORRY. I didn’t mean to hurt you. Are you ok?"
     pr "Yes, I think."
-    ec "Anyway, you didn’t happen to see someone in green run this way, did you?"
+    ec "Anyway, you didn’t happen to see where she went, did you?"
     pr "Yeah... they went that way, why?"
     ec "I’LL TELL YOU LATER."
     
     
-    scene bg xebroof
+    scene bg xebroof with fade
     "I think I finally found them."
     show ebby sad:
         zoom 1.0
@@ -503,7 +500,7 @@ label day1_lunchFin_explore:
     hide ebby
     hide zmapp
     show ebbyz:
-        zoom 1.0
+        zoom 1.8
         xalign 0.7
         yalign 0.7
     ug "Shit."
@@ -652,7 +649,7 @@ label Day1AfterSchoolRabFuggoff:
 label Day1AfterSchoolRabDormGood:
     scene bg xebdorm
     show rab unsure at right
-    rab "Hey _____-San..."
+    rab "Hey Chuu-San..."
     pr "Yes?"
     rab "..."
     pr "..."

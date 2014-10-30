@@ -380,9 +380,6 @@ if AidsProprietary == 1:
     prin "..."
     pr "C-could you move a little? Your knee's kinda poking into me."
     ai "That's not my knee."
-scene bg xebfin with fade
-pause (3)
-scene bg black with fade
 jump end
 
 

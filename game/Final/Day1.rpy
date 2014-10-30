@@ -119,13 +119,7 @@ $renpy.call(destination)
 if AidsCount >= 4:
     if AidsMetFulfilled == 0:
         jump day1_NightFin_BedFin
-call day1_endFin
-
-call decisionFin
-
-$renpy.call(str(bestgirl)+"_endFin")
-
-jump doneFin
+jump end
 
 
 
@@ -283,3 +277,6 @@ label doneFin:
 jump start
 
 label end:
+scene bg xebfin with fade
+pause (3)
+scene bg black with fade

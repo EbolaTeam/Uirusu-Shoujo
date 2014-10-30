@@ -98,10 +98,6 @@ label introLab:
 
     scene bg lab with fade
 
-    show pro:
-        zoom 1.0
-        xalign 0.1
-        yalign 1.0
     
     pr "It's been years since I started working here."
     pr "Nobody ever realy asked why, guess I'm not really the type people make chitchat with."
@@ -110,10 +106,10 @@ label introLab:
     pr "Funny, for all I've ever done, they only know about a select few things. They think that's what I'm pouring all these years into, all their money into."
     pr "They don't know jack shit, but they're still impressed."
     pr "I don't really know what that means, if I'm some smart-ass who pulls off miracles during his coffee break, or I just have the right approach..."
-    pr "I'd say the last. I may work for a big pharmaceutical company, but management aren't as dumb as most places. They know a stem cell from \"Deep fortifying face cream with pyrogenic nano-bubbles!\"."
+    pr "I'd say the latter. I may work for a big pharmaceutical company, but management aren't as dumb as most places. They know a stem cell from \"Deep fortifying face cream with pyrogenic nano-bubbles!\"."
     pr "Still, I'm amazed that no-one checks up on me too much. I guess just looking at the notes I make every once in a while on what I'm supposed to be doing makes them think I'm working harder than anyone here."
     pr "Which sadly isn't what I really want, I'd prefer to float in the grey, but I don't want to become nobody."
-    pr "Still, I guess I get the most money, who's gonna bitch?"
+    pr "Still, I guess I get the most funding, who's gonna bitch?"
     pr "So what do I show them, you ask?"
     pr "When I'm bored or my brain's just a bit worn out, I work on what my paycheck says I do, cures for illnesses. Viruses. Whatever I feel like."
     pr "They really don't mind, as long as I'm fixing something."
@@ -124,7 +120,7 @@ label introLab:
     pr "They don't know why I'm really doing it though."
     pr "I'm not some delusional scientist that thinks it's okay to take a huge risk for all the people it saves."
     pr "What I'm doing is completely intentional. The dangerous means aren't a way of getting somewhere, they're my goal."
-    pr "You see, this is why I don't want the higher ups paying too much attention. If they realized what I was doing they'd question why. Their first answer would be, \"Off-the-books reckless but dammit you get the job done\" kinda’ thing, but they wouldn't believe that."
+    pr "You see, this is why I don't want the higher ups paying too much attention. If they realized what I was doing they'd question why. Their first answer would be, \"Off-the-books reckless but dammit you get the job done\" kinda thing, but they wouldn't believe that for too long."
     pr "They'd soon realize why I was really doing what I'm doing, they wouldn't think for a second before firing me, risks-for-the-good-of-humanity goes out the door when they realize I don't give a shit about the good of humanity and I'm doing this specifically against that cause."
     pr "No one in my team really knows why they're doing what they're doing, they get orders from me and they do them."
     pr "There are those who do think reach the \"dammit you get the job done\" thing, but they think management has the same ideas but is happy with it, so they keep quiet."
@@ -187,21 +183,22 @@ label introLab:
     bn "Greetings. It's an honor."
     pr "Are you kidding me, you guys are the two greatest minds of our generation! The pleasure is all mine."
     bsg "You might not think so now, but from what I've read your research is ground-breaking. You can cure anything. Well, we need a cure for Ebola, now."
-    pr "Are you crazy? That could take years!"
+    bn "It's critical. A rather high-profile in politics has some friends who where, well, exposed to the infected.
+    pr "Are you crazy? A cure could take years!"
     bsg "You seem to doubt yourself now, but I believe that you could do this in a week."
-    pr "I hate to speak in such an unprofessional way, but are you high? That was a total fluke, I couldn't pull that off again."
+    pr "I hate to speak in such an unprofessional way, but are you high? My previous work was a total fluke, I couldn't pull that off again."
     bsg "I don't know for sure, but I have my suspicions that you could. Would you mind if you showed us your work? We'd like to know how you made these things."
     pr "Sure, come over here to my desk and I'll show you what I have."
     "Fuck Fuck Fuck Fuck Fuck Fuck Fuck..."
     pr "So this is something I've been playing with recently, I'm trying to work out how I can stop the HIV from turning into AIDS. It's been tricky but I'm making progress."
-    bsg "I heard about that, we want to know how the hell you reached these answers."
+    bn "I heard about that, we want to know how the hell you reached these answers."
     pr "Oh they're nothing, I'm nowhere close to a cure."
     bsg "But what you worked out was so brilliant, so complex, I can't begin to understand how you came up with it."
     pr "Well, to be honest, I'm not the one resposible for these works."
     bsg "Plagiarism? Elaborate."
     pr "No, not that. You see, rather than bashing my brain on working out solutions to problems, I just let evolution do its thing and study the results."
     pr "My findings are based on the most fit cells that fight the issue, I reverse engineer them from there, and compare the changes."
-    bsg "That's not how it works you little shit, but fuck it, why not? We're getting kinda desperate."
+    bn "That's not how it works you little shit, but fuck it, why not? We're getting kinda desperate."
     bsg "Tell me, how on Earth do you make so many permutations? That would take years, you've fixed things thrown at you in a couple of days! Small as they may have been, they where somewhat groundbreaking none the less. How do you do this?"
     pr "Well, I use something I created ages ago. It's a very basic thing that promotes changes in every single offspring, nothing too fancy, I found it by sheer luck. But when I apply it to some of the more common cells in humans and expose the results to viruses, the good cells literally just sit there, waiting for me to notice them."
     bsg "How much of this mutagen have you got? Have you tried using it on Ebola?"
@@ -254,9 +251,6 @@ label ChapterCover:
 label nurgyboo1:
     scene bg black with fade
     scene bg nurg with fade
-    show pro:
-        xalign 0.1
-        yalign 1.0
     pr "H-hello?"
     pr "Where am I?"
     nur "Welcome to my world."
