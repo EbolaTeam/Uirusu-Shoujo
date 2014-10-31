@@ -250,7 +250,8 @@ return
 
 
 
-
+init:
+    $ AidsPassed = 0
 
 label day1_afternoonFin_gateFin:
     scene bg xebgate with fade
@@ -258,14 +259,14 @@ label day1_afternoonFin_gateFin:
     if AidsMeet == 0:
         nn "Me and Ebster walk home togeather"
         nn "Huh, funny. I called the dorm \"Home\". Guess I've really snapped out of reality pretty quickly..."
-        if AidsPassed = 1:
+        if AidsPassed == 1:
             nn "She looks like the one we saw earlier at lunch, I wonder if Ebby still thinks I'm a dick for that..."
         show ebby sad
-        ebby "Aids! AIDS!"
+        ec "Aids! AIDS!"
         show aids normal
         ai "Y-yeah Ebby?"
         show ebby concerned
-        ebby "You've been alone alot recently. Ebola-chan is worried about you!"
+        ec "You've been alone a lot recently. Ebola-chan is worried about you!"
         ai "D-don't be, it's just HIV, he's not spending as much time with me anymore."
         show ebby normal
         ec "Aww, poor girl. Want a huggu?"
