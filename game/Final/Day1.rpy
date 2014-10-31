@@ -91,7 +91,7 @@ menu:
     "What to do?"
     "Hang around for a bit":
         $place="hang"
-    "Head home alone":
+    "Head home with Ebbs":
         $place="gateFin"
 
 $destination="day"+str(day)+"_"+time+"_"+place
@@ -136,8 +136,9 @@ label day1_lunchFin:
         zoom 1.0
         xalign 0.1
         yalign 1.0
-    nn "We have morning classes, I introduce myself to everyone, all that stuff."
-    nn "Honestly, it's a pretty boring morning."
+    show sars notamused at right:
+        zoom 1.5
+    nn "More classes, more harrasment by the short fuck, just like highschool all over again..."
 
     return
 
@@ -156,7 +157,8 @@ label day1_afternoonFin:
         yalign 1.0
     nn "Afternoon classes. Still pretty boring, but we have Biology, so I at least stay awake."
     nn "Some of the girls are impressed at how much I know, but I'm suprised at how much has changed in the textbooks since I last read them."
-    nn "I mean, since when did the immune system get so much attention? You wouldn't think it'd be that important, but the other girls seem fascinated..."
+    nn "If science has changed this much recently it's a wonder I still have a job..."
+    nn "Also, since when did the immune system get so much attention? You wouldn't think it'd be that important, but the other girls seem fascinated..."
     return
 
 

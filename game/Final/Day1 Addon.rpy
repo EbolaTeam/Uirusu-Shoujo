@@ -55,7 +55,7 @@ label day1morningwakeFin:
     prin "I walk out into what looks like the main room, onty to be greeted by a small girl getting dressed."
     show sars notamused
     show sars notamused
-    ug "Wh-what are you doing here, intruder! Pervert! GET OUT!"
+    "Short Girl" "Wh-what are you doing here, intruder! Pervert! GET OUT!"
     prin "I promptly fuck off back to my room. Maybe I'll clean myself up a bit..."
     scene bg xebshower with fade
 
@@ -69,7 +69,7 @@ label day1morningwakeFin:
     show sars notamused at left:
         zoom 1.5
 
-    ug "AHH! It's the pervert! Don’t look at him or you’ll get molested!"
+    "Short Girl" "AHH! It's the pervert! Don’t look at him or you’ll get molested!"
 
     show aids concerned behind sars:
         zoom 1.8
@@ -77,15 +77,15 @@ label day1morningwakeFin:
         yalign 1.0
     ug "Ehhhh? What?!?!?"
     pr "Good morning ladies!"
-    ug "Grrrrrr!"
+    "Short Girl" "Grrrrrr!"
     ug "Ah..g-good morning!"
 
     hide sars
     hide aids
 
-    show mal happy at left:
+    show joki smile at left:
         xalign 0.1
-    mal "*smile* *nod*"
+    joki "*smile* *nod*"
 
     show ebby toastdead behind mal:
         xalign 0.3
@@ -99,51 +99,45 @@ label day1morningwakeFin:
     hide ebby
     hide mal
 
-    show bp happy:
-        xalign 0.1
 
-    bp "Now now, settle down and enjoy your breakfast! It’s the most important meal of the day you know!"
+    joki "Now now, settle down and enjoy your breakfast! It’s the most important meal of the day you know!"
 
     nn "Not one to refuse a nice homecooked meal, I dig in."
 
     pr "Mmm! This is delicious!"
 
-    bp "I’m glad it’s to your tastes!"
+    joki "I’m glad it’s to your tastes!"
 
     pr "Definitly!"
 
     nn "I could easily get used to this." 
 
-    hide bp
+    hide joki
 
     show sars notamused at left:
         zoom 1.5
-    sars "I’m done! Come on Eidzu, let's leave now, I don’t want to be around HIM any longer than I have to!"
+    "Short Girl" "I’m done! Come on Eidzu, let's leave now, I don’t want to be around HIM any longer than I have to!"
     show aids concerned behind sars:
         zoom 1.8
         xalign 0.3
         yalign 1.0
-    ai "Ah! Yes - we’ll be going now!"
+    ug "Ah! Yes - we’ll be going now!"
 
     hide sars
     hide aids
 
     pr "She barely has time to call out as she is dragged out the door."
 
-    show mal notmal at left:
+    show joki smile at left:
         xalign 0.1
 
-    mal "I should be going too, I want to study a little before class while it’s quiet."
-    mal "Thank you for the meal."
+    joki "I should be going too, I want to study a little before class while it’s quiet."
+ 
+    pr "Thank you for the meal."
 
-    show bp happy behind mal:
-        xalign 0.3
+    joki "I’ll see you in class then."
 
-    bp "Have a good day!"
-    mal "I’ll see you two in class."
-
-    hide mal
-    hide bp
+    hide joki
 
     pr "Huh, only 8:30, what should we do?"
     
@@ -226,11 +220,11 @@ label day1_morningFin_dorm:
     hide ebby
     show sars stars at left:
         zoom 1.5
-    nn "WHAT THE HELL ARE YOU DOING WITH MY EBOLA-CHAN!!!"
+    "Short Girl" "WHAT THE HELL ARE YOU DOING WITH MY EBOLA-CHAN!!!"
     with vpunch
-    nn "PERVERT!"
+    "Short Girl" "PERVERT!"
     with hpunch
-    nn "MOLESTER!"
+    "Short Girl" "MOLESTER!"
     with vpunch
 
     nn "Before I can even catch my breath, I’m assaulted by the manic from earlier."
@@ -240,12 +234,12 @@ label day1_morningFin_dorm:
     \"{color=#57bab7}(Stop it Sars-chan! It's nothing like that!){/color}"
     show sars concerned at left:
         zoom 1.5
-    nn "What? Take that toast out of your mouth, I can't understand a word!"
+    "Short Girl" "What? Take that toast out of your mouth, I can't understand a word!"
     show sars stars at left:
         zoom 1.5
-    nn "-or did he force it on you?"
+    "Short Girl" "-or did he force it on you?"
     with hpunch
-    nn "TOAST FETISHIST!"
+    "Short Girl" "TOAST FETISHIST!"
     ec "Mffff! Mf mmmffff.\"{p}
     \"{color=#57bab7}(Ohh! I forgot.){/color}"
     nn "Finally she takes it out of her mouth."
@@ -254,7 +248,7 @@ label day1_morningFin_dorm:
     He was very kind and ran with me all the way here so that I wouldn’t be late!"
     show sars concerned at left:
         zoom 1.5
-    nn "Hmph! I dont care how kind he is, he shouldn’t be holding your hand with such familiarity!"
+    "Short Girl" "Hmph! I dont care how kind he is, he shouldn’t be holding your hand with such familiarity!"
     show ebby concerned
     ec "Eh?"
     nn "She looks down as if suddenly realizing we’re still holding hands."
@@ -268,9 +262,11 @@ label day1_morningFin_dorm:
     nn "And here is the teacher now, looks like we really did make it just in time."
     nn "Ebola-chan flashes me a quick smile and heads to her seat."
     hide ebby
-    nn "I'm watching you, toast-fetishist!"
+    "Short Girl" "I'm watching you, toast-fetishist!"
     hide sars
-    nn "Yes, this is going to be an experience indeed."
+    nn "Yes, this is going to be an experience indeed..."
+    nn "We have morning classes, I introduce myself to everyone, all that stuff."
+    nn "Honestly, it's a pretty boring morning."
 
     scene bg black with fade
     $ebby_affection+=1
@@ -475,14 +471,19 @@ label day1_lunchFin_explore:
     ec "IT'S RAPE TIME"
     ug "No, No, No!"
     ec "I GOT YOU NO-oh."
-    ec "MC?"
+    show ebby normal
+    ec "Chung-kun?"
     hide zmapp
     with moveoutright
+    show ebby concerned
     ec "OH GOD I’M SO SORRY. I didn’t mean to hurt you. Are you ok?"
     pr "Yes, I think."
     ec "Anyway, you didn’t happen to see where she went, did you?"
     pr "Yeah... they went that way, why?"
     ec "I’LL TELL YOU LATER."
+    show ebby rape:
+         linear 0.3 zoom 1.0 xalign 3.0 yalign 0.7
+    
     
     
     scene bg xebroof with fade
@@ -500,12 +501,15 @@ label day1_lunchFin_explore:
     hide ebby
     hide zmapp
     show ebbyz:
-        zoom 1.8
-        xalign 0.7
+        zoom 1.0
+        xalign 1.0
         yalign 0.7
     ug "Shit."
     ec "Wait, we're late for class."
     hide ebbyz
+    show ebby normal at right
+    show ebby normal:
+         linear 1.0 zoom 1.0 xalign -3.0 yalign 0.7
     show zmapp:
         zoom 1.0
         xalign 0.7
@@ -612,6 +616,7 @@ label day1_afternoonFin_hang:
 
 
 label Day1AfterSchoolRabHome:
+    $ RabKnowsILive = 1
     pr "Come on, let’s get you back to your room. Where do you live?"
     show rab normal
     rab "Oh, uh... I live in Petri Hall."
@@ -621,7 +626,7 @@ label Day1AfterSchoolRabHome:
     show rab shock
     rab "WHA? I didn’t know they let boys live there!"
     show rab unsure
-    rab "Then again... I always see HIV-kun there with AIDS-chan..."
+    rab "Then again... I always see HIV-kun there with Eidz-chan..."
     nn "The two of us chat the rest of the way back. As it starts to rain, I feel her clutching onto me."
     return
     
@@ -666,10 +671,13 @@ label Day1AfterSchoolRabDormGood:
 
 
 label Day1AfterSchoolRabDormBad:
-    scene bg zebdorm
-    show rab shock at left
-    rab "Wait... you live in Petri Hall too?"
-    show rab normal
+    scene bg xebdorm
+    if RabKnowsILive == 0:
+        show rab shock at left
+        rab "Wait... you live in Petri Hall too?"
+    show rab normal at center:
+        zoom 1.8
     rab "You’re like a good luck charm or something. Thanks a lot, Chuu-San!"
+    hide rab with moveoutleft
     nn "And there she goes, like a rocket up those stairs..."
     return

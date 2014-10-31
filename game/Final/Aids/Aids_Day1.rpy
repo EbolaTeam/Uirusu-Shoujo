@@ -4,11 +4,10 @@ label day1_SnackFin_libraryFin:
         zoom 1.0
         xalign 0.1
         yalign 1.0
-    "We got to school not long after."
     ec "...the principal's office is just beside you, and over here is the library."
     ec "We should probably get you a library card so you can borrow books."
     pr "Do we have time? We've been walking around for a while."
-    ec "Don't worry, class doesn't start 'till 9"
+    ec "Don't worry, class doesn't start again for 10 minutes."
     scene bg xeblibrary
     "We walked into the sparse library, it was mostly empty spare one girl reading a book."
     
@@ -25,7 +24,7 @@ label day1_SnackFin_libraryFin:
     ec "EIDSU-CHAN! EIDSU-CHAN!"
     pr "Quiet, we're in a library!"
     show ebby wink
-    ec "We're the only onces here, silly! Come on, let's go chat with Aids!"
+    ec "We're the only onces here, silly! Come on, let's go chat with Eids!"
     show aids excited:
         zoom 1.8
         xalign 0.9
@@ -129,7 +128,8 @@ label day1_lunchFin_corridorFin:
 
     else:
         if AidsCount < 2:
-            show aids sad at right
+            show aids sad at right:
+                zoom 1.8
             pr "Hey, Eidzu!"
             show aids excited
             ai "Protag?"
@@ -143,19 +143,18 @@ label day1_lunchFin_corridorFin:
             ai "Hey, where's Ebby? Usually on their first day people stick to their guides like glue!"
         else:
             $ AidsMetFulfilled = 0            
-            show aids normal
+            show aids normal at center:
+                zoom 1.8
             pr "Hey, Eidzu!"
             show aids excited
             ai "YAY, YOU MADE IT!"
             pr "Hope I didn't keep you waiting too long, had a little mixup with Ebby."
             show aids normal
             ai "Where is she, anyway? Usually on their first day people stick to their guides like glue!"
-        "show aids flustered"
         ai "Thick, viscuss, sticky white glue..."
         show aids normal
         pr "I dunno, she whent off chasing after some green haired girl, I think she stole her hat or something..."
         pr "They looked pretty similar, does she have a sister or something?"
-        "Show aids confused"
         ai "Yeah, but they're all equally pink. Weird, I haven't seen anyone with green hair around in ages..."
         pr "Maybe someone else joined today?"
         show aids joy
@@ -166,7 +165,12 @@ label day1_lunchFin_corridorFin:
         show aids joy
         ai "You're almost as ditsy as Ebby!"
         show aids normal
+        show ebbyzch:
+            zoom 1.0 xalign -2 yalign 0.7 
+        show ebbyzch:
+            linear 1.0 zoom 1.0 xalign 3.0 yalign 0.7
         "SWWWOOOOSHHH"
+
         "A green streak shot past us, followed by a shorter pink one."
         ai "Well that's Ebster explained."
         pr "Still, brings up a couple more questions than it answers."
@@ -190,7 +194,8 @@ label day1_lunchFin_corridorFin:
 
 label Day1AidLunchComfort:
         ec "Eidzu? Are you okay?"
-        show aids sad
+        show aids sad at center:
+            zoom 1.8
         ai "HIV-kun said he'd meet me at lunch but he's too busy railing that harlot Sian."
         pr "Did you say Sian?"
         show ebby normal
@@ -199,6 +204,8 @@ label Day1AidLunchComfort:
         ai "Depends, is your friend free?"
         show ebby concerned
         ec "Don't be lewd!"
+        ai "That wasn't lewd at all!"
+        ec "What you where thinking was!"
         pr "I'm fine with it Ebbs"
         show ebby normal
         ec "Oh, o-okay then."
@@ -211,7 +218,6 @@ label Day1AidLunchComfort:
         ec "No, it's not like that, daddy just wanted me to make sure he fits in well."
         show aids joy
         ai "I bet I can make him fit in well!"
-        "Show ebby flustered"
         ec "Y-you shouldn't be saying things like that!"
         pr "Wha~?"
         show aids normal
@@ -248,7 +254,7 @@ return
 
 label day1_afternoonFin_gateFin:
     scene bg xebgate with fade
-    show ebby normal on left
+    show ebby normal at left
     if AidsMeet == 0:
         nn "Me and Ebster walk home togeather"
         nn "Huh, funny. I called the dorm \"Home\". Guess I've really snapped out of reality pretty quickly..."
@@ -317,10 +323,10 @@ label day1_eveningFin_showerFin:
     if AidsMeet == 0:
         show aids concerned at right
         nn "After todays shinanigans a nice warm shower feels suprisingly good...{p}
-        I'm pretty sure I saw a girl I met earlier peeking at me"
+        I'm pretty sure I saw a girl I met earlier peeking at me."
         hide aids
         with moveoutright
-        nn "Nevermind, nothing wrong with a pervert, plus I wouldn't mind a peek at Ebby, if I do say so"
+        nn "Nevermind, nothing wrong with a pervert, plus I wouldn't mind a peek at Ebby, if I do say so..."
         $ AidsMeet = 1
     else:
         nn "After todays shinanigans a nice warm shower feels suprisingly good"
@@ -352,15 +358,16 @@ scene bg xebdorm_room with fade
 pause (1)
 prin "Bloody hell, what a day..."
 prin "Wait, what the fuck? Why am I in a school? I'm 25! I graduated Uni years ago! THIS DOESN'T MAKE ANY FUCKING SENSE!"
-prin "WHY DID I NOT NOTICE THIS EARLIER, THIS IS SO BLOODY WEIRD. WHAT THE SHIT."
+prin "WHY DID I NOT NOTICE HOW WEIRD THIS IS EARLIER, WHAT THE SHIT."
 prin "Oh who cares, time for some sleep"
 ug "Can it wait?"
 pr "Who's there?"
-show aids normal
+show aids normal at center:
+    zoom 1.5
 ai "Me, silly."
 pr "Eidz, what are you doing in here?"
 show aids sad
-if  AidsInvite = 1:
+if AidsInvite == 1:
     ai "You said I could hang out with you if I wanted"
     pr "This isn't really what I had in mind, but still, why are you up so late?"
 ai "I couldn't sleep, I had a dream. Mind if I stay with you tonight? I don't wanna be in my room alone."

@@ -102,7 +102,7 @@ label introLab:
     pr "It's been years since I started working here."
     pr "Nobody ever realy asked why, guess I'm not really the type people make chitchat with."
     pr "What does suprise me is how very few people ever ask me what I'm doing."
-    pr "\"Million dollar equipment? Sure. A 20 man team? Here you go. 5 billion dollars? For research? You act like you think I'm gonna say no.\"
+    pr "Million dollar equipment? Sure. A 20 man team? Here you go. 5 billion dollars? For research? You act like you think I'm gonna say no."
     pr "Funny, for all I've ever done, they only know about a select few things. They think that's what I'm pouring all these years into, all their money into."
     pr "They don't know jack shit, but they're still impressed."
     pr "I don't really know what that means, if I'm some smart-ass who pulls off miracles during his coffee break, or I just have the right approach..."
@@ -120,11 +120,11 @@ label introLab:
     pr "They don't know why I'm really doing it though."
     pr "I'm not some delusional scientist that thinks it's okay to take a huge risk for all the people it saves."
     pr "What I'm doing is completely intentional. The dangerous means aren't a way of getting somewhere, they're my goal."
-    pr "You see, this is why I don't want the higher ups paying too much attention. If they realized what I was doing they'd question why. Their first answer would be, \"Off-the-books reckless but dammit you get the job done\" kinda thing, but they wouldn't believe that for too long."
+    pr "You see, this is why I don't want the higher ups paying too much attention. If they realized what I was doing they'd question why. Their first answer would be \"Off-the-books reckless but dammit you get the job done\" kinda thing, but they wouldn't believe that for too long."
     pr "They'd soon realize why I was really doing what I'm doing, they wouldn't think for a second before firing me, risks-for-the-good-of-humanity goes out the door when they realize I don't give a shit about the good of humanity and I'm doing this specifically against that cause."
     pr "No one in my team really knows why they're doing what they're doing, they get orders from me and they do them."
     pr "There are those who do think reach the \"dammit you get the job done\" thing, but they think management has the same ideas but is happy with it, so they keep quiet."
-    pr "It's fun being the translator man in the anti-censorship club."
+    pr "It's fun being the translator in an anti-censorship club."
     pr "Anyway, more specifics. My project isn't working on anything inherently bad, I'm not even really using it for BAD, I'm just giving it to bad to see what bad does with it."
     pr "Same goes for good for a couple hours a week, and management like that."
     pr "How does this shit work, you ask? Well, basic evolution works by tiny changes happening when an organism recreates itself..."
@@ -133,7 +133,7 @@ label introLab:
     pr "For humans, this process happens once every 20 or so years. Viruses can do so in minutes."
     pr "But the difference between the times is really not that big, 20 years might as well be 2 minutes, cool shit is still not gonna happen in my lifetime."
     pr "Because most copies end up being too close to the original it takes ages before you even get a chance at something cool, and that chance is still probably 1 in a million."
-    pr "I decided to speed up this process by making each copy, each child, have a lot more changes than usual."
+    pr "I decided to speed up this process by making every copy, every child, have a lot more changes than usual."
     pr "Radiation tends to do the same, but it just shreads the DNA, leaving utter destruction."
     pr "What I wanted is to affect every child, but not so drastically."
     pr "I did this by using a organism of my own, a virus that lives on, or really just bonds to other viruses, changing their copys."
@@ -146,10 +146,8 @@ label introLab:
     si "Sir, th-"
     pr "Dammit girl, can't you see I'm monologing to myself?"
 
-    show sian:
+    show sian at left:
         zoom 1.0
-        xalign 0.3
-        yalign 0.75
 
     si "You do that every day Sir, but this is important."
     pr "That's Sian, not said how it's spelt. She's my complacent assistant. I'd love to rail her some day, but she was in human testing for a bit, so..."
@@ -168,24 +166,21 @@ label introLab:
     si "I'll let them in and you can see for yourself."
     pr "Oh my god."
 
-    show bsg:
+    show bsg at center:
         zoom 1.0
-        xalign 0.7
-        yalign 0.7
+    
 
     bsg "Hello, you must be the doctor. It's a pleasure to meet you. I'd like to introduce you to my partner."
 
-    show nye:
+    show nye at right:
         zoom 1.0
-        xalign 1.0
-        yalign 1.0
 
     bn "Greetings. It's an honor."
     pr "Are you kidding me, you guys are the two greatest minds of our generation! The pleasure is all mine."
     bsg "You might not think so now, but from what I've read your research is ground-breaking. You can cure anything. Well, we need a cure for Ebola, now."
-    bn "It's critical. A rather high-profile in politics has some friends who where, well, exposed to the infected.
+    bn "It's critical. A rather high-profile in politics has some friends who where, well, exposed to the infected."
     pr "Are you crazy? A cure could take years!"
-    bsg "You seem to doubt yourself now, but I believe that you could do this in a week."
+    bsg "You seem to doubt yourself now, but I believe that you could do this in a month."
     pr "I hate to speak in such an unprofessional way, but are you high? My previous work was a total fluke, I couldn't pull that off again."
     bsg "I don't know for sure, but I have my suspicions that you could. Would you mind if you showed us your work? We'd like to know how you made these things."
     pr "Sure, come over here to my desk and I'll show you what I have."
@@ -201,7 +196,7 @@ label introLab:
     bn "That's not how it works you little shit, but fuck it, why not? We're getting kinda desperate."
     bsg "Tell me, how on Earth do you make so many permutations? That would take years, you've fixed things thrown at you in a couple of days! Small as they may have been, they where somewhat groundbreaking none the less. How do you do this?"
     pr "Well, I use something I created ages ago. It's a very basic thing that promotes changes in every single offspring, nothing too fancy, I found it by sheer luck. But when I apply it to some of the more common cells in humans and expose the results to viruses, the good cells literally just sit there, waiting for me to notice them."
-    bsg "How much of this mutagen have you got? Have you tried using it on Ebola?"
+    bsg "How much of this, well, mutagen, have you got? Have you tried using it on Ebola?"
     pr "I-I'm sorry, what?"
     bsg "Have you applied the resulting cells to Ebola samples to see if anything will hurt it?"
     pr "Oh, sorry. Um, no. Not yet. Not recently, at least."
@@ -231,7 +226,7 @@ label introLab:
     
     scene bg black with fade
     $ renpy.pause(0.5, hard=True)
-    "Cough Cough"
+    "cough cough"
     ug "Pathetic... another one."
     
     

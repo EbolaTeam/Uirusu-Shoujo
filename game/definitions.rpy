@@ -217,6 +217,7 @@ init:
     image nye = "images/placeholder/nye.png"
     image zmapp = "images/placeholder/zmapp.png"
     image ebbyz = "images/placeholder/ebbyz.png"
+    image ebbyzch = "images/placeholder/Ebchase.png"
 
     #Click to continue
     image ctc = anim.Filmstrip("images/ec_c2cstrip.png", (79,40), (8,1), 0.1, xpos=1720, ypos=1020, xanchor=0, yanchor=0)
@@ -270,6 +271,8 @@ init:
     $ AidsCount = 0
     $ AidsMetFulfilled = 0
     $ AidsProprietary  = 0
+    $ AidsInvite = 0
     $ RabbiesMet = 0
     $ RabbiesCount = 0
     $ EbbyBrowniePoints = 0
+    $ RabKnowsILive = 0
