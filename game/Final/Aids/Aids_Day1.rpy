@@ -1,4 +1,4 @@
-label day1_SnackFin_libraryFin:
+﻿label day1_SnackFin_libraryFin:
     scene bg xebcorridor with fade
     show ebby normal:
         zoom 1.0
@@ -24,7 +24,7 @@ label day1_SnackFin_libraryFin:
     ec "EIDSU-CHAN! EIDSU-CHAN!"
     pr "Quiet, we're in a library!"
     show ebby wink
-    ec "We're the only onces here, silly! Come on, let's go chat with Eids!"
+    ec "We're the only ones here, silly! Come on, let's go chat with Eids!"
     show aids excited:
         zoom 1.8
         xalign 0.9
@@ -48,7 +48,7 @@ label day1_SnackFin_libraryFin:
     ec "Don't try to change the subject you little pervert!"
     ai "Nu-uh. Who is he? Is he your boyfriend?"
     show ebby concerned
-    ec "No! It's not like that, he's just a friend of Papa"
+    ec "No! It's not like that, he's just a friend of Papa."
     show aids joy
     ai "Shame. He's pretty cute."
     pr "He's right here you know."
@@ -266,14 +266,14 @@ label day1_afternoonFin_gateFin:
         ai "Y-yeah Ebby?"
         show ebby concerned
         ebby "You've been alone alot recently. Ebola-chan is worried about you!"
-        ai "D-don't be, it's just HIV, he's not spending as much time with me anymore"
+        ai "D-don't be, it's just HIV, he's not spending as much time with me anymore."
         show ebby normal
         ec "Aww, poor girl. Want a huggu?"
         show aids rape
         ai "Depends, is your friend free?"
         show ebby concerned
         ec "Don't be lewd!"
-        pr "I'm fine with it Ebbs"
+        pr "I'm fine with it Ebbs."
         show ebby normal
         ec "Oh, o-okay then."
         ec "Anyway, wanna walk home with us?"
@@ -309,9 +309,9 @@ label day1_afternoonFin_gateFin:
     ec "Huh, home already..."
     pr "Just in time, it's almost starting to rain..."
     ai "Well, I better go then. I'm all dirty, so I gotta have a shower."
-    ec "I should probably get going too, I promised Bee I'd help her cook tonight"
+    ec "I should probably get going too, I promised Bee I'd help her cook tonight."
     ai "Later you two!"
-    ec "Seeya"
+    ec "Seeya!"
     $ AidsCount += 1
     $ aids_affection += 1
     $ AidsInvite = 1
@@ -329,14 +329,14 @@ label day1_eveningFin_showerFin:
         nn "Nevermind, nothing wrong with a pervert, plus I wouldn't mind a peek at Ebby, if I do say so..."
         $ AidsMeet = 1
     else:
-        nn "After todays shinanigans a nice warm shower feels suprisingly good"
+        nn "After today's shinanigans a nice warm shower feels suprisingly good."
         show aids joy at right:
             zoom 1.8
-        nn "Aids accidentally walked in on me, although \"Accidentally\" may be up for debate"
+        nn "Aids accidentally walked in on me, although \"Accidentally\" may be up for debate."
         ai "S-sorry, I didn't mean to walk in on you l-like this..."
         hide aids
         with moveoutright
-        nn "I wouldn't mind too bad, but she's already gone"
+        nn "I wouldn't mind too bad, but she's already gone."
         
     
     $ AidsCount += 1
@@ -368,7 +368,7 @@ ai "Me, silly."
 pr "Eidz, what are you doing in here?"
 show aids sad
 if AidsInvite == 1:
-    ai "You said I could hang out with you if I wanted"
+    ai "You said I could hang out with you if I wanted."
     pr "This isn't really what I had in mind, but still, why are you up so late?"
 ai "I couldn't sleep, I had a dream. Mind if I stay with you tonight? I don't wanna be in my room alone."
 pr "Aww, I'm sorry, sure... I guess, stay if you want. What was your nightmare about, if you don't mind me asking?"
