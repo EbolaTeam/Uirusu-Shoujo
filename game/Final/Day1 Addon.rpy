@@ -28,7 +28,7 @@
     ec "Well that's a much more normal name. Nice to meet you, Chungus."
     pr "Anyway, what's the time? I'm pretty tired."
     show ebby normal
-    ec "Oh, it's 3AM. Sorry for waking you, I coundn't wait to meet you."
+    ec "Oh, it's 3AM. Sorry for waking you, I couldn't wait to meet you."
     pr "No chance you'd let me go back to sleep?"
     show ebby joy
     ec "No worries! Ebby's just happy she got to make a new friend. See you in the morning!"
