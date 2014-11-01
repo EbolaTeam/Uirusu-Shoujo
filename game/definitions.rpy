@@ -160,12 +160,24 @@ init:
     image mal = Placeholder("girl")
     image bp = Placeholder("girl")
 
-    image aids concerned = "images/sprites/AIDS/AidsConcerned.png"
-    image aids excited = "images/sprites/AIDS/AidsExcited.png"
-    image aids joy = "images/sprites/AIDS/AidsJoy.png"
-    image aids normal = "images/sprites/AIDS/AidsNormal.png"
-    image aids rape = "images/sprites/AIDS/AidsRape.png"
-    image aids sad = "images/sprites/AIDS/AidsSad.png"
+    image aids concerned:
+        "images/sprites/AIDS/AidsConcerned.png"
+        zoom 1.8
+    image aids excited:
+        "images/sprites/AIDS/AidsExcited.png"
+        zoom 1.8
+    image aids joy:
+        "images/sprites/AIDS/AidsJoy.png"
+        zoom 1.8
+    image aids normal:
+        "images/sprites/AIDS/AidsNormal.png"
+        zoom 1.8
+    image aids rape:
+        "images/sprites/AIDS/AidsRape.png"
+        zoom 1.8
+    image aids sad:
+        "images/sprites/AIDS/AidsSad.png"
+        zoom 1.8
 
     image joki angry = "images/sprites/JOKI/JokiAngry.png"
     image joki evil = "images/sprites/JOKI/JokiEvil.png"
@@ -176,19 +188,43 @@ init:
     image joki smile = "images/sprites/JOKI/JokiSmile.png"
     image joki wtf = "images/sprites/JOKI/JokiWTF.png"
 
-    image sars concerned = "images/sprites/SARS/SarsConcerned.png"
-    image sars grin = "images/sprites/SARS/SarsGrin.png"
-    image sars sad = "images/sprites/SARS/SarsSad.png"
-    image sars notamused = "images/sprites/SARS/SarsNotAmused.png"
-    image sars stars = "images/sprites/SARS/SarsStars.png"
+    image sars concerned:
+        "images/sprites/SARS/SarsConcerned.png"
+        zoom 1.5
+    image sars grin:
+        "images/sprites/SARS/SarsGrin.png"
+        zoom 1.5
+    image sars sad:
+        "images/sprites/SARS/SarsSad.png"
+        zoom 1.5
+    image sars notamused:
+        "images/sprites/SARS/SarsNotAmused.png"
+        zoom 1.5
+    image sars stars:
+        "images/sprites/SARS/SarsStars.png"
+        zoom 1.5
 
-    image rab happy = "images/sprites/RABIES/RabHappy.png"
-    image rab normal = "images/sprites/RABIES/RabNormal.png"
-    image rab sad = "images/sprites/RABIES/RabSad.png"
-    image rab shock = "images/sprites/RABIES/RabShock.png"
-    image rab unsure = "images/sprites/RABIES/RabUnsure.png"
-    image rab violent = "images/sprites/RABIES/RabViolent.png"
-    image rab annoyed = "images/sprites/RABIES/RabAnnoyed.png"
+    image rab happy:
+        "images/sprites/RABIES/RabHappy.png"
+        zoom 1.8
+    image rab normal:
+        "images/sprites/RABIES/RabNormal.png"
+        zoom 1.8
+    image rab sad:
+        "images/sprites/RABIES/RabSad.png"
+        zoom 1.8
+    image rab shock:
+        "images/sprites/RABIES/RabShock.png"
+        zoom 1.8
+    image rab unsure:
+        "images/sprites/RABIES/RabUnsure.png"
+        zoom 1.8
+    image rab violent:
+        "images/sprites/RABIES/RabViolent.png"
+        zoom 1.8
+    image rab annoyed:
+        "images/sprites/RABIES/RabAnnoyed.png"
+        zoom 1.8
 
     image marburg annoyed = "images/sprites/MARBURG/MarburgAnnoyed.png"
     image marburg normal = "images/sprites/MARBURG/MarburgNormal.png"

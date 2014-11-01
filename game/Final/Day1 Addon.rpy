@@ -66,13 +66,11 @@ label day1morningwakeFin:
 
     scene bg xebdorm with fade
 
-    show sars notamused at left:
-        zoom 1.5
+    show sars notamused at left
 
     "Short Girl" "AHH! It's the pervert! Don’t look at him or you’ll get molested!"
 
     show aids concerned behind sars:
-        zoom 1.8
         xalign 0.3
         yalign 1.0
     ug "Ehhhh? What?!?!?"
@@ -114,11 +112,9 @@ label day1morningwakeFin:
 
     hide joki
 
-    show sars notamused at left:
-        zoom 1.5
+    show sars notamused at left
     "Short Girl" "I’m done! Come on Eidzu, let's leave now, I don’t want to be around HIM any longer than I have to!"
     show aids concerned behind sars:
-        zoom 1.8
         xalign 0.3
         yalign 1.0
     ug "Ah! Yes - we’ll be going now!"
@@ -218,8 +214,7 @@ label day1_morningFin_dorm:
     ec "MFFF!!\"{p}
     \"{color=#57bab7}(SAFE!!){/color}"
     hide ebby
-    show sars stars at left:
-        zoom 1.5
+    show sars stars at left
     "Short Girl" "WHAT THE HELL ARE YOU DOING WITH MY EBOLA-CHAN!!!"
     with vpunch
     "Short Girl" "PERVERT!"
@@ -232,11 +227,9 @@ label day1_morningFin_dorm:
     show ebby toastsad
     ec "mfff mf mfff-mfff! mff mmmfffff mfff mfff!\"{p}
     \"{color=#57bab7}(Stop it Sars-chan! It's nothing like that!){/color}"
-    show sars concerned at left:
-        zoom 1.5
+    show sars concerned at left
     "Short Girl" "What? Take that toast out of your mouth, I can't understand a word!"
-    show sars stars at left:
-        zoom 1.5
+    show sars stars at left
     "Short Girl" "-or did he force it on you?"
     with hpunch
     "Short Girl" "TOAST FETISHIST!"
@@ -246,8 +239,7 @@ label day1_morningFin_dorm:
     show ebby rape
     ec "Chungus-kun didn’t do anything like that! Stop being so mean!{p}
     He was very kind and ran with me all the way here so that I wouldn’t be late!"
-    show sars concerned at left:
-        zoom 1.5
+    show sars concerned at left
     "Short Girl" "Hmph! I dont care how kind he is, he shouldn’t be holding your hand with such familiarity!"
     show ebby concerned
     ec "Eh?"
@@ -301,36 +293,28 @@ label day1_SnackFin_classFin:
             call lind_nowakeFin   
     
     "Are you ok? I think you fell asleep there."
-    show rab annoyed at left:
-        zoom 1.8
+    show rab annoyed at left
     ug "I KNOW THAT."
-    show rab unsure at left:
-        zoom 1.8
+    show rab unsure at left
     ug "I don't sleep well, so sometimes I come where it's quiet."
-    show rab normal at left:
-        zoom 1.8
+    show rab normal at left
     ug "Oh well... I'm awake now... sorry, who were you again?"
     pr "I'm Chungus. It's my first day here."
-    show rab unsure at left:
-        zoom 1.8
+    show rab unsure at left
     ug "You're... new here...?"
-    show rab happy at left:
-        zoom 1.8
+    show rab happy at left
     ug "YEY! Wait until Ebola-chan hears that I got to talk to the new kid! She'll freak out!"
     pr "But I already met her..."
-    show rab unsure at left:
-        zoom 1.8
+    show rab unsure at left
     ug "Oh..."
     pr "The two of us stare at each other, awkwardly. It looks like she might still be drooling."
-    show rab normal at left:
-        zoom 1.8
+    show rab normal at left
     ug "Well, I know something YOU haven't seen yet. Come with me!"#
     "She grabs you by the hand and drags you off with her."
 
     scene bg xebgrass with fade
 
-    show rab unsure at left:
-        zoom 1.8
+    show rab unsure at left
     ug "So...what do you think?"
 
     menu:
@@ -347,18 +331,15 @@ label day1_SnackFin_classFin:
 
     "The bell rings out signaling the end of the break."
 
-    show rab shock at left:
-        zoom 1.8
+    show rab shock at left
     ug "OH. We should get to class."
-    show rab normal at left:
-        zoom 1.8
+    show rab normal at left
     ug "I guess I'll see you around... sorry, what was your name again?"
     pr "It's Chungus-kun."
     rab "Well, it was nice to meet you, Chuu-San, I'm Rabies. I guess I'll see you later, then..."
 
     "She skips away."
-    show rab happy at left:
-        zoom 1.8
+    show rab happy at left
     rab "I got to meet the new kid!~"
 
     scene bg black with fade
@@ -367,55 +348,44 @@ label day1_SnackFin_classFin:
 
 label lind_wakeFin:
     "Uh, excuse me?"
-    show rab unsure at left:
-        zoom 1.8
+    show rab unsure at left
     ug "Huh...wha...?"
     return  
 
 label lind_nowakeFin:
     "They must be tired, I should just let them sleep."
     "Unfortunately the door makes a loud creek as I go to leave."
-    show rab unsure at left:
-        zoom 1.8
+    show rab unsure at left
     ug "Huh...wha...?"
-    show rab shock at left:
-        zoom 1.8
+    show rab shock at left
     ug "NOCOMEBACK!"
     return
 
 label lind_itsokFin:
-    show rab annoyed at left:
-        zoom 1.8
+    show rab annoyed at left
     ug "WHAT? I go through all the effort of taking you here, and all you say is 'it's ok'?"
-    show rab unsure at left:
-        zoom 1.8
+    show rab unsure at left
     ug "Well, I guess it's a bit cloudy. I'd rather have shown you when it was sunny out. It almost looks like it's about to rain..."
     return
 
 label lind_beutFin:
-    show rab happy at left:
-        zoom 1.8
+    show rab happy at left
     ug "I know, right? I come here all the time to get some fresh air."
-    show rab unsure at left:
-        zoom 1.8
+    show rab unsure at left
     ug "Except when it rains... it kinda looks that way right now..."
     return
 
 label lind_raingoodFin:
-    show rab annoyed at left:
-        zoom 1.8
+    show rab annoyed at left
     ug "NO. WATER IS BAD."
-    show rab unsure at left:
-        zoom 1.8
+    show rab unsure at left
     ug "It gets in my ears and makes them feel all full."
     return
 
 label lind_rainbadFin:
-    show rab shock at left:
-        zoom 1.8
+    show rab shock at left
     ug "You do?"
-    show rab normal at left:
-        zoom 1.8
+    show rab normal at left
     ug "So do I. It's just such a downer..."
     return
 
@@ -562,7 +532,7 @@ label day1_afternoonFin_hang:
         rab "Wait... is that an umbrella?"
         nn "She didn't see it before? Or is she just playing dumb?"
         show rab shock:
-            linear 1.0 zoom 1.8 xalign 0.2 yalign 1.0
+            linear 1.0 xalign 0.2 yalign 1.0
         show rab happy
         rab "That's MUCH better. Lucky I found you, isn't it?"
     else:
@@ -588,7 +558,7 @@ label day1_afternoonFin_hang:
         ug "Wait... is that an umbrella?"
         nn "She didn't see it before? Or is she just playing dumb?"
         show rab shock:
-            linear 1.0 zoom 1.8 xalign 0.2 yalign 1.0
+            linear 1.0 xalign 0.2 yalign 1.0
         show rab happy
         ug "That's MUCH better. Lucky I found you, isn't it?"
         pr "I guess, but I didn't even catch your name yet"
@@ -659,7 +629,7 @@ label Day1AfterSchoolRabDormGood:
     rab "..."
     pr "..."
     show rab happy:
-        linear 0.1 zoom 1.8 xalign 0.3 yalign 1.0
+        linear 0.1 xalign 0.3 yalign 1.0
     nn "She rushes me, almost knocking me over. Upon contact, she wraps her arms around me."
     show rab normal
     rab "Thanks for walking me back. You were a real lifesaver there."
@@ -675,8 +645,7 @@ label Day1AfterSchoolRabDormBad:
     if RabKnowsILive == 0:
         show rab shock at left
         rab "Wait... you live in Petri Hall too?"
-    show rab normal at center:
-        zoom 1.8
+    show rab normal at center
     rab "You’re like a good luck charm or something. Thanks a lot, Chuu-San!"
     hide rab with moveoutleft
     nn "And there she goes, like a rocket up those stairs..."

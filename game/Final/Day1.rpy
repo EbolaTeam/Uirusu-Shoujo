@@ -136,8 +136,7 @@ label day1_lunchFin:
         zoom 1.0
         xalign 0.1
         yalign 1.0
-    show sars notamused at right:
-        zoom 1.5
+    show sars notamused at right
     nn "More classes, more harrasment by the short fuck, just like highschool all over again..."
 
     return
@@ -227,7 +226,6 @@ label sars_endFin:
         xalign 0.1
         yalign 1.0
     show sars grin:
-        zoom 1.6
         xalign 0.9
         yalign 1.0
     ec "You got the Sars ending! Fighto!"
@@ -240,7 +238,6 @@ label aids_endFin:
         xalign 0.1
         yalign 1.0
     show aids joy:
-        zoom 1.8
         xalign 0.9
         yalign 1.0
     ec "You got the Aids ending! Ecchi!"

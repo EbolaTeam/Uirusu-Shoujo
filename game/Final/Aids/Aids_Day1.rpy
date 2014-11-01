@@ -26,7 +26,6 @@
     show ebby wink
     ec "We're the only ones here, silly! Come on, let's go chat with Eids!"
     show aids excited:
-        zoom 1.8
         xalign 0.9
         yalign 1.0
     ai "H-hi Ebby, who's your new friend?"
@@ -128,8 +127,7 @@ label day1_lunchFin_corridorFin:
 
     else:
         if AidsCount < 2:
-            show aids sad at right:
-                zoom 1.8
+            show aids sad at right
             pr "Hey, Eidzu!"
             show aids excited
             ai "Protag?"
@@ -143,8 +141,7 @@ label day1_lunchFin_corridorFin:
             ai "Hey, where's Ebby? Usually on their first day people stick to their guides like glue!"
         else:
             $ AidsMetFulfilled = 0            
-            show aids normal at center:
-                zoom 1.8
+            show aids normal at center
             pr "Hey, Eidzu!"
             show aids excited
             ai "YAY, YOU MADE IT!"
@@ -194,8 +191,7 @@ label day1_lunchFin_corridorFin:
 
 label Day1AidLunchComfort:
         ec "Eidzu? Are you okay?"
-        show aids sad at center:
-            zoom 1.8
+        show aids sad at center
         ai "HIV-kun said he'd meet me at lunch but he's too busy railing that harlot Sian."
         pr "Did you say Sian?"
         show ebby normal
@@ -295,8 +291,7 @@ label day1_afternoonFin_gateFin:
         nn "I see Aids sitting alone on a bench, looking like she's waiting for someone."    
         show aids sad at right
         pr "Aids, you okay?"
-        show aids normal:
-            zoom 1.8
+        show aids normal
         ai "Mostly. HIV's ditched me again for another floozy."
         show aids sad
         ai "Why don't I ever get to have fun with him anymore?"
@@ -331,8 +326,7 @@ label day1_eveningFin_showerFin:
         $ AidsMeet = 1
     else:
         nn "After today's shinanigans a nice warm shower feels suprisingly good."
-        show aids joy at right:
-            zoom 1.8
+        show aids joy at right
         nn "Aids accidentally walked in on me, although \"Accidentally\" may be up for debate."
         ai "S-sorry, I didn't mean to walk in on you l-like this..."
         hide aids
@@ -363,8 +357,7 @@ prin "WHY DID I NOT NOTICE HOW WEIRD THIS IS EARLIER, WHAT THE SHIT."
 prin "Oh who cares, time for some sleep"
 ug "Can it wait?"
 pr "Who's there?"
-show aids normal at center:
-    zoom 1.5
+show aids normal at center
 ai "Me, silly."
 pr "Eidz, what are you doing in here?"
 show aids sad

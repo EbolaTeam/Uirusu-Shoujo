@@ -1,4 +1,3 @@
-label start:
 label final:
 #backgrounds, images, and character definitions have been moved to definitions.rpy
 
