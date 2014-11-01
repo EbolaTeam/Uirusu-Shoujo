@@ -29,14 +29,14 @@
         zoom 1.8
         xalign 0.9
         yalign 1.0
-    ai "h-Hi Ebby, who's your new friend?"
+    ai "H-hi Ebby, who's your new friend?"
     show ebby concerned
     ec "He's... wait, Eidzu, are you reading a naughty book again?"
     show aids concerned
     ai "N-no! It isn't like that I'm not-"
     ec "Gimmie"
     show aids sad
-    ai "n-No! Don't read that!"
+    ai "N-no! Don't read that!"
     show ebby sad
     ec "Let's see what you've been reading: \"I don't love you. I've never loved anyone. I wanted you from the first moment I saw you. I wanted you as one wants a whore – for the same reason and purpose.\""
     show ebby concerned
@@ -257,7 +257,7 @@ label day1_afternoonFin_gateFin:
     scene bg xebgate with fade
     show ebby normal at left
     if AidsMeet == 0:
-        nn "Me and Ebster walk home togeather"
+        nn "Me and Ebster walk home together"
         nn "Huh, funny. I called the dorm \"Home\". Guess I've really snapped out of reality pretty quickly..."
         if AidsPassed == 1:
             nn "She looks like the one we saw earlier at lunch, I wonder if Ebby still thinks I'm a dick for that..."
@@ -323,7 +323,7 @@ label day1_eveningFin_showerFin:
     scene bg xebshower with fade
     if AidsMeet == 0:
         show aids concerned at right
-        nn "After todays shinanigans a nice warm shower feels suprisingly good...{p}
+        nn "After today's shinanigans a nice warm shower feels suprisingly good...{p}
         I'm pretty sure I saw a girl I met earlier peeking at me."
         hide aids
         with moveoutright

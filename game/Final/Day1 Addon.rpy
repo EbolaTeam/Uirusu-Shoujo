@@ -1,4 +1,4 @@
-label day1_morningFin:
+﻿label day1_morningFin:
     scene bg black with fade
     scene bg xebdorm_room with fade
     show ebby concerned:
@@ -48,11 +48,11 @@ label day1morningwakeFin:
     scene bg xebdorm_room with fade
 
     prin "I wake to sunlight streaming in the window and give a stretch."
-    nn "Mmmm this is nice - when was the last time waking up in the morning felt so damn good?"
+    nn "Mmmm, this is nice - when was the last time waking up in the morning felt so damn good?"
     prin "There's a school uniform with my name tagged onto it. I have no clue what the hell's going on, but I think I can understand that much."
     
     scene bg xebdorm with fade
-    prin "I walk out into what looks like the main room, onty to be greeted by a small girl getting dressed."
+    prin "I walk out into what looks like the main room, only to be greeted by a small girl getting dressed."
     show sars notamused
     show sars notamused
     "Short Girl" "Wh-what are you doing here, intruder! Pervert! GET OUT!"
@@ -108,7 +108,7 @@ label day1morningwakeFin:
 
     joki "I’m glad it’s to your tastes!"
 
-    pr "Definitly!"
+    pr "Definitely!"
 
     nn "I could easily get used to this." 
 
@@ -389,7 +389,7 @@ label lind_itsokFin:
     ug "WHAT? I go through all the effort of taking you here, and all you say is 'it's ok'?"
     show rab unsure at left:
         zoom 1.8
-    ug "Well, I guess it's a bit cloudy. I'd rather have shown you when it was sunny out. It almost looks like it's about to rain.."
+    ug "Well, I guess it's a bit cloudy. I'd rather have shown you when it was sunny out. It almost looks like it's about to rain..."
     return
 
 label lind_beutFin:
@@ -450,7 +450,7 @@ label lind_rainbadFin:
 label day1_lunchFin_explore:
     scene bg xebriver with fade
     pr "How did I end up here?"
-    pr "I realy shouldn't have walked around without someone to guide me, now I'm lost."
+    pr "I really shouldn't have walked around without someone to guide me, now I'm lost."
     show zmapp:
         zoom 1.0
         xalign 0.9
@@ -461,14 +461,14 @@ label day1_lunchFin_explore:
     pr "Working on what?"
     ug "Oh, you’ll see... Now, let me get back to work."
     ug "So... if I put this one here..."
-    ug "OH SHIT"
+    ug "OH SHIT!"
     show ebby rape:
         zoom 1.0
         xalign -1.0
         yalign 0.7
     show ebby rape:
         linear 0.05 zoom 1.0 xalign 0.7 yalign 0.7
-    ec "IT'S RAPE TIME"
+    ec "IT'S RAPE TIME!"
     ug "No, No, No!"
     ec "I GOT YOU NO-oh."
     show ebby normal
@@ -599,11 +599,11 @@ label day1_afternoonFin_hang:
     
     
     menu:
-        "Let's get you home.":
+        "Let's get you home":
             $ RabbiesHelp = 1
             $ RabbiesCount += 1
             call Day1AfterSchoolRabHome
-        "Please let go of me.":
+        "Please let go of me":
             call Day1AfterSchoolRabFuggoff
     if RabbiesCount == 2:
         if RabbiesHelp == 1:
@@ -621,7 +621,7 @@ label Day1AfterSchoolRabHome:
     show rab normal
     rab "Oh, uh... I live in Petri Hall."
     show rab happy
-    rab "It’s where I first met Ebola-Chan. I live just a few rooms down from her."
+    rab "It’s where I first met Ebola-chan. I live just a few rooms down from her."
     pr "I live there too. Right across from her, actually..."
     show rab shock
     rab "WHA? I didn’t know they let boys live there!"

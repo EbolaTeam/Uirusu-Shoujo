@@ -22,7 +22,7 @@ $time = "morningFin"
 menu:
     "What to do?"
 
-    "Stay at the dorm a while longer.":
+    "Stay at the dorm a while longer":
         $place="dorm"
 
 $destination="day"+str(day)+"_"+time+"_"+place
