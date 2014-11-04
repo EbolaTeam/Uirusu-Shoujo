@@ -266,19 +266,25 @@ init:
     define adv = Character (None, what_color="#fdb2b6", who_color="#000000", what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", ctc_pause="ctc", ctc_timedpause=Null())
 
     # Characters can have dynamic names. Change the variable at any time to change her name.
-    define ec = Character('name_ec', dynamic=True, image='ebby')
-    $ name_ec = 'Ebola-chan'
-    define vc = Character('Vu-chan', image='vu')
+    define ebby = Character('name_ebby', dynamic=True, image='ebby')
+    $ name_ebby = 'Ebola-chan'
+    define vu = Character('Vu-chan', image='vu')
     define sars = Character('Sars-chan', image='sars')
     define joki = Character('Joki-kun', image='joki')
     define mal = Character('Malaria-chan', image='mal')
     define rab = Character('Rabies-chan', image='rab')
     define bp = Character('BP-sama', image='bp')
-    define wc = Character('WHO-chan', image='who')
+    define who = Character('WHO-chan', image='who')
     define zmapp = Character('Zmapp-chan', image='zmapp')
     define marburg = Character('Marburg-sama', image='marburg')
     define teach = Character('Teacher')
-    define ai = Character('Eidzu-chan', image='aids')
+    define aids = Character('Eidzu-chan', image='aids')
+    
+    # Possibly deprecated
+    define ec = Character(kind=ebby)
+    define vc = Character(kind=vu)
+    define wc = Character(kind=who)
+    define ai = Character(kind=aids)
     
     # This is the protagonist. Use this character when the protagonist speaks.
     define pr = Character('player_name', dynamic=True)
