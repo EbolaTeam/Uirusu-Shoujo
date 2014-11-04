@@ -13,7 +13,7 @@ label introAfrica:
     "Vu-chan!{w=1.5} Vu-chan!{p=1.5}
     Where are you Vu-chan?"
 
-    show ebby excited:
+    show ebby excited bloodskull:
         zoom 1.0
         xalign 0.1
         yalign 1.0
@@ -29,18 +29,18 @@ label introAfrica:
     vc "Keep yer shimpan on dearie,
     I'm here."
 
-    show ebby joy
+    show ebby joy bloodskull
 
     ec "Vu-chan! Yay!"
     ec "It's gotten so quiet around here,"
 
-    show ebby normal
+    show ebby normal bloodskull
 
     ec "Ebola-chan was getting lonely!"
 
     vc "Of course it's quiet you puerile pestillance!"
     vc "Everybody's dead!"
-    show ebby concerned
+    show ebby concerned bloodskull
     ec "Dead?"
 
     vc "Yes, Dead! Expired! Bereft of Life!
@@ -57,7 +57,7 @@ label introAfrica:
     vc "Don't you want to 'ave an after-epidemic nap or something?"
 
 
-    show ebby sad
+    show ebby sad bloodskull
     
     ec "Ebola-chan doesn't want a nap!
     Ebola-chan doesn't want to be lonely!"
@@ -69,7 +69,7 @@ label introAfrica:
 
 
 
-    show ebby joy
+    show ebby joy bloodskull
 
     ec "Yay! Vu-chan!"
     ec "Ebola-chan is glad she has a friend like you!"
@@ -78,7 +78,7 @@ label introAfrica:
     vc "Yeah, and you're so bloody virulant I'm suprised I haven't burst."
 
 
-    show ebby normal
+    show ebby normal bloodskull
 
     vc "Ok there is this one place I 'erd of"
     vc "loads a humans"

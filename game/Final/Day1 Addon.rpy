@@ -66,7 +66,7 @@ label day1morningwakeFin:
 
     scene bg xebdorm with fade
 
-    show sars notamused at left
+    show sars notamused point at left
 
     "Short Girl" "AHH! It's the pervert! Don’t look at him or you’ll get molested!"
 
@@ -214,7 +214,7 @@ label day1_morningFin_dorm:
     ec "MFFF!!\"{p}
     \"{color=#57bab7}(SAFE!!){/color}"
     hide ebby
-    show sars stars at left
+    show sars stars point at left
     "Short Girl" "WHAT THE HELL ARE YOU DOING WITH MY EBOLA-CHAN!!!"
     with vpunch
     "Short Girl" "PERVERT!"
@@ -229,7 +229,7 @@ label day1_morningFin_dorm:
     \"{color=#57bab7}(Stop it Sars-chan! It's nothing like that!){/color}"
     show sars concerned at left
     "Short Girl" "What? Take that toast out of your mouth, I can't understand a word!"
-    show sars stars at left
+    show sars stars point at left
     "Short Girl" "-or did he force it on you?"
     with hpunch
     "Short Girl" "TOAST FETISHIST!"
@@ -254,6 +254,7 @@ label day1_morningFin_dorm:
     nn "And here is the teacher now, looks like we really did make it just in time."
     nn "Ebola-chan flashes me a quick smile and heads to her seat."
     hide ebby
+    show sars notamused
     "Short Girl" "I'm watching you, toast-fetishist!"
     hide sars
     nn "Yes, this is going to be an experience indeed..."

@@ -146,38 +146,105 @@ init:
     # CHARACTER IMAGES
     #==============================================================
     
-    image ebby wink = "images/sprites/EbbyWink.png"
-    image ebby concerned= "images/sprites/EbbyConcerned.png"
-    image ebby excited = "images/sprites/EbbyExcited.png"
-    image ebby sad= "images/sprites/EbbySad.png"
-    image ebby rape= "images/sprites/EbbyRape.png"
-    image ebby joy= "images/sprites/EbbyJoy.png"
-    image ebby normal = "images/sprites/EbbyNormal.png"
-    image ebby toastdead = "images/sprites/EbbyToastDead.png"
-    image ebby toastsad = "images/sprites/EbbyToastSad.png"
-    image ebby toastjoy = "images/sprites/EbbyToastJoy.png"
+init python:
+    # Used for compositing and declaring many images with little effort.
+    # For each item, defines 4 images. Cropped small, cropped large, full small, and full large.
+    def autoComposite(basename='', base='', bases={}, dict={}, wimg=800, himg=1600, xcomp=0, ycomp=0, wcomp=200, hcomp=200, lcrop=1000, scrop=900, lscale=1.0, sscale=0.66):
+        suffix=''
+        #main base
+        autoComposite2(**locals())
+        #additional bases
+        for key in bases:
+            suffix = " "+key
+            base = bases[key]
+            autoComposite2(**locals())
+        return
+    def autoComposite2(basename, base, suffix, dict, wimg, himg, xcomp, ycomp, wcomp, hcomp, lcrop, scrop, lscale, sscale,*args,**kwargs):
+        if basename:
+            # declare baseimage
+            autoComposite3(basename+suffix, base, **locals())
+        for key in dict:
+            # declare composite images
+            if dict[key]:
+                src=im.Composite((wimg, himg),(0,0),base,(xcomp,ycomp),dict[key])
+            else:
+                src=base
+            autoComposite3(key+suffix, **locals())
+    def autoComposite3(name,src, wimg, lcrop, scrop, lscale, sscale,*args,**kwargs):
+        #cropped
+        renpy.image(name, im.FactorScale(im.Crop(src,(0,0,wimg,scrop)),sscale))
+        #full image
+        renpy.image(name+" full", im.FactorScale(src,sscale))
+        #large cropped
+        renpy.image(name+" large", im.FactorScale(im.Crop(src,(0,0,wimg,lcrop)),lscale))
+        #large full
+        renpy.image(name+" large full", im.FactorScale(src,lscale))
+        return
+    
+    #Some actual image definitions
+    autoComposite('ebby normal', base="images/sprites/EBOLA/EbbyNormal.png",
+    bases={
+    'blood':"images/sprites/EBOLA/EbbyBlood.png",
+    'skull':"images/sprites/EBOLA/EbbySkull.png",
+    'bloodskull':"images/sprites/EBOLA/EbbySkullBlood.png",
+    },
+    dict={
+    'ebby wink':"images/sprites/EBOLA/EbbyWink.png",
+    'ebby concerned':"images/sprites/EBOLA/EbbyConcerned.png",
+    'ebby excited':"images/sprites/EBOLA/EbbyExcited.png",
+    'ebby sad':"images/sprites/EBOLA/EbbySad.png",
+    'ebby rape':"images/sprites/EBOLA/EbbyRape.png",
+    'ebby joy':"images/sprites/EBOLA/EbbyJoy.png",
+    }, wimg=808, himg=1929, 
+    xcomp=297, ycomp=188, wcomp=259, hcomp=268,
+    lcrop=1060, scrop=1350)
+    
+    autoComposite(base="images/sprites/EBOLA/EbbyNormal.png",
+    bases={
+    'blood':"images/sprites/EBOLA/EbbyBlood.png",
+    'skull':"images/sprites/EBOLA/EbbySkull.png",
+    'bloodskull':"images/sprites/EBOLA/EbbySkullBlood.png",
+    },
+    dict={
+    'ebby toastdead':"images/sprites/EBOLA/EbbyToastDead.png",
+    'ebby toastsad':"images/sprites/EBOLA/EbbyToastSad.png",
+    'ebby toastjoy':"images/sprites/EBOLA/EbbyToastJoy.png",
+    }, wimg=808, himg=1929, 
+    xcomp=297, ycomp=188, wcomp=259, hcomp=334,
+    lcrop=1060, scrop=1350)
+    
+    autoComposite('sars normal', base="images/sprites/SARS/SarsNormal.png",
+    bases={
+    'point':"images/sprites/SARS/SarsPoint.png"
+    },
+    dict={
+    'sars notamused':"",
+    'sars concerned':"images/sprites/SARS/SarsConcerned.png",
+    'sars grin':"images/sprites/SARS/SarsGrin.png",
+    'sars sad':"images/sprites/SARS/SarsSad.png",
+    'sars stars':"images/sprites/SARS/SarsStars.png",
+    }, wimg=751, himg=1790, 
+    xcomp=241, ycomp=129, wcomp=307, hcomp=284,
+    lcrop=984, scrop=1200,
+    sscale=0.64)
+    
+init:
 
     image mal = Placeholder("girl")
     image bp = Placeholder("girl")
 
     image aids concerned:
-        "images/sprites/AIDS/AidsConcerned.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/AIDS/AidsConcerned.png",1.8)
     image aids excited:
-        "images/sprites/AIDS/AidsExcited.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/AIDS/AidsExcited.png",1.8)
     image aids joy:
-        "images/sprites/AIDS/AidsJoy.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/AIDS/AidsJoy.png",1.8)
     image aids normal:
-        "images/sprites/AIDS/AidsNormal.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/AIDS/AidsNormal.png",1.8)
     image aids rape:
-        "images/sprites/AIDS/AidsRape.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/AIDS/AidsRape.png",1.8)
     image aids sad:
-        "images/sprites/AIDS/AidsSad.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/AIDS/AidsSad.png",1.8)
 
     image joki angry = "images/sprites/JOKI/JokiAngry.png"
     image joki evil = "images/sprites/JOKI/JokiEvil.png"
@@ -188,43 +255,20 @@ init:
     image joki smile = "images/sprites/JOKI/JokiSmile.png"
     image joki wtf = "images/sprites/JOKI/JokiWTF.png"
 
-    image sars concerned:
-        "images/sprites/SARS/SarsConcerned.png"
-        zoom 1.5
-    image sars grin:
-        "images/sprites/SARS/SarsGrin.png"
-        zoom 1.5
-    image sars sad:
-        "images/sprites/SARS/SarsSad.png"
-        zoom 1.5
-    image sars notamused:
-        "images/sprites/SARS/SarsNotAmused.png"
-        zoom 1.5
-    image sars stars:
-        "images/sprites/SARS/SarsStars.png"
-        zoom 1.5
-
     image rab happy:
-        "images/sprites/RABIES/RabHappy.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/RABIES/RabHappy.png",1.8)
     image rab normal:
-        "images/sprites/RABIES/RabNormal.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/RABIES/RabNormal.png",1.8)
     image rab sad:
-        "images/sprites/RABIES/RabSad.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/RABIES/RabSad.png",1.8)
     image rab shock:
-        "images/sprites/RABIES/RabShock.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/RABIES/RabShock.png",1.8)
     image rab unsure:
-        "images/sprites/RABIES/RabUnsure.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/RABIES/RabUnsure.png",1.8)
     image rab violent:
-        "images/sprites/RABIES/RabViolent.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/RABIES/RabViolent.png",1.8)
     image rab annoyed:
-        "images/sprites/RABIES/RabAnnoyed.png"
-        zoom 1.8
+        im.FactorScale("images/sprites/RABIES/RabAnnoyed.png",1.8)
 
     image marburg annoyed = "images/sprites/MARBURG/MarburgAnnoyed.png"
     image marburg normal = "images/sprites/MARBURG/MarburgNormal.png"
@@ -303,7 +347,6 @@ init:
 
     define prin = Character('', kind=narrator) #deprecated. Please use narrator instead
     define nn = Character('', kind=narrator) #deprecated. Please use narrator instead
-    
     
     #================#
     # Record keeping #
