@@ -139,7 +139,7 @@ label introLab:
     pr "I did this by using a organism of my own, a virus that lives on, or really just bonds to other viruses, changing their copys."
     pr "Nice, non-destructive, doesn't really hurt the viruses. No need to reengineer every bloody organism I want to work on, just shake and go"
     pr "The effect? Well, a medicine might kill 99.99\% of viruses, but that 1 in 10 billion retard virus babby with the genetic fuck-up that makes it immune to penicillin is gonna be the Adam of a new race."
-    pr "The shit I've created in this lab out of the virus samples that I'm supposed to be trying to kill scare even me, though that doesn't stop me from carrying a little viral of airborne Cuevavirus Lloviu around my neck."
+    pr "The shit I've created in this lab out of the virus samples that I'm supposed to be trying to kill scare even me, though that doesn't stop me from carrying a little vial of airborne Cuevavirus Lloviu around my neck."
     pr "If people ask, I just say it's part of a cure to cancer. Heh..."
     pr "Anyway, thanks to the, well, enhancing organism I made being self-replicating, I've been able to apply it to almost..."
     "KNOCK KNOCK"
