@@ -146,7 +146,29 @@ init:
     # CHARACTER IMAGES
     #==============================================================
     
+    if persistent.artstyle is None:
+        $ persistent.artstyle = 'default'
+    
 init python:
+    # Used for declaring images that switch artstyles.
+    # Takes a list of image names.
+    def artstyle_switcher(list=[], bases=[]):
+        artstyle_switcher2(list)
+        for base in bases:
+            artstyle_switcher2(list,base)
+        return
+    def artstyle_switcher2(list=[], base=''):
+        if base:
+            base = " "+base
+        for item in list:
+            renpy.image(item+base, ConditionSwitch(
+                "renpy.image_exists(persistent.artstyle+' "+item+base+"')",DynamicDisplayable(artstyle_dynamic,item=item,base=base),
+                "renpy.image_exists('default "+item+base+"')", "default "+item+base,
+                "True",Placeholder('girl')
+            ))
+    def artstyle_dynamic(st, at, item, base):
+        return persistent.artstyle+" "+item+base, None
+            
     # Used for compositing and declaring many images with little effort.
     # For each item, defines 4 images. Cropped small, cropped large, full small, and full large.
     def autoComposite(basename='', base='', bases={}, dict={}, wimg=800, himg=1600, xcomp=0, ycomp=0, wcomp=200, hcomp=200, lcrop=1000, scrop=900, lscale=1.0, sscale=0.66):
@@ -165,10 +187,12 @@ init python:
             autoComposite3(basename+suffix, base, **locals())
         for key in dict:
             # declare composite images
-            if dict[key]:
+            if dict[key] and base:
                 src=im.Composite((wimg, himg),(0,0),base,(xcomp,ycomp),dict[key])
-            else:
+            elif base:
                 src=base
+            elif dict[key]:
+                src=dict[key]
             autoComposite3(key+suffix, **locals())
     def autoComposite3(name,src, wimg, lcrop, scrop, lscale, sscale,*args,**kwargs):
         #cropped
@@ -182,23 +206,41 @@ init python:
         return
     
     #Some actual image definitions
-    autoComposite('ebby normal', base="images/sprites/EBOLA/EbbyNormal.png",
+#Ebby default
+    autoComposite(
+    bases={'blood':"",'skull':"",'bloodskull':"",},
+    dict={
+    'default ebby normal':"images/sprites/EBOLA/EbbyNormal.png",
+    'default ebby wink':"images/sprites/EBOLA/EbbyWink.png",
+    'default ebby concerned':"images/sprites/EBOLA/EbbyConcerned.png",
+    'default ebby excited':"images/sprites/EBOLA/EbbyExcited.png",
+    'default ebby sad':"images/sprites/EBOLA/EbbySad.png",
+    'default ebby rape':"images/sprites/EBOLA/EbbyRape.png",
+    'default ebby joy':"images/sprites/EBOLA/EbbyJoy.png",
+    'default ebby toastdead':"images/sprites/EBOLA/EbbyToastDead.png",
+    'default ebby toastsad':"images/sprites/EBOLA/EbbyToastSad.png",
+    'default ebby toastjoy':"images/sprites/EBOLA/EbbyToastJoy.png",
+    }, wimg=477, himg=900, 
+    lcrop=900, scrop=900,
+    lscale=1.0, sscale=1.0)
+#Ebby dread normal
+    autoComposite('dread ebby normal', base="images/sprites/dread/EBOLA/EbbyNormal.png",
     bases={
-    'blood':"images/sprites/EBOLA/EbbyBlood.png",
-    'skull':"images/sprites/EBOLA/EbbySkull.png",
-    'bloodskull':"images/sprites/EBOLA/EbbySkullBlood.png",
+    'blood':"images/sprites/dread/EBOLA/EbbyBlood.png",
+    'skull':"images/sprites/dread/EBOLA/EbbySkull.png",
+    'bloodskull':"images/sprites/dread/EBOLA/EbbySkullBlood.png",
     },
     dict={
-    'ebby wink':"images/sprites/EBOLA/EbbyWink.png",
-    'ebby concerned':"images/sprites/EBOLA/EbbyConcerned.png",
-    'ebby excited':"images/sprites/EBOLA/EbbyExcited.png",
-    'ebby sad':"images/sprites/EBOLA/EbbySad.png",
-    'ebby rape':"images/sprites/EBOLA/EbbyRape.png",
-    'ebby joy':"images/sprites/EBOLA/EbbyJoy.png",
+    'dread ebby wink':"images/sprites/dread/EBOLA/EbbyWink.png",
+    'dread ebby concerned':"images/sprites/dread/EBOLA/EbbyConcerned.png",
+    'dread ebby excited':"images/sprites/dread/EBOLA/EbbyExcited.png",
+    'dread ebby sad':"images/sprites/dread/EBOLA/EbbySad.png",
+    'dread ebby rape':"images/sprites/dread/EBOLA/EbbyRape.png",
+    'dread ebby joy':"images/sprites/dread/EBOLA/EbbyJoy.png",
     }, wimg=808, himg=1929, 
     xcomp=297, ycomp=188, wcomp=259, hcomp=268,
     lcrop=1060, scrop=1350)
-    
+#Ebby dread toast
     autoComposite(base="images/sprites/EBOLA/EbbyNormal.png",
     bases={
     'blood':"images/sprites/EBOLA/EbbyBlood.png",
@@ -206,28 +248,76 @@ init python:
     'bloodskull':"images/sprites/EBOLA/EbbySkullBlood.png",
     },
     dict={
-    'ebby toastdead':"images/sprites/EBOLA/EbbyToastDead.png",
-    'ebby toastsad':"images/sprites/EBOLA/EbbyToastSad.png",
-    'ebby toastjoy':"images/sprites/EBOLA/EbbyToastJoy.png",
+    'dread ebby toastdead':"images/sprites/dread/EBOLA/EbbyToastDead.png",
+    'dread ebby toastsad':"images/sprites/dread/EBOLA/EbbyToastSad.png",
+    'dread ebby toastjoy':"images/sprites/dread/EBOLA/EbbyToastJoy.png",
     }, wimg=808, himg=1929, 
     xcomp=297, ycomp=188, wcomp=259, hcomp=334,
     lcrop=1060, scrop=1350)
-    
-    autoComposite('sars normal', base="images/sprites/SARS/SarsNormal.png",
+#Ebby poneh
+    autoComposite(
+    bases={'blood':"",'skull':"",'bloodskull':"",},
+    dict={
+    'poneh ebby normal':"images/sprites/poneh/EBOLA/EbbyNormal.png",
+    'poneh ebby wink':"images/sprites/poneh/EBOLA/EbbyJoy.png",
+    'poneh ebby concerned':"images/sprites/poneh/EBOLA/EbbyConcerned.png",
+    'poneh ebby excited':"images/sprites/poneh/EBOLA/EbbyExcited.png",
+    'poneh ebby sad':"images/sprites/poneh/EBOLA/EbbyConcerned.png",
+    'poneh ebby rape':"images/sprites/poneh/EBOLA/EbbyRape.png",
+    'poneh ebby joy':"images/sprites/poneh/EBOLA/EbbyJoy.png",
+    }, wimg=700, himg=1100, 
+    lcrop=800, scrop=800,
+    lscale=1.0, sscale=1.0)
+#Sars default
+    autoComposite(
+    bases={'point':""},
+    dict={
+    'default sars normal':"images/sprites/SARS/SarsNotAmused.png",
+    'default sars notamused':"images/sprites/SARS/SarsNotAmused.png",
+    'default sars concerned':"images/sprites/SARS/SarsConcerned.png",
+    'default sars grin':"images/sprites/SARS/SarsGrin.png",
+    'default sars sad':"images/sprites/SARS/SarsSad.png",
+    'default sars stars':"images/sprites/SARS/SarsStars.png",
+    }, wimg=525, himg=600, 
+    lcrop=600, scrop=600,
+    lscale=1.5, sscale=1.5)
+#Sars dread
+    autoComposite('dread sars normal', base="images/sprites/dread/SARS/SarsNormal.png",
     bases={
-    'point':"images/sprites/SARS/SarsPoint.png"
+    'point':"images/sprites/dread/SARS/SarsPoint.png"
     },
     dict={
-    'sars notamused':"",
-    'sars concerned':"images/sprites/SARS/SarsConcerned.png",
-    'sars grin':"images/sprites/SARS/SarsGrin.png",
-    'sars sad':"images/sprites/SARS/SarsSad.png",
-    'sars stars':"images/sprites/SARS/SarsStars.png",
+    'dread sars notamused':"",
+    'dread sars concerned':"images/sprites/dread/SARS/SarsConcerned.png",
+    'dread sars grin':"images/sprites/dread/SARS/SarsGrin.png",
+    'dread sars sad':"images/sprites/dread/SARS/SarsSad.png",
+    'dread sars stars':"images/sprites/dread/SARS/SarsStars.png",
     }, wimg=751, himg=1790, 
     xcomp=241, ycomp=129, wcomp=307, hcomp=284,
     lcrop=984, scrop=1200,
     sscale=0.64)
-    
+#Ebby Switch
+    artstyle_switcher([
+    'ebby normal',
+    'ebby wink',
+    'ebby concerned',
+    'ebby excited',
+    'ebby sad',
+    'ebby rape',
+    'ebby joy',
+    'ebby toastdead',
+    'ebby toastsad',
+    'ebby toastjoy',
+    ],['blood','skull','bloodskull'])
+#Sars Switch
+    artstyle_switcher([
+    'sars normal',
+    'sars notamused',
+    'ebby concerned',
+    'ebby grin',
+    'ebby sad',
+    'ebby stars',
+    ],['point'])
 init:
 
     image mal = Placeholder("girl")
@@ -361,3 +451,5 @@ init:
     $ RabbiesCount = 0
     $ EbbyBrowniePoints = 0
     $ RabKnowsILive = 0
+    
+        
