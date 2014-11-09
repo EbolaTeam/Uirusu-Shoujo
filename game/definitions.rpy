@@ -161,13 +161,24 @@ init python:
         if base:
             base = " "+base
         for item in list:
-            renpy.image(item+base, ConditionSwitch(
-                "renpy.image_exists(persistent.artstyle+' "+item+base+"')",DynamicDisplayable(artstyle_dynamic,item=item,base=base),
-                "renpy.image_exists('default "+item+base+"')", "default "+item+base,
-                "True",Placeholder('girl')
-            ))
-    def artstyle_dynamic(st, at, item, base):
-        return persistent.artstyle+" "+item+base, None
+            artstyle_switcher3(item+base)
+    def artstyle_switcher3(name):
+        #cropped
+        renpy.image(name, DynamicDisplayable(artstyle_dynamic,name=name))
+        #full image
+        renpy.image(name+" full", DynamicDisplayable(artstyle_dynamic,name=name+" full"))
+        #large cropped
+        renpy.image(name+" large", DynamicDisplayable(artstyle_dynamic,name=name+" large"))
+        #large full
+        renpy.image(name+" large full", DynamicDisplayable(artstyle_dynamic,name=name+" large full"))
+        return
+    def artstyle_dynamic(st, at, name=''):
+        if renpy.image_exists(persistent.artstyle+" "+name):
+            return persistent.artstyle+" "+name, None
+        elif renpy.image_exists("default "+name):
+            return "default "+name, None
+        else:
+            return Placeholder('girl'), None
             
     # Used for compositing and declaring many images with little effort.
     # For each item, defines 4 images. Cropped small, cropped large, full small, and full large.
@@ -279,8 +290,8 @@ init python:
     'default sars sad':"images/sprites/SARS/SarsSad.png",
     'default sars stars':"images/sprites/SARS/SarsStars.png",
     }, wimg=525, himg=600, 
-    lcrop=600, scrop=600,
-    lscale=1.5, sscale=1.5)
+    lcrop=500, scrop=600,
+    lscale=3.0, sscale=1.5)
 #Sars dread
     autoComposite('dread sars normal', base="images/sprites/dread/SARS/SarsNormal.png",
     bases={
@@ -313,10 +324,10 @@ init python:
     artstyle_switcher([
     'sars normal',
     'sars notamused',
-    'ebby concerned',
-    'ebby grin',
-    'ebby sad',
-    'ebby stars',
+    'sars concerned',
+    'sars grin',
+    'sars sad',
+    'sars stars',
     ],['point'])
 init:
 
