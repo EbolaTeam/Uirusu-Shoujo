@@ -53,8 +53,7 @@ label day1morningwakeFin:
     
     scene bg xebdorm with fade
     prin "I walk out into what looks like the main room, only to be greeted by a small girl getting dressed."
-    show sars notamused
-    show sars notamused
+    show sars blush
     "Short Girl" "Wh-what are you doing here, intruder! Pervert! GET OUT!"
     prin "I promptly fuck off back to my room. Maybe I'll clean myself up a bit..."
     scene bg xebshower with fade
@@ -66,7 +65,7 @@ label day1morningwakeFin:
 
     scene bg xebdorm with fade
 
-    show sars notamused point at left
+    show sars angry point at left
 
     "Short Girl" "AHH! It's the pervert! Don’t look at him or you’ll get molested!"
 

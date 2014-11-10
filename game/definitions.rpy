@@ -146,10 +146,11 @@ init:
     # CHARACTER IMAGES
     #==============================================================
     
+init -13:
     if persistent.artstyle is None:
         $ persistent.artstyle = 'default'
     
-init python:
+init -13 python:
     # Used for declaring images that switch artstyles.
     # Takes a list of image names.
     def artstyle_switcher(list=[], bases=[]):
@@ -234,51 +235,6 @@ init python:
     }, wimg=477, himg=900, 
     lcrop=900, scrop=900,
     lscale=1.0, sscale=1.0)
-#Ebby dread normal
-    autoComposite('dread ebby normal', base="images/sprites/dread/EBOLA/EbbyNormal.png",
-    bases={
-    'blood':"images/sprites/dread/EBOLA/EbbyBlood.png",
-    'skull':"images/sprites/dread/EBOLA/EbbySkull.png",
-    'bloodskull':"images/sprites/dread/EBOLA/EbbySkullBlood.png",
-    },
-    dict={
-    'dread ebby wink':"images/sprites/dread/EBOLA/EbbyWink.png",
-    'dread ebby concerned':"images/sprites/dread/EBOLA/EbbyConcerned.png",
-    'dread ebby excited':"images/sprites/dread/EBOLA/EbbyExcited.png",
-    'dread ebby sad':"images/sprites/dread/EBOLA/EbbySad.png",
-    'dread ebby rape':"images/sprites/dread/EBOLA/EbbyRape.png",
-    'dread ebby joy':"images/sprites/dread/EBOLA/EbbyJoy.png",
-    }, wimg=808, himg=1929, 
-    xcomp=297, ycomp=188, wcomp=259, hcomp=268,
-    lcrop=1060, scrop=1350)
-#Ebby dread toast
-    autoComposite(base="images/sprites/EBOLA/EbbyNormal.png",
-    bases={
-    'blood':"images/sprites/EBOLA/EbbyBlood.png",
-    'skull':"images/sprites/EBOLA/EbbySkull.png",
-    'bloodskull':"images/sprites/EBOLA/EbbySkullBlood.png",
-    },
-    dict={
-    'dread ebby toastdead':"images/sprites/dread/EBOLA/EbbyToastDead.png",
-    'dread ebby toastsad':"images/sprites/dread/EBOLA/EbbyToastSad.png",
-    'dread ebby toastjoy':"images/sprites/dread/EBOLA/EbbyToastJoy.png",
-    }, wimg=808, himg=1929, 
-    xcomp=297, ycomp=188, wcomp=259, hcomp=334,
-    lcrop=1060, scrop=1350)
-#Ebby poneh
-    autoComposite(
-    bases={'blood':"",'skull':"",'bloodskull':"",},
-    dict={
-    'poneh ebby normal':"images/sprites/poneh/EBOLA/EbbyNormal.png",
-    'poneh ebby wink':"images/sprites/poneh/EBOLA/EbbyJoy.png",
-    'poneh ebby concerned':"images/sprites/poneh/EBOLA/EbbyConcerned.png",
-    'poneh ebby excited':"images/sprites/poneh/EBOLA/EbbyExcited.png",
-    'poneh ebby sad':"images/sprites/poneh/EBOLA/EbbyConcerned.png",
-    'poneh ebby rape':"images/sprites/poneh/EBOLA/EbbyRape.png",
-    'poneh ebby joy':"images/sprites/poneh/EBOLA/EbbyJoy.png",
-    }, wimg=700, himg=1100, 
-    lcrop=800, scrop=800,
-    lscale=1.0, sscale=1.0)
 #Sars default
     autoComposite(
     bases={'point':""},
@@ -289,24 +245,12 @@ init python:
     'default sars grin':"images/sprites/SARS/SarsGrin.png",
     'default sars sad':"images/sprites/SARS/SarsSad.png",
     'default sars stars':"images/sprites/SARS/SarsStars.png",
+    'default sars angry':"images/sprites/SARS/SarsNotAmused.png",
+    'default sars blush':"images/sprites/SARS/SarsNotAmused.png",
     }, wimg=525, himg=600, 
     lcrop=500, scrop=600,
     lscale=3.0, sscale=1.5)
-#Sars dread
-    autoComposite('dread sars normal', base="images/sprites/dread/SARS/SarsNormal.png",
-    bases={
-    'point':"images/sprites/dread/SARS/SarsPoint.png"
-    },
-    dict={
-    'dread sars notamused':"",
-    'dread sars concerned':"images/sprites/dread/SARS/SarsConcerned.png",
-    'dread sars grin':"images/sprites/dread/SARS/SarsGrin.png",
-    'dread sars sad':"images/sprites/dread/SARS/SarsSad.png",
-    'dread sars stars':"images/sprites/dread/SARS/SarsStars.png",
-    }, wimg=751, himg=1790, 
-    xcomp=241, ycomp=129, wcomp=307, hcomp=284,
-    lcrop=984, scrop=1200,
-    sscale=0.64)
+init -11 python:
 #Ebby Switch
     artstyle_switcher([
     'ebby normal',
@@ -328,6 +272,8 @@ init python:
     'sars grin',
     'sars sad',
     'sars stars',
+    'sars angry',
+    'sars blush',
     ],['point'])
 init:
 
