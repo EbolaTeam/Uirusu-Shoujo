@@ -16,16 +16,22 @@
     show ebby joy
     ec "Hehe, that happens to me some times"
     pr "Seriously, what's my name..."
-    $ bullshitname = renpy.input("Please enter your name:")
-    $ bullshitname = bullshitname.strip()
-    pr "I remember, it's %(bullshitname)s"
+    label name_input:
+    $ player_name = renpy.input("Please enter your name:", pixel_width=300)
+    $ player_name = player_name.strip()
+    if player_name == '':
+        $ player_name = "Chungus"
+    $ PLAYER_NAME = player_name.upper()
+    show ebby normal
+    menu:
+        ec "So you are %(player_name)s-kun?"
+        "Yeah, that's it.":
+            pass
+        "Wait, no, that isn't it.":
+            jump name_input
     show ebby concerned
     ec "Seriously? What a weird name."
-    pr "Wait no, that isn't it, obviously. Forgive me, I'm still half asleep."
     show ebby normal
-    pr "I'm Chungus. Nice to meet you Ebby."
-    show ebby joy
-    ec "Well that's a much more normal name. Nice to meet you, Chungus."
     pr "Anyway, what's the time? I'm pretty tired."
     show ebby normal
     ec "Oh, it's 3AM. Sorry for waking you, I couldn't wait to meet you."
@@ -236,7 +242,7 @@ label day1_morningFin_dorm:
     \"{color=#57bab7}(Ohh! I forgot.){/color}"
     nn "Finally she takes it out of her mouth."
     show ebby rape
-    ec "Chungus-kun didn’t do anything like that! Stop being so mean!{p}
+    ec "%(player_name)s-kun didn’t do anything like that! Stop being so mean!{p}
     He was very kind and ran with me all the way here so that I wouldn’t be late!"
     show sars concerned at left
     "Short Girl" "Hmph! I dont care how kind he is, he shouldn’t be holding your hand with such familiarity!"
@@ -246,7 +252,7 @@ label day1_morningFin_dorm:
     show ebby joy
     ec "Oh! Hehe"
     nn "She gives my hand a last friendly squeeze before letting go and giving me a quick bow."
-    ec "Thank you Chungus-kun, I wouldn't have made it on time without you!"
+    ec "Thank you %(player_name)s-kun, I wouldn't have made it on time without you!"
     nn "Now I actually start to feel embarrassed."
     "We both made it in time, that’s the important thing."
     teach "All right! Settle down and get to your seats everyone!"
@@ -299,7 +305,7 @@ label day1_SnackFin_classFin:
     ug "I don't sleep well, so sometimes I come where it's quiet."
     show rab normal at left
     ug "Oh well... I'm awake now... sorry, who were you again?"
-    pr "I'm Chungus. It's my first day here."
+    pr "I'm %(player_name)s. It's my first day here."
     show rab unsure at left
     ug "You're... new here...?"
     show rab happy at left
@@ -335,8 +341,8 @@ label day1_SnackFin_classFin:
     ug "OH. We should get to class."
     show rab normal at left
     ug "I guess I'll see you around... sorry, what was your name again?"
-    pr "It's Chungus-kun."
-    rab "Well, it was nice to meet you, Chuu-San, I'm Rabies. I guess I'll see you later, then..."
+    pr "It's %(player_name)s-kun."
+    rab "Well, it was nice to meet you, %(player_name)s-san, I'm Rabies. I guess I'll see you later, then..."
 
     "She skips away."
     show rab happy at left
@@ -442,7 +448,7 @@ label day1_lunchFin_explore:
     ug "No, No, No!"
     ec "I GOT YOU NO-oh."
     show ebby normal
-    ec "Chung-kun?"
+    ec "%(player_name)s-kun?"
     hide zmapp
     with moveoutright
     show ebby concerned
@@ -516,7 +522,7 @@ label day1_afternoonFin_hang:
         nn "As I walk past, she shouts to me."
         show rab unsure at right
         if RabbiesMet == 1:
-            rab "HEY! CHUU-SAN!"
+            rab "HEY! %(PLAYER_NAME)s-SAN!"
         else:
             ug "HEY!"
         nn "She sounds terrified, she looks like she's cowering under there..."
@@ -542,7 +548,7 @@ label day1_afternoonFin_hang:
         nn "As I walk past, she shouts to me."
         show rab unsure at right
         if RabbiesMet == 1:
-            rab "HEY! CHUU-SAN!"
+            rab "HEY! %(PLAYER_NAME)s-SAN!"
         else:
             ug "HEY!"
         nn "She sounds terrified, she looks like she's cowering under there..."
@@ -624,7 +630,7 @@ label Day1AfterSchoolRabFuggoff:
 label Day1AfterSchoolRabDormGood:
     scene bg xebdorm
     show rab unsure at right
-    rab "Hey Chuu-San..."
+    rab "Hey %(player_name)s-San..."
     pr "Yes?"
     rab "..."
     pr "..."
@@ -636,7 +642,7 @@ label Day1AfterSchoolRabDormGood:
     show rab sad
     rab "I don’t know how long I’d have been stuck out there if you hadn’t passed by."
     show rab normal
-    rab "I won’t forget my umbrella next time. See you tomorrow, Chuu-San!"
+    rab "I won’t forget my umbrella next time. See you tomorrow, %(player_name)s-San!"
     return
 
 
@@ -646,7 +652,7 @@ label Day1AfterSchoolRabDormBad:
         show rab shock at left
         rab "Wait... you live in Petri Hall too?"
     show rab normal at center
-    rab "You’re like a good luck charm or something. Thanks a lot, Chuu-San!"
+    rab "You’re like a good luck charm or something. Thanks a lot, %(player_name)s-San!"
     hide rab with moveoutleft
     nn "And there she goes, like a rocket up those stairs..."
     return
