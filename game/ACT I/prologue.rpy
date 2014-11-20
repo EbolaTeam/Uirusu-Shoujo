@@ -7,9 +7,8 @@ label prologue_name:
     $ player_name = player_name.strip()
     if player_name == '':
         $ player_name = "Chungus"
-    $ PLAYER_NAME = player_name.upper()
     menu:
-        "So you are %(player_name)s-dono?"
+        "So you are [player_name]-dono?"
         "Yes":
             pass
         "No":
