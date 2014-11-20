@@ -391,7 +391,10 @@ init:
     # The narrator is used when no speaker is provided.
     define narrator = Character('', what_color="#dddddd", what_prefix='', what_suffix='')
     define centered = Character('', kind=narrator, what_style="centered_text", window_style="centered_window", ctc=None)
-
+    
+    # This is for placeholder text. No placeholder text should remain in the final release.
+    define plh = Character('', kind=narrator, what_color="#55aa55", what_prefix='# ', what_suffix='')
+    
     define prin = Character('', kind=narrator) #deprecated. Please use narrator instead
     define nn = Character('', kind=narrator) #deprecated. Please use narrator instead
     
