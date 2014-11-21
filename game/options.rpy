@@ -23,7 +23,7 @@ init -1 python hide:
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
 
-    config.window_title = u"Ebola-chan"
+    config.window_title = u"Uirusu Shoujo"
 
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
@@ -66,7 +66,7 @@ init -1 python hide:
         label = "#5D1010",
 
         ## The color of a frame containing widgets.
-        frame = "#F8F2D0",
+        frame = "#882222",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
